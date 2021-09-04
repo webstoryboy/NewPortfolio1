@@ -1,0 +1,168 @@
+/* 폰트 */
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    src : url("../font/GT-Super-Display-Light-Trial.otf");
+    font-family: 'GT Super Ds Trial';
+}
+
+.supah-scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    overflow: hidden;
+}
+
+#contents {overflow: hidden; width: 10000px;}
+#section1 {width: 5000px; height: 100vh; float: left;}
+#section2 {background: #222; width: 1800px; height: 100vh; float: left;}
+#section3 {background: #333; width: 1800px; height: 100vh; float: left;}
+#section4 {background: #444; width: 1800px; height: 100vh; float: left;}
+#section5 {background: #555; width: 1800px; height: 100vh; float: left;}
+#section6 {background: #666; width: 1800px; height: 100vh; float: left;}
+
+/* sec1 */
+.about {
+    display: flex;
+}
+.about .intro {
+    position: relative;
+}
+.about .intro .intro-img {
+    width: 500px; 
+    height: 60vh;
+    background: url(../img/main.jpg);
+    background-size: cover;
+    filter: brightness(60%);
+}
+.about .intro .intro-cirle {
+    background: #000;
+    border-radius: 50%;
+    width: 150px; height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+.about .intro .intro-cirle h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.about .nav {
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.about .nav h2 {
+    transform: rotate(-90deg);
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 24px;
+}
+
+.about .nav ul {
+    transform: rotate(90deg);
+}
+.about .nav ul li {
+    display: inline-block;
+    transform: rotate(-180deg);
+}
+.about .nav ul li a {
+    
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    padding-left: 30px;
+    /* margin: 0 1.25rem; */
+}
+
+
+
+.about .desc {
+    height: 100vh;
+    margin-left: 50px;
+}
+.about .desc p {
+    line-height: 1.6;
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    font-family: 'Chosunilbo_myungjo';
+    color: #545454;
+}
+.about .desc span {
+    width: 73%;
+    display: block;
+    font-size: 14px;
+    margin-top: 20px;
+    padding-bottom: 3px;
+    letter-spacing: -1px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+.about .title {
+    margin-left: 50px;
+}
+.about .title h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: normal;
+    font-size: 280px;
+    white-space: nowrap;
+    letter-spacing: -20px;
+    line-height: 0.9;
+}
+.about .title .abo_tit1 {
+    height: 33vh;
+}
+.about .title .abo_tit2 {
+    height: 33vh;
+    margin-left: 370px;
+}
+.about .title .abo_tit3 {
+    height: 33vh;
+    margin-left: 200px;
+}
+
+.about .about-img {
+    width: 600px;
+    height: 100vh;
+    background-image: url(../img/sub.JPG);
+    background-size: cover;
+    filter: saturate(30%);
+}
+.about .about-img .img {
+    
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

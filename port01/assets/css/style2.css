@@ -1,0 +1,57 @@
+/*--------------------
+Body
+--------------------*/
+
+
+body {
+    -ms-scroll-chaining: none;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.supah-scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    overflow: hidden;
+}
+
+#contents {overflow: hidden; width: 10000px;}
+#contents > div {width: 1800px; height: 100vh; float: left;}
+#section1 {}
+#section2 {background: #222;}
+#section3 {background: #333;}
+#section4 {background: #444;}
+#section5 {background: #555;}
+#section6 {background: #666;}
+
+/* sec1 */
+.sec1 {}
+.sec1 .intro {}
+.sec1 .intro .intro-img {
+    width: 500px; 
+    height: 60vh;
+    background: #444;
+}
+.sec1 .intro .intro-cirle {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
