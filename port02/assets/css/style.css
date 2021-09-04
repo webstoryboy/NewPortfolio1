@@ -1,0 +1,749 @@
+
+body {
+    --font-en: "Neue Montreal";
+    --font-ko-light: 'S-CoreDream-3Light';
+    --font-ko-regular: 'S-CoreDream-4Regular';
+    --height: calc(100vh - 51px);
+    --width: calc(100vw - 70px);
+    background: #000;
+    color: #fff;
+    font-family: var(--font-en);
+}
+
+#header {
+    position: fixed; left: 0; top: 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 70px 0 30px; 
+    width: 100vw; height: 51px; 
+    border-bottom: 1px solid #fff; 
+    text-transform: uppercase; 
+    font-family: var(--font-en); 
+    font-size: 1rem;
+    box-sizing: border-box;
+    z-index: 100;
+    background: #000;
+}
+
+/* header */
+.header-right {
+    position: relative;
+    display: block;
+}
+.header-right .btn > .whiteCircle {
+    position: absolute;
+    top: 5px; right: -25px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #fff;
+    transition: all 0.3s;
+}
+.header-right .btn > .blackCircle {
+    position: absolute;
+    top: 5px; right: -35px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+
+#contents {
+    width: 2400vw;
+    overflow: hidden;
+    position: fixed;
+    left: 0; top: 0;
+}
+#contents > section {
+    height: var(--height);
+    float: left;
+    width: 100vw;
+    padding-top: 51px;
+    border-right: 1px solid #fff;
+}
+.main-title {
+    position: relative;
+}
+.main-title span {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 8vw;
+    letter-spacing: 2.5vw;
+}
+.column_menu {
+    position: absolute;
+    left: 0; top: 100vh;
+    width: 100vh; height: 70px;
+    transform: rotate(270deg);
+    transform-origin: left top;
+    font-size: 50px;
+    line-height: 1.4;
+    padding-left: 2.7vmax;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    background: #000;
+    box-sizing: border-box;
+}
+
+.btn-wrap {
+    position: absolute;
+    right: 10%; bottom: 5%;
+}
+.btn-wrap .btn {
+    margin-left: 6vmin;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 1vmax;
+    font-family: var(--font-ko-light);
+}
+.btn .whiteCircle {
+    position: absolute;
+    top: 0.3vmin; left: -4vmin;
+    width: 1.7vmin; height: 1.7vmin;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #fff;
+    transition: all 0.3s;
+}
+.btn .blackCircle {
+    position: absolute;
+    top: 0.3vmin; left: -3vmin;
+    width: 1.7vmin; height: 1.7vmin;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+
+/* first */
+#first {
+    position: relative;
+    overflow: hidden;
+}
+#first #container {
+    animation: fade-in 1s ease-out forwards;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 7vw auto;
+}
+#first #container .wrapper {
+    position: relative;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+#first #container .circle {
+    animation: rotate 2s infinite linear;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    height: 29px;
+    position: relative;
+    width: 29px;
+    transition: border 1s ease-out;
+}
+
+#first #container .circle:after {
+    content: "";
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    height: 6px;
+    top: -3px;
+    left: calc(50% - 3px);
+    width: 6px;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+#first .comment {
+    position: absolute;
+    left: 50%; bottom: 10vh;
+    transform: translateX(-50%);
+    font-size: 34px;
+    text-indent: 90px;
+}
+#first .comment::before {
+    content: '';
+    position: absolute;
+    top: 20px; left: 0;
+    height: 3px; width: 60px;
+    background: #fff;
+}
+
+/* menu */
+#menu {
+    position: relative;
+    text-transform: uppercase;
+}
+#menu li {
+    border-bottom: 1px solid #fff;
+}
+#menu li a {
+    display: block;
+    font-size: 36px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+#menu h2 {
+    position: absolute;
+    bottom: 8vh; left: 50%;
+    transform: translateX(-50%);
+    font-size: 17vw;
+    font-weight: 400;
+}
+
+/* about */
+#about {
+    position: relative; 
+}
+#about .aboutMe {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 5% 16% 5% calc(16% + 70px);
+    box-sizing: border-box;
+}
+#about .aboutMe .top {display: flex;}
+#about .aboutMe .top figure {flex: 1 1 40%; margin-right: 5%;}
+#about .aboutMe .top figure img {width: 100%;}
+#about .aboutMe .top .desc {
+    flex: 1 1 47%;
+    font-family: var(--font-ko-light);
+    font-size: 1.57vw;
+    line-height: 1.5;
+    margin-top: 1.2%;
+}
+#about .aboutMe .bottom {display: flex; justify-content: space-between; margin-top: 10vh;}
+#about .aboutMe .bottom .bottom-box {flex: 1 1 25%; margin-right: 10%;}
+#about .aboutMe .bottom .bottom-box:last-child {margin-right: 0;}
+#about .aboutMe .bottom .bottom-box .title {font-size: 30px; margin-bottom: 5vh;}
+#about .aboutMe .bottom .bottom-box .desc {font-size: 22px; margin-bottom: 4.3vh; line-height: 1.3; font-weight: 100;}
+#about .aboutMe .bottom .bottom-box .num {font-size: 4vw;}
+
+/* skill */
+#contents > #skill {position: relative; width: auto; box-sizing: content-box;}
+#skill ul {
+    width: 57vmax;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+}
+#skill li {
+    position: relative;
+    flex: 1 1 50%;
+    height: 33%;
+    padding: 4% 2% 0 14%;
+    /* padding: 6vh 2vw 1vh 10vw; */
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-top: 0;
+}
+#skill li:nth-child(even){
+    border-right: 0;
+    border-left: 0;
+}
+#skill li:nth-child(5){
+    border-bottom: 0;
+}
+#skill li:nth-child(6){
+    border-bottom: 0;
+}
+#skill li .name {
+    position: relative;
+    font-size: 2.3vmax;
+    font-weight: 100;
+}
+#skill li:nth-child(1) .name::before {
+    content: '';
+    border: 1px solid #fff;
+    position: absolute;
+    left: -5.5vmax; top: 0;
+    border-radius: 50%;
+    width: 2.5vmax; height: 2.5vmax;
+}
+#skill li:nth-child(1) .name::after {
+    content: '';
+    border: 1px solid #fff;
+    position: absolute;
+    left: -4vmax; top: 0;
+    border-radius: 50%;
+    width: 2.5vmax; height: 2.5vmax;
+}
+#skill li:nth-child(2) .name::before {
+    content: '';
+    border: 1px solid #fff;
+    position: absolute;
+    left: -4.7vmax; top: 0;
+    width: 2.5vmax; height: 2.5vmax;
+}
+#skill li:nth-child(3) .name::before {
+    content: '';
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    position: absolute;
+    left: -4.7vmax; top: 0.3vmax;
+    width: 2.5vmax; height: 2vmax ;
+}
+#skill li:nth-child(3) .name::after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    left: -4.7vmax; top: 50%;
+    width: 2.5vmax; height: 0.05vmax;
+}
+#skill li:nth-child(4) .name::before {
+    content: '';
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -5vmax; top: 0;
+    width: 3vmax; height: 3vmax;
+}
+#skill li:nth-child(5) .name::before {
+    content: '';
+    border: 1px solid #fff;
+    position: absolute;
+    left: -4.7vmax; top: 0;
+    width: 2.4vmax; height: 2.4vmax;
+    transform: rotate(45deg);
+}
+#skill li:nth-child(6) .name::before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    left: -5vmax; top: 1.2vmax;
+    width: 3.8vmax; height: 0.05vmax;
+    transform: rotate(45deg);
+}
+#skill li:nth-child(6) .name::after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    left: -5vmax; top: 1.2vmax;
+    width: 3.8vmax; height: 0.05vmax;
+    transform: rotate(135deg);
+}
+
+#skill li .score {
+    position: absolute;
+    right: 4%; bottom: -1%;
+    font-size: 9vmax;
+    font-weight: 300;
+    text-align: right;
+    margin-top: 7%;
+    /* margin-top: 5vh; */
+
+}
+
+#website {
+    position: relative;
+    z-index: 1000;
+}
+#website .website-list {
+    /* position: fixed;
+    left: 70px; top: 51px; */
+    width: calc(100vw - 70px);
+    margin-left: 70px;
+}
+#website .website-contents {
+    position: absolute;
+    height: 68vh;
+    box-sizing: border-box;
+}
+#website .website-contents.website1 {
+    left: 71px; top: 49px;
+}
+#website .website-contents.website2 {
+    left: 71px; top: 80vh;
+}
+#website .website-contents.website3 {
+    left: 71px; top: 87vh;
+}
+#website .website-contents.website4 {
+    left: 71px; top: 94vh;
+}
+/* #website .website-contents.website1 .website-menu {display: none;} */
+#website .website-contents .website-menu {
+    position: relative;
+    display: block; 
+    height: 7vmin; 
+    border-bottom: 1px solid #fff; 
+    padding-left: 2vmax;
+    box-sizing: border-box;
+    font-size: 2vmax;
+    line-height: 7vmin;
+    font-weight: 100;
+    text-transform: capitalize;
+    background: #000;
+    width: calc(100vw - 70px);
+}
+#website .website-contents .website-menu .view {
+    position: absolute;
+    right: 2%; top: 38%;
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: #fff;
+}
+/* #website .website-contents.website2 .website-detail {display: none;}
+#website .website-contents.website3 .website-detail {display: none;}
+#website .website-contents.website4 .website-detail {display: none;} */
+#website .website-contents .website-detail {
+    display: flex;
+    height: 68vh;
+    border-bottom: 1px solid #fff;
+    background: #000;
+}
+#website .website-contents .website-detail .left {
+    position: relative;
+    flex: 1 1 50%;
+    padding: 8vmin 0 0 8vmin;
+    height: 73vh;
+    box-sizing: border-box;
+}
+#website .website-contents .website-detail .left .title {
+    font-size: 5vmax;
+    text-transform: capitalize;
+    margin-bottom: 5vmin;
+}
+#website .website-contents .website-detail .left .desc {
+    color: #999;
+    font-family: var(--font-ko-light);
+    font-size: 1.2vmax;
+    width: 87%;
+    padding-left: 8%;
+    box-sizing: border-box;
+}
+#website .website-contents .website-detail .left .btn-wrap {
+    bottom: 13%;
+}
+/* #website .website-contents .website-detail .left .btn-wrap .btn {
+    margin-left: 6vmin;
+} */
+#website .website-contents .website-detail .right {
+    flex: 1 1 50%;
+    width: 100%; height:68vh;
+    background: #ccc;
+}
+
+#react {
+    position: relative;
+    z-index: 900;
+}
+#react .react-contents {
+    width: calc(100vw - 70px);
+    margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#react .text-box {
+    width: 50%;
+    height: 80%;
+    /* float: left; */
+    flex: 1 1 50%;
+    padding: 10vh;
+    box-sizing: border-box;
+    /* background: #ccc; */
+}
+#react .text-box .react {}
+#react .text-box .portfolio {
+    margin-top: 2vmax;
+}
+#react .text-box .title {
+    font-size: 2.3vmax;
+}
+#react .text-box .desc {
+    margin-top: 1vmax;
+    font-size: 1.7vw;
+}
+#react .text-box .portfolio .desc {
+    font-family: var(--font-ko-regular);
+    font-size: 1.5vw;
+}
+#react .img-wrap {
+    position: relative;
+    /* float: left; */
+    flex: 1 1 50%;
+    width: 50%;
+    box-sizing: border-box;
+}
+#react .img-wrap .img {
+    position: relative;
+    display: block;
+    width: 40vmax; height: 25vmax;
+    margin: 10vh -10vw 0 0;
+    background: #ccc;
+}
+#react .img-wrap .btn-wrap {
+    right: auto;
+    left: 0;
+}
+#react .img-wrap .btn-wrap .btn:first-child {
+    margin-left: 2.5vmax;
+}
+#react .project {
+    position: absolute;
+    left: 0; bottom: 0;
+    width: calc(100% - 70px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vh;
+    box-sizing: border-box;
+    margin-left: 70px;
+    /* clear: both; */
+}
+#react .project a {
+    display: block;
+    width: 20%; height: 10vh;
+}
+#react .project a:nth-child(1) {
+    text-align: left;
+}
+#react .project a:nth-child(2) {
+    text-align: center;
+}
+#react .project a:nth-child(3) {
+    text-align: right;
+}
+
+
+/* script */
+#script {
+    position: relative;
+    width: 400vw !important;
+}
+#script .script-wrap {
+    width: 400vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#script .script-wrap .script {
+    position: relative;
+    height: var(--height);
+    width: var(--width);
+    margin-left: 70px;
+}
+#script .script-wrap .script-contents {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+#script .script-wrap .script-contents .circle {
+    position: absolute;
+    left: -15vw; top: -13vh;
+    width: 30vw; height: 30vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    z-index: -1;
+}
+#script .script-wrap .script .txt {
+    z-index: 110;
+    font-size: 6vw;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#script .script-wrap .script .txt.script {
+    position: absolute;
+    left: -5vw; top: -7vh;
+}
+#script .script-wrap .script .txt.effect {
+    position: absolute;
+    right: -8vw; bottom: -4vh;
+}
+#script .script-wrap .script iframe {
+    width: 50vw; height: 50vh;
+    z-index: 1000;
+}
+#script .script-wrap .script .btn-wrap {
+    position: absolute;
+    right: 0; top: -4vh;
+}
+#script .script-wrap .script .effect-number {
+    position: absolute;
+    right: -1.7vw; top: 0;
+    display: flex;
+    flex-direction: column;
+}
+#script .script-wrap .script .effect-number a {
+    display: block;
+    font-weight: 100;
+    font-size: 1vw;
+    text-align: center;
+    margin-bottom: 0.3vh;
+}
+#script .script-wrap .script .effect-number a.active {
+    width: 1.1vw; height: 1.1vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+
+/* animation */
+#animation {
+    position: relative;
+    width: 600vw !important;
+}
+#animation .animation-wrap {
+    width: 600vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#animation .animation-wrap .animation {
+    position: relative;
+    height: var(--height);
+    width: var(--width);
+    margin-left: 70px;
+}
+.animation .animation-contents {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+.animation .animation-contents .text-area {
+    flex: 0 0 25%;
+    text-align: right;
+    margin-right: 2vw;
+}
+.animation .animation-contents .text-area .animation-number {}
+.animation .animation-contents .text-area .animation-number .max-number {
+    position: relative;
+    display: inline-block;
+    padding-left: 4vw;
+    color: #999;
+}
+.max-number::before {
+    content: '';
+    position: absolute;
+    left: 0.8vw; top: 2vh;
+    width: 2.7vw; height: 0.1vh;
+    background: #999;
+}
+.animation .animation-contents .text-area .animation-title {
+    font-size: 3vw;
+    text-transform: capitalize;
+    margin-top: 2.2vh;
+}
+.animation .animation-contents .text-area .animation-desc {
+    font-family: var(--font-ko-light);
+    color: #999;
+    font-size: 1.3vw;
+    margin-top: 1.7vh;
+}
+.animation .animation-contents .text-area .btn-wrap {
+    left: 12%; bottom: 0;
+    right: auto;
+}
+.animation .animation-contents .animation-area {
+    position: relative;
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center;
+}
+.animation .animation-contents .animation-area iframe {
+    width: 50vw; height: 50vh;
+}
+.animation .animation-contents .animation-area .back-line-group {
+    position: absolute;
+    left: 11vw; top: 5vh;
+    width: 42vw; height: 52vh;
+    z-index: -1;
+    overflow: hidden;
+}
+.animation .animation-contents .animation-area .back-line-group .back-line {
+    height: 100%; width: 0.1vw;
+    background: #fff;
+    display: inline-block;
+    margin-left: calc(42vw / 120);
+}
+
+.main-title.last {
+    position: relative;
+}
+.main-title.last .quote {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    font-weight: 100;
+    font-size: 8vw;
+}
+
+#contact {
+    position: relative;
+    width: var(--width);
+}
+#contact .contact-wrap {
+    display: flex;
+}
+#contact .contact-info {
+    position: relative;
+    flex: 1 1 40%;
+    margin-left: 70px;
+    height: var(--height);
+    background: #000;
+}
+#contact .contact-info .contact-title {
+    font-size: 5vw;
+    position: absolute;
+    left: 40%; top: 10%;
+    transform: translateX(-50%);
+}
+#contact .contact-info ul {
+    position: absolute;
+    left: 50%; bottom: 15%;
+    transform: translateX(-50%);
+}
+#contact .contact-info li {}
+#contact .contact-info li a {
+    font-weight: 100;
+    white-space: nowrap;
+    display: inline-block;
+    width: 23vw;
+    display: flex;
+}
+#contact .contact-info li a .contact {
+    flex: 1 1 20%;
+}
+#contact .contact-info li a .address {
+    flex: 1 1 80%;
+}
+#contact .contact-info .btn-wrap {
+    left: 41%; bottom: 5%;
+    transform: translateX(-50%);
+}
+#contact .contact-info .btn-wrap .btn {}
+#contact .contact-animation {
+    position: relative;
+    flex: 1 1 60%;
+    overflow: hidden;
+}
+#contact .contact-animation .contact-circle {
+    position: absolute;
+    width: 50vmax; height: 50vmax;
+    background: #fff;
+    border-radius: 50%;
+}
+#contact .contact-animation .contact-circle.left {
+    left: -10vw; top: 10%;
+}
+#contact .contact-animation .contact-circle.right {
+    right: -10vw; top: 10%;
+}
