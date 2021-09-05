@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/index3.js" defer></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+     (function(){ 
+         // emailJS 유저 ID 
+         emailjs.init("user_oPgwxiy2kEbJqLNtLqCtx"); })(); 
+   
+    </script> 
+       <script type="text/javascript"> window.onload = function() { 
+           // form id, #contact-form 안에 있는 것들 전송
+            document.getElementById('contact-form').addEventListener('submit', function(event) 
+            { event.preventDefault(); this.contact_number.value = Math.random() * 100000 | 0; 
+               // 서비스 id, 이메일 템플릿 
+               emailjs.sendForm('parkGmail', 'template_oluw5vt', this)
+               .then(function() {
+                        alert('SUCCESS!');
+                    }, function(error) {
+                        alert('FAILED...', error);
+                    }); 
+            }); 
+        } 
+               
+               </script>
+
+</head>
+<body>
+    <div id="contents">
+       <section id="section1">
+        <div class="mequen">
+            <div class="top">
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+        </div>
+
+           <div class="bg">
+               <div class="left"></div>
+               <div class="right"></div>
+           </div>
+           <div class="sec1">
+               <div class="title">
+                   <div>
+                       <span class="titleName">Park su jin</span>
+                       <h1 class="split">PORTFOLIO</h1>
+                   </div>
+               </div>
+           </div>
+           <div class="mainImgListWrap">
+
+           </div>
+
+
+           <div class="bg1_sec">
+
+           </div>
+       </section>
+       <section id="section2">
+        <div class="bg2">
+            <div class="left2">
+                    <img class="sonImg" src="assets/img/son.png" alt="">
+                    <p class="writeConIm1">about me</p>
+                    <h2>HELLO<h1>
+                    <h2> I’M PARK SU-JIN </h2>
+                    <span>끊임없는 노력으로 항상새로운 것을 만드는 
+                       퍼블리셔가 되고 싶습니다.</span>
+                    <p class="writeConIm">
+                        I'm a publisher who looks for new things andproduces results.</p>
+                    <div class="follow_btn">FOLLOW ALONG</div>
+
+            </div>
+            <div class="right2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="rightLeft">
+                   
+                </div>
+                <div class="right_Right">
+                    
+                    <p>GET BUCKETS</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom bottom2">
+            <p>#ABOUTME</p><span>FOLLOW ALONG</span>
+            <p>#ABOUTME</p><span>FOLLOW ALONG</span>
+        </div>
+       </section>
+       <section id="section3">
+            <div class="skillTitle">
+                <h1>MY SKILL</h1>
+            </div>
+            <div class="bottom">
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            </div>
+
+
+            <!-- pie.js -->
+            <!-- <div class="skill-wrap">
+                <div class="skill">
+                    <ul class="clearfix about">
+                        <li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">90</strong><span class="f1">HTML</span></a></li>
+                        <li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">90</strong><span class="f1">CSS</span></a></li>
+                        <li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">80</strong><span class="f1">JAVASCRIPT</span></a></li>
+                        <li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">80</strong><span class="f1">JQUERY</span></a></li>
+                        <li class="pie" data-percent="100"><a href="#" target="_blank"><strong class="count">85</strong><span class="f1">JAVASCRIPT</span></a></li>
+                    </ul>
+                </div>
+            </div> -->
+
+
+            <ul class="skillBox clearfix about">
+                <li class="skillCon skillContent1 cont1">
+                    <h1>01</h1>
+                    <p>HTML<br>MARKUP
+                    </p>
+                    <div>
+                        <ul>
+                            <li class="number5">
+                                <strong class="count">90</strong></li>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skillCon skillContent1 cont2">
+                    <h1>02</h1>
+                    <p>CSS<br>& SCSS
+                    </p>
+                    <div>
+                        <ul>
+                            <li class="number5">
+                            <strong class="count">90</strong></li>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skillCon skillContent1 cont3">
+                    <h1>03</h1>
+                    <p>
+                        JAVA<br>SCRIPT
+                    </p>
+                    <div>
+                        <ul>
+                            <li class="number5">
+                                <strong class="count">80</strong></li>
+                                </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skillCon skillContent1 cont4">
+                    <h1>04</h1>
+                    <p>LIBRARY<br>JQUERY
+                        
+                    </p>
+                    <div>
+                        <ul>
+                            <li class="number5">
+                                <strong class="count">80</strong></li>
+                                </li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="skillTitle2">
+                <h1>
+                    EFFORT & GROWTH
+                </h1>
+            </div>
+            
+       </section>
+
+       <section id="section4">
+            <div class="skillTitle">
+                <h1>ANIMATION</h1>
+            </div>
+            <div class="bottom">
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+                <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            </div>
+            <div class="section4_content">
+            <div class="constent4 con1">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top typingCon1top">
+                    <h1 class="typing">Typing Effect with animaition</h1>
+                </div>
+                <p class="textBottom">01</p>
+                <div class="con1Bottom">
+                    <h1>TEXT</h1>
+                    <p>
+                        텍스트를 이용하여 애니메이션을<br>
+구현하였습니다
+                    </p>
+
+                </div>
+            </div>
+            <div class="constent4 con2">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top bubbleAnimation">
+                    <div class="bubble b1"></div>
+                    <div class="bubble b2"></div>
+                    <div class="bubble b3"></div>
+                    <div class="bubble b4"></div>
+                    <div class="bubble b5"></div>
+                    <div class="bubble b6"></div>
+                    <div class="bubble b7"></div>
+                </div>
+                <p class="textBottom">02</p>
+                <div class="con1Bottom">
+                    <h1>BUBBLE</h1>
+                    <p>
+                        건들이면 터지는 버블
+<br>
+애니메이션을 구현하였습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="constent4 con3">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top cubeAnimation">
+                    <div class="cube">
+                        <div class="face front1"></div>
+                        <div class="face back1"></div>
+                        <div class="face left1"></div>
+                        <div class="face right1"></div>
+                        <div class="face top1"></div>
+                        <div class="face bottom1"></div>
+                      </div>
+                    
+                </div>
+                <p class="textBottom">03</p>
+                <div class="con1Bottom">
+                    <h1>CUBE</h1>
+                    <p>
+                        3D로 움직이는 큐브 
+<br>
+애니메이션은 구현하였습니다.
+                    </p>
+                </div>
+            </div>
+            </div>
+       </section>
+
+
+       <section id="section5">
+        <div class="skillTitle">
+            <h1>JAVASCRIPT</h1>
+        </div>
+        <div class="bottom">
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+        </div>
+        <div class="section4_content">
+        <div class="constent4 con1">
+            <div class="con1bar"></div>
+            <p class="textTop">CODING</p>
+            <div class="con1Top">
+                <div class="clock">
+                    <div class="clock-face">
+                        <div class="hand hour-hand"></div>
+                        <div class="hand min-hand"></div>
+                        <div class="hand second-hand"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="textBottom">01</p>
+            <div class="con1Bottom">
+                <h1>CLOCK</h1>
+                <p>
+                    JS와 ANIMATION을 이용하여<br>
+시계를 구현하였습니다
+                </p>
+
+            </div>
+        </div>
+        <div class="constent4 con2">
+            <div class="con1bar"></div>
+            <p class="textTop">CODING</p>
+            <div class="con1Top">
+                <div>
+                    <ul>
+                      <li class="number">99</li>
+                    </ul>
+                  </div>
+            </div>
+            <p class="textBottom">02</p>
+            <div class="con1Bottom">
+                <h1>LOADING</h1>
+                <p>
+                    로딩 숫자가 울라가는 
+<br>
+JAVASCRIPT를 구현하였습니다.
+                </p>
+            </div>
+        </div>
+        </div>
+       </section>
+
+       <section id="section6">
+
+
+        <div class="skillTitle portview_title">
+            <h1>STANDARD</h1>
+        </div>
+        <h1 class="writeAnimation">
+            <div class="move-text-wrap">
+                <p>
+                    <span> STANDARD  </span>
+                    
+                </p>
+                <p>
+                    <span> STANDARD </span>
+                </p>
+            </div>
+        </h1>
+        <div class="section4_content section6_content">
+            <div class="constent5 con1 const6">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top"><img src="assets/img/lahan.png" alt=""></div>
+                <p class="textBottom">SITE VIEW</p>
+                <div class="con1Bottom portView">
+                    <div class="standardList">
+                        <h1>STANDARD</h1>
+                        <p>
+                            미디어쿼리를 이용한 반응형 작업을 하였습니다.
+                        <br>
+                        라이브러리를 이용하여 구현하였습니다.
+                        </p>
+                        <button class="seTwoWrite2 write6">FOLLOW ALONG</button>
+                    </div>
+
+
+                </div>
+            </div>
+            
+            
+        </div>
+
+           
+
+
+    </section><!-- //section6 -->
+    <section id="section6">
+
+
+        <div class="skillTitle portview_title">
+            <h1>RESPONSE</h1>
+        </div>
+        <h1 class="writeAnimation">
+            <div class="move-text-wrap2">
+                <p>
+                    <span> GIBIASITE </span>
+                </p>
+                <p>
+                    <span> GIBIASITE </span>
+                </p>
+            </div>
+        </h1>
+        <div class="section4_content section6_content">
+            <div class="constent5 con1 const6">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top"><img src="assets/img/gabia.png" alt=""></div>
+                <p class="textBottom">SITE VIEW</p>
+                <div class="con1Bottom portView">
+                    <div class="standardList">
+                    <h1>GIBIA SITE</h1>
+                    <p>
+                        미디어쿼리를 이용한 반응형 작업을 하였습니다.
+<br>
+라이브러리를 이용하여 구현하였습니다.
+                    </p>
+                    <button class="seTwoWrite2 write6">FOLLOW ALONG</button>
+                </div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+
+           
+
+
+    </section><!-- //section6 -->
+    <section id="section6">
+        <div class="bottom">
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+        </div>
+
+        <div class="skillTitle portview_title">
+            <h1>RESPONSE</h1>
+        </div>
+        <h1 class="writeAnimation">
+            <div class="move-text-wrap3">
+                <p>
+                    <span> BUILDSITE </span>
+                </p>
+                <p>
+                    <span> BUILDSITE </span>
+                </p>
+            </div>
+        </h1>
+        <div class="section4_content section6_content">
+            <div class="constent5 con1 const6">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top"><img src="assets/img/build.png" alt=""></div>
+                <p class="textBottom">SITE VIEW</p>
+                <div class="con1Bottom portView">
+                    <div class="standardList">
+                    <h1>BUILDSITE</h1>
+                    <p>
+                        미디어쿼리를 이용한 반응형 작업을 하였습니다.
+<br>
+라이브러리를 이용하여 구현하였습니다.
+                    </p>
+                    <button class="seTwoWrite2 write6">FOLLOW ALONG</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+           
+
+
+    </section><!-- //section -->
+    <section id="section6">
+        <div class="bottom">
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+        </div>
+
+        <div class="skillTitle portview_title">
+            <h1>RESPONSE</h1>
+        </div>
+        <h1 class="writeAnimation">
+            <div class="move-text-wrap3">
+                <p>
+                    <span> JOSUNHOTEL </span>
+                </p>
+                <p>
+                    <span> JOSUNHOTEL </span>
+                </p>
+            </div>
+        </h1>
+        <div class="section4_content section6_content">
+            <div class="constent5 con1 const6">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top"><img src="assets/img/hotel.png" alt=""></div>
+                <p class="textBottom">SITE VIEW</p>
+                <div class="con1Bottom portView">
+                    <div class="standardList">
+                    <h1>JOSUNHOTEL</h1>
+                    <p>
+                        미디어쿼리를 이용한 반응형 작업을 하였습니다.
+<br>
+라이브러리를 이용하여 구현하였습니다.
+                    </p>
+                    <button class="seTwoWrite2 write6">FOLLOW ALONG</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+           
+
+
+    </section><!-- //section -->
+    <section id="section6">
+        <div class="bottom">
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+            <p>#PORTFOLIO</p><span>PUBLISHER</span>
+        </div>
+
+        <div class="skillTitle portview_title">
+            <h1>RESPONSE</h1>
+        </div>
+        <h1 class="writeAnimation">
+            <div class="move-text-wrap3">
+                <p>
+                    <span> MODELSITE </span>
+                </p>
+                <p>
+                    <span> MODELSITE </span>
+                </p>
+            </div>
+        </h1>
+        <div class="section4_content section6_content">
+            <div class="constent5 con1 const6">
+                <div class="con1bar"></div>
+                <p class="textTop">CODING</p>
+                <div class="con1Top"><img src="assets/img/response2.png" alt=""></div>
+                <p class="textBottom">SITE VIEW</p>
+                <div class="con1Bottom portView">
+                    <div class="standardList">
+                    <h1>MODEL SITE</h1>
+                    <p>
+                        미디어쿼리를 이용한 반응형 작업을 하였습니다.
+<br>
+라이브러리를 이용하여 구현하였습니다.
+                    </p>
+                    <button class="seTwoWrite2 write6">FOLLOW ALONG</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+           
+
+
+    </section><!-- //section -->
+
+    <section id="section8">
+        <div class="layoutLastLeft">
+            <p>Thank you</p>
+        </div>
+        <div class="layoutLastRight">
+            <div class="llrTop">
+                <p>함께하고 싶은 저에게<br>
+                    메세지를 보내주세요</p>
+            </div>
+            <div class="llrmiddle">
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number"> 
+                   <label>Name</label> 
+                   <input type="text" name="to_name" placeholder="name"> 
+                   <label>Email</label>
+                    <input type="email" name="from_name" placeholder="email">
+                    <label>Message</label>
+                     <textarea name="message" placeholder="message"></textarea> 
+                    <input type="submit" value="보내기"> </form>
+            </div>
+
+        </div>
+        <div class="layoutLastLeft2">
+        </div>
+    </section>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://webstoryboy.github.io/portfolio/port10/portfolio/assets/js/easypiechart.min.js"></script>
+    <script src="https://webstoryboy.github.io/portfolio/port10/portfolio/assets/js/jquery-ui-1.12.1.min.js"></script>
+    <script>
+counter();
+function counter() {
+    if ($('.about .count').size()) {
+        $c = $('.about .count');
+
+        $c.each(function () {
+            var $this = $(this);
+            $this.data('target', parseInt($this.html()));
+            $this.data('counted', false);
+            $this.html('0');
+        });
+
+        $(window).on('scroll', function () {
+            var speed = 5000;
+
+            $c.each(function (i) {
+                var $t = $(this);
+                if (!$t.data('counted') && $(window).scrollTop() + $(window).height() >= $t.offset().top) {
+
+                    $t.data('counted', true);
+
+                    $t.animate({
+                        dummy: 1
+                    }, {
+                        duration: speed,
+                        step: function (now) {
+                            var $this = $(this);
+                            var val = Math.round($this.data('target') * now);
+                            $this.html(val +"%");
+                        },
+                        easing: 'easeInOutQuart'
+                    });
+
+                    // easy pie
+                    $('.pie').easyPieChart({
+                        barColor: '#000',
+                        trackColor: '#fff',
+                        scaleColor: '#E84200',
+                        scaleLength: 5,
+                        lineWidth: 5,
+                        size: 200,
+                        lineCap: 'round',
+                        animate: { duration: speed, enabled: true }
+                    });
+                }
+            });
+        }).triggerHandler('scroll');
+    }
+}
+
+
+
+
+
+
+                    $(".split").each(function(){
+                        let text = $(this).text();
+                        let split = text.split("").join("</span><span aria-hidden='true'>");
+                            split = "<span aria-hidden='true'>" + split + "</span>";
+                        $(this).html(split).attr("aria-label", text);
+                    });
+
+
+                setTimeout(function(){
+                    //$(".title").css("opacity","1");
+                    //document.querySelector(".title").style.opacity = "1"
+
+                    let tl = gsap.timeline();
+                    tl.to(".title .titleName", {duration:0.1 , opacity: 1});
+                    tl.to(".title .split", {duration:0.3, opacity:1});
+                    tl.to(".title .split span", {duration: 0.4, stagger: 0.1, opacity: 1 , y:-3});
+
+                    tl.to(".mequen", {duration: 0.3, top:0});
+                    tl.to(".bottom", {duration: 0.3, bottom:0});
+                    tl.to(".bg1_sec", {duration:0.4, opacity:0});
+
+                },2000); 
+
+
+                  let tl = gsap.timeline({repeat: -1});
+                tl.to("#section2 .bg2 .right2 .front", {duration:1, rotateY: "180deg"})
+                tl.to("#section2 .bg2 .right2 .front", {display: "none"})
+                tl.to("#section2 .bg2 .right2 .back", {duration:1, rotateY: "180deg", display:"block"})
+                tl.to("#section2 .bg2 .right2 .back", {display: "none"})
+
+
+                
+
+
+                window.addEventListener('scroll' , (event) => {
+                    let scrollLacation = document.documentElement.scrollTop;
+                    console.log(scrollLacation); 
+                    if(scrollLacation > 550) {
+                        let t2 = gsap.timeline();
+                        t2.to(".left2", {duration:0.1, opacity:1 , stagger: 0.1});
+                        t2.to(".left2 .writeConIm1", {duration:0.2, opacity:1 , stagger: 0.1});
+                        t2.to(".left2 h2", {duration:0.3, opacity:1 , stagger: 0.1});
+                        t2.to(".left2 span", {duration:0.4, opacity:1, stagger: 0.1});
+                        t2.to(".left2 .writeConIm", {duration:0.5, opacity:1, stagger: 0.1});
+                        t2.to(".left2 .follow_btn", {duration:0.6, opacity:1 , stagger: 0.1});
+                        t2.to("#section2 .bg2 .right2", {duration:0.7, opacity:1 , stagger: 0.1});
+                    }
+                    if(scrollLacation > 1100) {
+                        let t3 = gsap.timeline();
+                        t3.to(".skillCon.skillContent1.cont1", {duration:0.2, opacity:1, delay:0.3});
+                        t3.to(".skillCon.skillContent1.cont2", {duration:0.3, opacity:1, delay:0.3});
+                        t3.to(".skillCon.skillContent1.cont3", {duration:0.4, opacity:1, delay:0.3});
+                        t3.to(".skillCon.skillContent1.cont4", {duration:0.5, opacity:1, delay:0.3});
+
+
+                        t3.to(".skillCon.skillContent1 h1", {duration:0.4, opacity:1, delay:0.4});
+                        t3.to(".skillCon.skillContent1 p", {duration:0.6, opacity:1 , delay:0.5});
+                        t3.to(".skillCon.skillContent1 .skillnumber", {duration:0.9, opacity:1 , delay:0.9});
+                        // t3.to(".number2", {duration:1, opacity:1 , delay:0.9});
+
+                        t3.to(".number1", {duration:0.5, opacity:1, delay:0.3});
+                        t3.to(".number2", {duration:0.5, opacity:1, delay:0.3});
+                        t3.to(".number3", {duration:0.5, opacity:1, delay:0.3});
+                        t3.to(".number4", {duration:0.5, opacity:1, delay:0.3});
+                        
+                       
+                        // 숫자가 올라가는 js
+                        $(function() {
+                            var count0 = count1 = count2 = 0;
+
+                            timeCounter();
+
+                            function timeCounter() {
+
+                                id0 = setInterval(count0Fn, 100);
+
+                                function count0Fn() {
+                                    count0++;
+                                    if (count0 > 90) {
+                                        clearInterval(id0);
+                                    } else {
+                                        $(".number1").text(count0+"%");
+                                    }
+                                }
+
+                                id1 = setInterval(count1Fn, 100);
+
+                                function count1Fn() {
+                                    count1++;
+                                    if (count1 > 90) {
+                                        clearInterval(id1);
+                                    } else {
+                                        $(".number2").text(count1+"%");
+                                    }
+                                }
+
+                                id2 = setInterval(count2Fn, 100);
+
+                                function count2Fn() {
+                                    count2++;
+                                    if (count2 > 80) {
+                                        clearInterval(id2);
+                                    } else {
+                                        $(".number3").text(count2+"%");
+                                    }
+                                }
+                            }
+                        });
+                                                
+                    }
+                    // if(scrollLacation > 2200) {
+                    //         $(function() {
+                    //         var cnt0 = 0;
+
+                    //         counterFn();
+
+                    //         function counterFn() {
+
+                    //         id0 = setInterval(count0Fn, 100);
+
+                    //         function count0Fn() {
+                    //             cnt0++;
+                    //             if (cnt0 > 100) {
+                    //             clearInterval(id0);
+                    //             } else {
+                    //             $(".number").text(cnt0);
+                    //             }
+                    //         }
+                    //         }
+                    //     });
+                    // }
+                });
+    </script>
+
+
+</body>
+</html>

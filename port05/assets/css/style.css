@@ -1,0 +1,918 @@
+/* layout */
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@font-face {
+    font-family: "esamanruBold";
+    src: url('../font/esamanru\ Bold.ttf');
+}
+
+@font-face {
+    font-family: "esamanruMedium";
+    src: url('../font/esamanru\ Medium.ttf');
+}
+@font-face {
+    font-family: "esamanruLight";
+    src: url('../font/esamanru\ Light.ttf');
+}
+
+
+.clearfix::after , .clearfix::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#contents {}
+#section1 {
+    height: 100vh;
+}
+#section2 {
+    height: 100vh;
+    
+}
+#section3 {
+    height: 100vh;
+    background-color: #df6129;
+}
+#section4 {
+    height: 100vh;
+}
+#section5 {height: 100vh; background-color: black;}
+#section6 {height: 100vh;}
+#section7 {height: 100vh; background-color: black;}
+
+
+
+
+/* sec1 */
+.sec1 {
+    height: 100vh;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+}
+.sec1::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 14px;
+    height: 1000px;
+    background: #000;
+}
+
+
+
+.top {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 100;
+    height: 35px;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.top h6 , .bottom h6{
+    width: 100px;
+    height: inherit;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 13px;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+    float: left;
+}
+
+.top .topDiv , .bottom .topDiv{
+    padding: 5px;
+    width: 120px;
+    height: 17px;
+    background-color: white;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+}
+
+.bottom {
+    position: absolute;
+    left: 0; bottom: 0;
+    z-index: 100;
+    height: 35px;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    height: 100vh;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+    font-family: 'Russo One', sans-serif;
+}
+.title span {
+    font-size: 4vw;
+    background: #000;
+    color: #fff;
+    padding: 7px 20px 0px 20px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.title h1 {
+    background: #fff;
+    font-size: 10vw;
+    padding: 4px 30px 0px 30px;
+    border: 10px solid #000;
+    letter-spacing: 0.3px;
+}
+.bg {
+    display: flex;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+}
+.bg .left {
+    width: 50vw;
+    height: 100vh;
+    background: #F9ED50;
+    position: relative;
+    overflow: hidden;
+}
+.bg .left .oneLeft{
+    width: 410px;
+    height: 410px;
+    background: linear-gradient(#ffffff 45%, #df6129 40%);
+    
+
+    transform: rotate(225deg);
+    position: absolute;
+    border-radius: 50%;
+    top: -150px;
+    left: -115px;
+    border: 14px solid black;
+}
+.bg .left::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 50vw solid #DF6129;
+    border-left: 50vw solid transparent;
+}
+.bg .left::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 14px;
+    height: 200%;
+    background: #000;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.bg .right {
+    width: 50vw;
+    height: 100vh;
+    background-color:#fff;
+    /* background-image: 
+        radial-gradient(black 20%, transparent 16%),
+        radial-gradient(black 20%, transparent 16%);
+    background-size: 60px 60px; */
+        background-image: 
+        radial-gradient(black 20%, transparent 16%),
+        radial-gradient(black 20%, transparent 16%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.bg .right::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 50vw solid #5FCFB1;
+    border-right: 50.1vw solid transparent;
+}
+.bg .right::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 14px;
+    height: 200%;
+    background: #000;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sec2{
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.son{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -22px;
+    left: 370px;
+}
+
+.sec2 .bottom2{
+    width: 100%;
+    bottom: -30px;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    z-index: 99;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+.sec2 .bottom2 h6{
+    color: white;
+    width: 100px;
+    height: inherit;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 13px;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+    float: left;
+
+}
+.sec2 .bottom2 .topDiv{
+    padding: 5px;
+    width: 120px;
+    height: 25px;
+    background-color: white;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    float: left;
+}
+
+
+
+.sec2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 14px;
+    height: 100%;
+    background: #000;
+}
+.seTwoLeft{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+
+}
+.seTwoLeft .seTwoWriteMain{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+
+.seTwoLeft .seTwoWrite{
+    padding: 15px 40px 10px 40px;
+}
+
+.seTwoLeft .seTwoWrite.write1{padding-top: 20px;
+height: 10%;
+ width: 100%;
+position: relative;
+}
+.seTwoLeft .seTwoWrite.write2{font-size: 40px; font-family: 'Russo One', sans-serif;
+letter-spacing: 1px;
+height: 48%; 
+font-family: 'Black Han Sans', sans-serif;
+
+}
+.seTwoLeft .seTwoWrite.write3{font-size: 20px;
+    height: 13%; 
+}
+.seTwoLeft .seTwoWrite.write4{font-family: 'Russo One', sans-serif;
+    height: 8%; 
+}
+.seTwoLeft .seTwoWrite.write5{font-size: 15px;font-family: 'Russo One', sans-serif;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px 0 0 40px ;
+    box-shadow: 5px 5px 0px 0px;
+    font-weight: bold;
+
+
+
+}
+.seTwoLeft .seTwoWrite.write5:hover{
+  
+    background-position: 1% 100%;
+    transition: all 0.7s ease-out;
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+}
+
+.seTwoRight{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.seTwoRight .contenLeft{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.seTwoRight .contenRight::after{
+    content: '';
+    width: 14px;
+    height: 100%;
+    background-color: black;
+    display: block;
+    z-index: 99;
+    position: absolute;
+}
+
+.seTwoRight .contenRight{
+    width: 50%;
+    height: 100%;
+    background-color: #01C39E;
+    float: left;
+}
+
+.seTwoRight .contenRight .crtitle{
+    position: absolute;
+    right: -110px;
+    top: 45%;
+    font-size: 30px;
+    transform: rotate(90deg);
+    font-size: 50px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.seTwoRight .seTwoOne{
+    width: 380px;
+    height: 380px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: linear-gradient(#ffffff 50%, #FBEE03 30%);
+    border-radius: 50%;
+    z-index: 98;
+    border: 14px solid black;
+}
+
+.seTwoRight img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.oneLeftImg{
+    position: absolute;
+    z-index: 9999;
+}
+.oneLeftImg2{
+    position: absolute;
+    z-index: 999;
+}
+
+.oneLeftImg3{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: rotate(45deg);
+}
+.oneLeftImg4{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: rotate(-45deg);
+}
+
+
+/* section3 */
+.skillTitle{
+    width: 300px;
+    height: 93px;
+    background-color: white;
+    margin: 0 auto;
+    border: 10px solid black;
+    /* border-top: 0; */
+    margin-bottom: 20px;
+    
+}
+
+.skillTitle.portview_title{
+    margin: 20px auto;
+}
+
+.skillTitle h1{
+font-size: 40px;
+height: 75px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Russo One', sans-serif;
+font-weight: bold;
+
+}
+
+.skillTitle2{
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    margin: 10px auto;
+}
+.skillTitle2 h1{
+    color: white;
+    height: inherit;
+    font-size: 8px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    
+    }
+
+.skillBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 960px;
+    height: 400px;
+    box-sizing: border-box;
+
+
+}
+
+.skillCon.skillContent1{width: 300px; height: 400px; background-color: white; float: left;
+border: 10px solid black;
+box-sizing: border-box;
+margin: 10px;
+font-family: 'Russo One', sans-serif;
+
+}
+.skillCon.skillContent1 h1,
+.skillCon.skillContent2 h1,
+.skillCon.skillContent3 h1
+{
+    padding: 30px 0;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.skillCon.skillContent1 p,
+.skillCon.skillContent2 p,
+.skillCon.skillContent3 p
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+.skillCon.skillContent1 .skillnumber,
+.skillCon.skillContent2 .skillnumber,
+.skillCon.skillContent3 .skillnumber
+{
+    font-size: 80px;
+    padding-top: 30px;
+}
+.skillCon.skillContent2{width: 300px; height: 400px; background-color: white; float: left;
+    border: 10px solid black;
+    box-sizing: border-box;
+margin: 10px;
+font-family: 'Russo One', sans-serif;
+}
+.skillCon.skillContent3{width: 300px; height: 400px; background-color: white; float: left;
+    border: 10px solid black;
+    box-sizing: border-box;
+margin: 10px;
+font-family: 'Russo One', sans-serif;
+}
+
+
+/* section4 */
+#section3{
+    position: relative;
+}
+#section4{
+    position: relative;
+}
+.section4_content{width: 900px;
+height: 400px;
+position: absolute;
+top: 47%;
+left: 50%;
+transform: translate(-50%, -40%);
+display: flex;
+}
+
+.section5_content{
+    width: 600px;
+}
+.section6_content{
+    width: 500px;
+    height: 440px;
+}
+
+
+#section6 .seTwoWrite2.write6{
+    font-size: 15px;font-family: 'Russo One', sans-serif;
+    border: 3px solid black;
+    padding: 10px;
+    /* margin: 10px 0 0 40px ; */
+    box-shadow: 5px 5px 0px 0px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+
+
+}
+
+
+.section4_content .constent4{
+    width: 33.33%;
+    height: 100%;
+    border: 10px solid black;
+    box-sizing: border-box;
+    margin: 0 20px;
+
+
+}
+
+.section4_content .const5{
+    width: 100%;
+}
+.section4_content .const6{
+    width: 100%;
+}
+
+.section4_content .constent4.con1,
+.section4_content .constent4.con2,
+.section4_content .constent4.con3{
+    position: relative;
+}
+
+
+.section4_content .constent4.con1 .textBottom,
+.section4_content .constent4.con2 .textBottom,
+.section4_content .constent4.con3 .textBottom{
+    background-color: #000;
+    width: 20%;
+    color: white;
+    text-align: center;
+    padding: 3px 10px 6px 10px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.section4_content .constent4.con1 .textTop,
+.section4_content .constent4.con2 .textTop,
+.section4_content .constent4.con3 .textTop{
+    
+    background-color: #000;
+    width: 30%;
+    color: white;
+    text-align: center;
+    padding: 3px 10px 6px 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section4_content .constent4.con1 .con1Top{width: 100%;
+height: 60%; background-color: #52190D;}
+
+.section4_content .constent4.con2 .con1Top{width: 100%;
+    height: 60%; background-color: #FBEE03;}
+
+    .section4_content .constent4.con3 .con1Top{width: 100%;
+        height: 60%; background-color: #154136;}
+.section4_content .constent4.con1 .con1Bottom{
+    width: 100%;
+height: 40%;
+background-color: white;
+}
+
+.section4_content .constent4.con1 .con1Bottom h1,
+.section4_content .constent4.con2 .con1Bottom h1,
+.section4_content .constent4.con3 .con1Bottom h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 30px 10px 10px 10px;
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+}
+.section4_content .constent4.con1 .con1Bottom.portView h1,
+.section4_content .constent4.con2 .con1Bottom.portView h1,
+.section4_content .constent4.con3 .con1Bottom.portView h1
+{padding: 16px 10px 0px 10px;}
+
+
+.section4_content .constent4.con1 .con1Bottom p,
+.section4_content .constent4.con2 .con1Bottom p,
+.section4_content .constent4.con3 .con1Bottom p{
+    text-align: center;
+    padding: 10px 10px;
+
+}
+.section4_content .constent4.con2 .con1Bottom{
+    width: 100%;
+height: 40%;
+}
+.section4_content .constent4.con3 .con1Bottom{
+    width: 100%;
+height: 40%;
+}
+
+.section4_content .constent4.con1 .con1bar::after,
+.section4_content .constent4.con2 .con1bar::after,
+.section4_content .constent4.con3 .con1bar::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    background-color: black;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section4_content .constent4.con1 .con1Top img{
+    width: 100%;
+    height: 100%
+}
+
+
+#section5{
+    position: relative;
+}
+#section6{
+    position: relative;
+}
+
+
+#section3 .bottom2 , #section4 .bottom2,
+#section5 .bottom2 , #section6 .bottom2
+{
+    width: 100%;
+    bottom: -30px;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    z-index: 99;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    overflow-x: hidden;
+}
+#section3 .bottom2 h6, #section4 .bottom2 h6,
+#section5 .bottom2 h6,
+#section6 .bottom2 h6{
+    color: white;
+    width: 100px;
+    height: inherit;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+    float: left;
+
+}
+#section3 .bottom2 .topDiv , #section4 .bottom2 .topDiv,
+#section5 .bottom2 .topDiv,
+#section6 .bottom2 .topDiv{
+    padding: 5px;
+    width: 120px;
+    height: 25px;
+    background-color: white;
+    margin: 0 15px 0 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    float: left;
+}
+
+
+/* section6 */
+.writeAnimation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+/* section8 */
+#section8{height: 100vh;
+background-color: black;}
+#section8 .layoutLastLeft{
+    width: 30%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+#section8 .layoutLastLeft p{
+    font-family: 'Russo One', sans-serif;
+    width: 100%;
+    transform: rotate(-90deg);
+    font-size: 65px;
+    position: absolute;
+    top: 44%;
+    left: 0;
+    color: white;
+
+}
+#section8 .layoutLastRight{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#section8 .layoutLastRight2{
+    width: 20%;
+    height: 100%;
+}
+
+#section8 .layoutLastRight .llrTop{
+    
+    padding: 25px 0 0 0;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+#section8 .layoutLastRight .llrTop p{
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#section8 .layoutLastRight .llrmiddle{
+    height: 55%;
+}
+
+#section8 .layoutLastRight .llrmiddle input{
+    display: block;
+    width: 90%;
+    height: 15%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#section8 .layoutLastRight .llrmiddle .bottomInput{
+    height: 60%;
+}
+
+#section8 .layoutLastRight .llrBottom{
+    text-align: center;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+#section8 .layoutLastRight .llrBottom .llrBtn{
+    
+    padding: 10px 30px;
+    background-color: white;
+    outline: none;
+}
+
+.colorWhite{
+    border: 10px solid white;
+    border-top: 0;
+    background-color: black;
+    color: white;
+}
+
+.section4_content .constent4.const5{
+    border-color: white;
+}
+
+
+/* 로딩화면 */
+
+.loading{
+    font-size: 100px;
+    letter-spacing: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    background:#fff;
+    z-index:3000;
+    font-family: 'Russo One', sans-serif;
+}
+.loading2{
+    font-size: 30px;
+    letter-spacing: 10px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+.loading span {
+    display: inline-block;
+    margin: 0 -.05em;
+    animation: loading 1s infinite;
+  }
+  .loading span:nth-child(2) {
+    animation-delay: .1s;
+  }
+  .loading span:nth-child(3) {
+    animation-delay: .2s;
+  }
+  .loading span:nth-child(4) {
+    animation-delay: .3s;
+  }
+  .loading span:nth-child(5) {
+    animation-delay: .4s;
+  }
+  .loading span:nth-child(6) {
+    animation-delay: .5s;
+  }
+  .loading span:nth-child(7) {
+    animation-delay: .6s;
+  }
+  @keyframes loading {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+  }
