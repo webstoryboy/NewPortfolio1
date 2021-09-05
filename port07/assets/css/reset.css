@@ -1,0 +1,312 @@
+@charset "utf-8"; 
+/* 여백 초기화 */
+body, ul, div, li, dl, dd, dt, ol,
+h1, h2, h3, h4, h5, h6,
+input, fieldset, legend, p, select, table, th, td, tr,
+textarea, button, form, figure, figcaption { 
+    margin: 0; padding: 0; 
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F8F4F0;
+    overflow-x: hidden;
+    border-top: 1px solid #000;
+}
+
+*,
+*::after,
+*::before { box-sizing: border-box; } 
+
+
+/* a 링크 초기화 */
+a { color: #222; text-decoration: none; } 
+
+a:hover { color: #a59984; } 
+
+/* 폰트 초기화 */
+body, input, textarea,
+select, button, table { 
+    font-family: S-Core Dream; font-weight: 200; font-style: normal; 
+    color: #222; font-size: 13px; line-height: 1.5; 
+} 
+
+/* 폰트 스타일 초기화 */
+em,
+address { font-style: normal; } 
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol { list-style: none; } 
+
+/* 제목 태그 초기화 */
+h1, h2, h3, h4, h5, h6 { 
+    font-size: 2vw; font-weight: 200; 
+    color: #222; font-style: normal; 
+} 
+
+/* 테두리 초기화 */
+img,
+fieldset { border: 0 none; } 
+
+/* 버튼 초기화 */
+button { border: 0; } 
+
+/* 반응형 */
+video,
+img { width: 100%; } 
+
+/* clearfix */
+.clearfix { *zoom: 1; } 
+
+.clearfix:before,
+.clearfix:after { display: block; content: ""; line-height: 0; } 
+
+.clearfix:after { clear: both; } 
+
+/* IR 효과 */
+.ir_pm { display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px; } 
+/* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
+
+.ir_wa { display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%; } 
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+
+.ir_so { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; } 
+/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
+
+/* .star */
+.star {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    left: -0.9vw;
+}
+.star2 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    right: 0vw;
+}
+.star-top {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: -0.9vw;
+    bottom: 46%;
+    transform: translateY(-46%);
+}
+.star-mid {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    left: 48.3%;
+}
+.star span, .star2 span, .star-top span, .star-mid span {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/Star\ 22.svg) center no-repeat;
+    background-size: 50%;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* .triangle */
+.triangle {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: -0.9vw;
+}
+.triangle1 {
+    display: none;
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 46.2%;
+    transform: translateX(46.5%);
+}
+.triangle2 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    right: 0vw;
+}
+.triangle4 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 33.3%;
+    transform: translate(-40%);
+}
+.triangle5 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 66.5%;
+    transform: translate(-40%);
+}
+.triangle span, .triangle1 span, .triangle2 span, .triangle4 span, .triangle5 span {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/Polygon\ 8.svg) center no-repeat;
+    background-size: 40%;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* .circle */
+.circle {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    left: -1vw;
+}
+.circle2 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    right: -0vw;
+}
+.circle3 {
+    display: none;
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 24vw;
+}
+.circle-top {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: -0.9vw;
+    bottom: 46%;
+    transform: translateY(-46%);
+}
+.circle span, .circle2 span, .circle3 span, .circle-top span {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/circle.svg) center no-repeat;
+    background-size: 30%;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* .square */
+.square {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    left: -0.9vw;
+}
+.square2 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -0.9vw;
+    right: 0vw;
+}
+.square3 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 50%;
+    transform: translate(-45%);
+}
+.square4 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 33.3%;
+    transform: translate(-45%);
+}
+.square5 {
+    z-index: 101;
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    bottom: -1vw;
+    left: 66.5%;
+    transform: translate(-45%);
+}
+.square span, .square2 span, .square3 span, .square4 span, .square5 span {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: url(../images/square.svg) center no-repeat;
+    background-size: 30%;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* ----------------- */
+/* grid-frame */
+
+/* .lineLeft */
+.lineLeft { z-index: 10; position: absolute; left: 0; top: 0; height: 100%; width: 0; background: #000; display: block; } 
+.lineLeft::before { content: ""; width: 1px; height: calc(100% + 2vw); background: #000; position: absolute; left: -1vw; top: -1vw; } 
+.lineLeft::after { content: ""; width: 1px; height: calc(100% + 2vw); background: #000; position: absolute; left: 1vw; top: -1vw; } 
+
+/* lineBottom */
+.lineBottom { z-index: 10; width: calc(100% + (1vw)); height: 0; background: #000; position: absolute; display: block; left: 0; bottom: 0; } 
+.lineBottom::before { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: -1vw; left: -1vw; } 
+.lineBottom::after { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: 1vw; left: -1vw; } 
+
+/* lineBottomLast */
+.lineBottomLast { z-index: 10; width: calc(100% + (1vw)); height: 0; background: #000; position: absolute; display: block; left: 0; bottom: 0;} 
+.lineBottomLast::before { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: -1vw; left: 0vw;} 
+.lineBottomLast::after { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: 1vw; left: 0vw;} 
+
+/* minLine */
+.minLine { z-index: 100; z-index: 10; position: absolute; left: 50%; bottom: 0; height: 1vw; width: 0; background: #000; display: block; } 
+.minLine::before { content: ""; width: 1px; height: 100%; background: #000; position: absolute; left: -1vw; top: 0vw; } 
+.minLine::after { content: ""; width: 1px; height: 100%; background: #000; position: absolute; left: 1vw; top: 0vw; } 
+
+/* minLineLeft */
+.minLineLeft { z-index: 10; position: absolute; left: 50%; bottom: 0; height: 2vw; width: 0; background: #000; display: block; } 
+.minLineLeft::before { content: ""; width: 1px; height: calc(100%); background: #000; position: absolute; left: -1vw; top: 1vw; } 
+.minLineLeft::after { content: ""; width: 1px; height: calc(100%); background: #000; position: absolute; left: 1vw; top: 1vw; } 
+
+/* miniBottom */
+.minLineBtm2 { z-index: 10; width: 1vw; height: 0; background: #000; position: absolute; display: block; left: 1vw; top: 50%; } 
+.minLineBtm2::before { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: -1vw; left: -1vw; } 
+.minLineBtm2::after { content: ""; width: 100%; height: 1px; background: #000; position: absolute; bottom: 1vw; left: -1vw; } 

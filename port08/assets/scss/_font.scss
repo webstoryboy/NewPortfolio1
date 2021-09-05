@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spyagency3_2halfital';
+    src: url('../font/spyagency3_2halfital.woff');
+}
+
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+.nanumbrushscript * {
+ font-family: 'Nanum Brush Script', cursive;
+}
+
+@font-face {
+    font-family:'Spy_Agency_Expa_nded_Italic';
+    src: url("../font/Spy_Agency_Expa_nded_Italic.woff");
+}
+@font-face {
+    font-family:RIVERFLOWS;
+    src: url(../font/RIVERFLOWS.woff);
+}
+
+$font-spy1 : spyagency3_2halfital;
+$font-spy2 : Spy_Agency_Expa_nded_Italic;
+$font-nexon1 : NEXON Lv1 Gothic OTF Light;
+$font-nexon2 : NEXON Lv1 Gothic OTF Bold;
+$font-nanum1 : Nanum Brush Script;
+

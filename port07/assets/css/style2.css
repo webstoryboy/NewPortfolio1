@@ -1,0 +1,111 @@
+/* layout */
+* {margin: 0; padding: 0;}
+body {background: #F7F4F0;}
+
+#contents {}
+
+#section1 {}
+
+#section2 {}
+
+#section3 {}
+
+#section4 {}
+
+#section5 {}
+
+#section6 {}
+
+/* box */
+.box-wrap {
+    display: flex;
+}
+
+.box-wrap .left {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap; /* 한줄이 꽉 차면 다음줄로 자동으로 넘어가게 함 */
+}
+
+.box-wrap .right {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 0 0 50%;
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+}
+
+.box .lineLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #000;
+    display: block;
+}
+
+.box .lineLeft::before {
+    content: '';
+    width: 1px;
+    height: calc(100% + 1vw);
+    background: #000;
+    position: absolute;
+    left: -1vw;
+    top: 0;
+}
+
+.box .lineLeft::after {
+    content: '';
+    width: 1px;
+    height: calc(100% + 1vw);
+    background: #000;
+    position: absolute;
+    left: 1vw;
+    top: 0;
+}
+
+.box .lineBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: calc(100% + 1vw);
+    background: #000;
+    display: block;
+}
+
+.box .lineBottom::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: -1vw;
+    left: -1vw;
+}
+
+.box .lineBottom::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 1vw;
+    left: -1vw;
+}
+
+#section1 .box-wrap .left span {
+    position: absolute;
+    width: 152px;
+    height: 86px;
+    left: 50px;
+    top: 39px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
