@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* webfont */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@font-face {font-family: 'Cafe24Danjunghae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
+/* font-family: 'Playfair Display SC', serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Cafe24Danjunghae'; */
+
+
+/* layout */
+#nav {position: relative;}
+#contents {}
+#section1 {
+    min-height: 100vh;
+    background: #FEE050 url(../img/bg-blue.svg) no-repeat center top;
+    background-size: cover;
+}
+#section1 svg {
+    position: absolute; left: 0; top: 0;
+}
+#section2 {
+    height: 270vh;
+    background: #FFFFFF url(../img/bg-yellow.svg) no-repeat center top;
+    background-size: cover;
+}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+
+/* nav */
+.nav {position: absolute; top: 25px; right: 90px;}
+.nav ul {text-align: center;}
+.nav li {display: inline-block; margin: 0 20px;}
+.nav li a {color: #fff; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: 300;}
+.mNav {position: fixed; top: 20px; right: 30px;}
+.mNav .ham {display: block; width: 25px; height: 10px; /* background: rgba(0,0,0,0.4); */ padding: 17px 10px 10px 10px;}
+.mNav .ham span {position: relative; display: block; width: 25px; height: 2px; background: #fff;}
+.mNav .ham span:before {content: ''; width: 25px; height: 2px; background: #fff; position: absolute; left: 0; top: -7px;}
+.mNav .ham span:after {content: ''; width: 25px; height: 2px; background: #fff; position: absolute; left: 0; bottom: -7px;}
+
+/* section1 : home */
+.sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 90vh; flex-direction: column;}
+.sec1 h1 {font-size: 6vw; font-family: 'Playfair Display SC', serif; font-weight: 900;}
+.sec1 p.desc {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px;}
+
+/* section2 : about */
+.sec2 {padding: 250px 0;}
+.sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec2 .object {height: 75vh; position: relative;}
+.sec2 .object .pt {position: absolute;}
+.sec2 .object .pt > div {background: #19057A; border: 5px solid #19057A;}
+.sec2 .object .pt > img {border: 5px solid #19057A;}
+.sec2 .object .p-1 {top: 60px; left: 30%;}
+.sec2 .object .p-1 > div {position: relative; width: 200px; height: 200px; border-radius: 50%;}
+.sec2 .object .p-1 > img {position: absolute; width: 200px; height: 200px; border-radius: 50%; top: -10px; left: -10px;}
+.sec2 .object .p-2 {top: 350px; left: 10%;}
+.sec2 .object .p-2 > div {position: relative; width: 320px; height: 320px;}
+.sec2 .object .p-2 > img {position: absolute; width: 320px; height: 320px; top: -10px; left: -10px;}
+.sec2 .object .p-3 {top: 200px; left: 67%;}
+.sec2 .object .p-3 > div {position: relative; width: 230px; height: 460px; border-radius: 0 230px 230px 0; transform: rotate(-27deg);}
+.sec2 .object .p-3 > img {position: absolute; width: 230px; height: 460px; border-radius: 0 230px 230px 0; transform: rotate(-27deg); top: -20px; left: -20px;}
+.sec2 .object .ob {position: absolute; z-index: 10;}
+.sec2 .object .b-1 {top: 550px; left: 50%;}
+.sec2 .object .b-2 {top: 280px; left: 22%;}
+.sec2 .object .b-3 {top: 100px; right: 10%;}
+.sec2 .object .b-4 {top: 500px; right: 5%;}
+.sec2 .object .ob {position: absolute; z-index: 20;}
+.sec2 .object .s-1 {top: 100px; left: 0;}
+.sec2 .object .s-2 {top: 550px; left: 35%;}
+.sec2 .object .s-3 {top: 60px; right: 2%;}
+.sec2 .ability {height: 60vh; position: relative;}
+.sec2 .ability ul {text-align: center; color: #19057A; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 30px;}
+.sec2 .ability ul li {float: left; width: 28.5%; height: 20vh; top: 80px; position: relative;}
+.sec2 .ability ul:last-child li {float: right; top: 50px;}
+.sec2 .ability ul li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.sec2 .ability ul li span {display: block; margin: 70px 0;}
+.sec2 .intro {color: #19057A;}
+.sec2 .intro ul {padding: 0 2%;}
+.sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
+.sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4;}
+.sec2 .intro ul.que:after {content: ''; width: 5px; height: 410px; background: #fff; position: absolute; right: -2%; top: 0;}
+
+/* section3 : works */
+.sec3 {padding: 250px 0;}
+.sec3 h2 {color: #19057A; text-align: right; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900; margin-bottom: 50px;}
+.sec3 .project {height: 75vh; background: rgba(0,0,0,0.2); margin: 100px 0;}
+.sec3 .project:first-child {width: 700px;}
+
+
+
+
+/* media query */
+@media (max-width: 1280px) {}
+@media (max-width: 1024px) {}
+@media (max-width: 960px) {}
+@media (max-width: 768px) {}
+@media (max-width: 600px) {}
+@media (max-width: 480px) {}
+@media (max-width: 360px) {}

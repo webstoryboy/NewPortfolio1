@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* ---------------------- media query ---------------------- */
+/* #section1,
+ #section2,
+#section3, 
+#section4,
+#section5 {display: none;} */
+
+
+@media (max-width: 1500px) { /* 0 ~ 1500px */
+    .container {width: 100%;}
+    .sec2 .intro ul.ans li:nth-child(3) span {display: none;}
+    .sec3 .site-wrap {padding: 200px 20px 0 20px;}
+    .sec4 h2 {margin-left: 20px;}
+    .sec4 .ani {position: relative;}
+    .sec4 .ani .ani-wrap {margin: 0; width: 60%; height: 350px;}
+    .sec4 .ani .ani-wrap:hover {width: 80%;}
+    .sec4 .ani h3 {width: 60%; line-height: 3em;}
+    .sec4 .ani-left .ani-wrap {float: right; margin: 0 10% 0 30%;}
+    .sec4 .ani-left .ani-wrap:hover {margin: 0 10%;}
+    .sec4 .ani-left h3 {margin: 0 calc(10% - 5px) 0 calc(30% - 5px);}
+    .sec4 .ani-right .ani-wrap {float: left; margin: 0 33% 0 7%;}
+    .sec4 .ani-right .ani-wrap:hover {margin: 0 13% 0 7%;}
+    .sec4 .ani-right h3 {margin: 0 calc(33% - 5px) 0 calc(7% - 5px);}
+}
+
+@media (max-width: 1280px) { /* 0 ~ 1280px */
+    .container {width: 100%;}
+    .mNav .menu .left li {font-size: 70px;}
+    .sec1 .title {font-size: 180px;}
+    .sec1 .object .b-1 {left: 300px; top: -40px;}
+    .sec1 .object .b-2 {left: -600px; top: -700px;}
+    .sec1 .object .s-1 {right: 180px; top: -380px;}
+    .sec1 .object .s-2 {left: -290px; top: -185px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;}
+    .sec2 .object-fix .s-5 {top: 750px; right: 0px;}   
+    .sec3 .title h2 {font-size: 60px;}
+    .sec3 .title p {font-size: 20px;}
+    .sec3 .site .desc-box .desc {font-size: 18px;}
+    .sec4 h2 {font-size: 60px;}
+    .sec5 .right h2 {font-size: 60px;}
+    .sec5 .object .b-1 {left: 462px;}
+    .sec5 .object .pencil {bottom: -77px;}
+}
+
+@media (max-width: 1024px) { /* 0 ~ 1024px */
+    #section1 svg {transform-origin: left top; transform: scale(0.8); animation: opening-8 1s linear; -webkit-animation: opening-8 1s linear;}
+    @keyframes opening-8 {
+        0% {transform: translateY(-200px) scale(0.8);}
+        100% {transform: translateY(0) scale(0.8);}
+    }
+    -webkit-@keyframes opening-8 {
+        0% {transform: translateY(-200px) scale(0.8);}
+        100% {transform: translateY(0) scale(0.8);}
+    }
+    .sec1 .title {font-size: 150px;}
+    .sec2 .ment p {padding: 90px 150px;}
+    .sec2 .ment p:before {top: 34px; left: 92px; font-size: 150px;}
+    .sec2 .ment p:after {bottom: 34px; right: 92px; font-size: 150px;}
+    .sec2 .intro ul.ans span {display: none;}
+    .sec2 .skill .left .ab {padding: 20px 50px 20px 80px;}
+    .sec2 .skill .right .ab {padding: 20px 80px 20px 50px;}
+    .sec3 .site .view {height: 300px; box-shadow: 25px 25px 0 0 #19057A;}
+    .sec3 .site .view img {width: 108%; transform: translateX(-4%);}
+    .sec3 .site .btn li {margin-bottom: 20px;}
+    .sec3 .site .btn li.mint {margin-left: 20px;}
+    .sec3 .site .desc-box h3 {font-size: 50px;}
+    .sec4 .ani .ani-wrap .desc p {padding: 100px 0 20px 0; font-size: 18px;}
+    #section5 svg {transform-origin: right bottom; transform: scale(0.8);}
+}
+
+@media (max-width: 960px) { /* 0 ~ 960px */
+    #section1 svg {transform: scale(0.7); animation: opening-7 1s linear; -webkit-animation: opening-7 1s linear;}
+    @keyframes opening-7 {
+        0% {transform: translateY(-200px) scale(0.7);}
+        100% {transform: translateY(0) scale(0.7);}
+    }
+    -webkit-@keyframes opening-7 {
+        0% {transform: translateY(-200px) scale(0.7);}
+        100% {transform: translateY(0) scale(0.7);}
+    }
+    .nav ul {display: none;}
+    .mNav .menu .left {width: 100%;}
+    .mNav .menu .left li.mob {display: inline-block; padding-right: 30px;}
+    .mNav .menu .left li.mob a:hover {color: #FEE050;}
+    .mNav .menu .right {display: none;}
+    .sec1 .title {display: none;}
+    .sec1 .title-mob {display: block; font-size: 150px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out; z-index: 500;}
+    .sec1 .title-mob .rainbow {-webkit-animation: rainbow 1.5s ease-in-out infinite; animation: rainbow 1.5s ease-in-out infinite; -webkit-animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
+    .sec1 .title-mob .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s; -webkit-animation-delay: 0.5s;}
+    .sec1 .title-mob .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s; -webkit-animation-delay: 0.4s;}
+    .sec1 .title-mob .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s; -webkit-animation-delay: 0.3s;}
+    .sec1 .title-mob .rainbow:nth-child(4) {color: #fff; position: absolute; top: 0; right: 9px;}
+    .sec1 p.desc {padding-top: 50px;}
+    .sec1 .object .b-1 {left: 200px; top: -100px; width: 200px;}
+    .sec1 .object .b-2 {left: -400px; top: -800px; width: 300px;}
+    .sec1 .object .s-1 {right: 130px; top: -800px;}
+    .sec1 .object .s-2 {left: -300px; top: -400px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;} 
+    .sec2 {padding: 150px 0 250px 0;}
+    .sec2 h2 {font-size: 50px;}
+    .sec2 .object .p-1 > img {width: 180px; height: 180px;}
+    .sec2 .object .p-2 > img {width: 240px; height: 240px;}
+    .sec2 .object .p-3 > img {width: 160px; height: 320px; border-radius: 0 160px 160px 0;}
+    .sec2 .object .ob {width: auto; height: 130px;}
+    .sec2 .ment p {padding: 90px 80px;}
+    .sec2 .ment p:before {top: 34px; left: 42px; font-size: 100px;}
+    .sec2 .ment p:after {bottom: 34px; right: 42px; font-size: 100px;}
+    .sec2 .intro ul.que {width: 45%;}
+    .sec2 .intro .line {left: 49%;}
+    .sec2 .intro ul.ans {float: left; width: 45%;}
+    .sec2 .skill .left .ab {padding: 20px 80px;}
+    .sec2 .skill .right .ab {padding: 20px 80px;}
+    #section3 {background: #fff url(../img/wave-blue-2.svg) no-repeat center top;}
+    .sec3 .title {height: 214px;}
+    .sec3 .title h2 {flex: 0 0 100%; text-align: center; font-size: 60px;}
+    .sec3 .title p {display: none;}
+    .sec3 .title .object .b-1 {width: 180px; height: 180px;}
+    .sec3 .title .object .s-1 {top: -360px; left: -842px;}
+    .sec3 .site {margin: 50px 0 200px 0;}
+    .sec3 .site .btn li {width: 175px; font-size: 16px;}
+    .sec3 .site .btn li a {padding: 13px 10px;}
+    .sec3 .site .btn li:hover {width: 200px;}
+    .sec3 .site .desc-box .desc {font-size: 16px;}
+    .sec3 .site .line {display: none;}
+    
+    .sec4 {position: static; padding: 100px 0 0 0; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    .sec4 .line {display: none;}
+    .sec4 .ani .ani-wrap {margin: 0; width: calc(100% - 10px); height: 300px; box-shadow: 100px 100px 0 -75px #19057A;}
+    .sec4 .ani .ani-wrap .desc p {padding: 75px 0 20px 0; font-size: 16px;}
+    .sec4 .ani h3 {margin: 0; width: 100%; line-height: 2.2em;}
+    .sec4 .ani-left {position: static; width: 80%; box-sizing: border-box; transition: none; margin: 0;}
+    .sec4 .ani-left .ani-wrap {margin: 0;}
+    .sec4 .ani-left .ani-wrap:hover {width: calc(100% - 10px); margin: 0;}
+    .sec4 .ani-right {position: static; width: 80%; box-sizing: border-box; transition: none; margin: 0;}
+    .sec4 .ani-right .ani-wrap {margin: 0;}
+    .sec4 .ani-right .ani-wrap:hover {width: calc(100% - 10px); margin: 0;}
+    .sec4.show .ani-left {float: none; opacity: 1; transform: translateX(0);}
+    .sec4.show .ani-right {opacity: 1; transform: translateX(0);}
+    .sec4 .ani .anima {float: none; margin-bottom: 40px; opacity: 0;}
+    .sec4.show .ani .anima {opacity: 1; transform: translateX(0);}
+    
+    #section5 svg {transform-origin: right bottom; transform: scale(0.7);}
+    .sec5 .contact {height: 700px;}
+    .sec5 {padding: 100px 0 50px 0;}
+    .sec5 .left {margin: 20px;}
+    .sec5 .right {margin: 20px;}
+    .sec5 .right h2 {font-size: 50px;}
+    .sec5 .object .pencil {width: 260px;}
+    .sec5 .object .b-1 {left: 384px;}
+    .sec5 .object .s-1 {left: 5px; bottom: 370px;}
+    .sec5 .object .s-2 {display: none;}
+}
+
+@media (max-width: 768px) { /* 0 ~ 768px */
+    #section1 svg {transform: scale(0.5); animation: opening-5 1s linear; -webkit-animation: opening-5 1s linear;}
+    @keyframes opening-5 {
+        0% {transform: translateY(-200px) scale(0.5);}
+        100% {transform: translateY(0) scale(0.5);}
+    }
+    -webkit-@keyframes opening-5 {
+        0% {transform: translateY(-200px) scale(0.5);}
+        100% {transform: translateY(0) scale(0.5);}
+    }
+    .sec1 .object .b-1 {left: 200px; top: -50px; width: 150px;}
+    .sec1 .object .b-2 {left: -300px; top: -650px; width: 200px;} 
+    .sec2 .object {height: 700px;}
+    .sec2 .object .p-1 {left: 20%;}
+    .sec2 .object .p-1 > img {width: 150px; height: 150px;}
+    .sec2 .object .p-2 > img {width: 200px; height: 200px;}
+    .sec2 .object .p-3 > img {width: 140px; height: 280px; border-radius: 0 140px 140px 0;}
+    .sec2 .object .b-1 {width: 100px;}
+    .sec2 .object .b-2 {width: 150px;}
+    .sec2 .object .b-3 {width: 100px;}
+    .sec2 .object .b-4 {width: 150px;}
+    .sec2 .object .s-1 {display: none;}
+    .sec2 .object-fix .s-4 {top: 280px; left: 20px;}
+    .sec2 .object-fix .s-5 {top: 1065px; right: 10px;}
+    .sec2 .ment p {padding: 90px 50px; font-size: 20px;}
+    .sec2 .ment p span {font-size: 22px;}
+    .sec2 .intro {height: 400px;}
+    .sec2 .intro ul.que {font-size: 30px;}
+    .sec2 .intro ul.ans {font-size: 20px; line-height: 2.7em;}
+    .sec2 .intro .line {height: 328px;}
+    .sec2 .skill {height: 300px;}
+    .sec2 .skill h3 {font-size: 35px;}
+    .sec2 .skill .ability .progress-title {font-size: 21px;}
+    .sec2 .skill .left .ab {padding: 20px 40px;}
+    .sec2 .skill .right .ab {padding: 20px 40px;}
+    
+    .sec3 .title .object .s-1 {left: -645px;}
+    .sec3 .site .view {height: 200px; box-shadow: 20px 20px 0 0 #19057A;}
+    .sec3 .site .btn li {width: 150px; font-size: 14px; margin-bottom: 25px;}
+    .sec3 .site .btn li.mint {margin-left: 15px;}
+    .sec3 .site .btn li:hover {width: 170px;}
+    .sec3 .site .bot {height: auto;}
+    .sec3 .site .desc-box {width: 100%;}
+    .sec3 .site .tab-box {display: none;}
+    
+    #section5 svg {transform-origin: right bottom; transform: scale(0.5);}
+    .sec5 .contact {height: 500px;}
+    .sec5 .left {display: none;}
+    .sec5 .right {flex: 0 0 100%; text-align: center;}
+    .sec5 .right h2 {text-align: center;}
+    .sec5 .right ul li {z-index: 1000;}
+}
+
+@media (max-width: 600px) { /* 0 ~ 600px */
+    .mNav {top: 10px; right: 10px;}
+    .mNav .menu .left li {font-size: 60px;}
+    #section1 svg {transform: scale(0.3); animation: opening-3 1s linear; -webkit-animation: opening-3 1s linear;}
+    @keyframes opening-3 {
+        0% {transform: translateY(-200px) scale(0.3);}
+        100% {transform: translateY(0) scale(0.3);}
+    }
+    -webkit-@keyframes opening-3 {
+        0% {transform: translateY(-200px) scale(0.3);}
+        100% {transform: translateY(0) scale(0.3);}
+    }
+    .sec1 .title-mob {font-size: 120px;}
+    .sec1 .title-mob .rainbow {text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 5px 5px 0 rgba(0,0,0,0.2);}
+    .sec1 p.desc {font-size: 20px;}
+    .sec2 {padding: 100px 0 250px 0;}
+    .sec2 h2 {font-size: 40px; padding: 0 127px;}
+    .sec2 .object {height: 600px;}
+    .sec2 .object .p-2 {top: 300px; left: 10%;}
+    .sec2 .object .p-2 > img {width: 160px; height: 160px;}
+    .sec2 .object .p-3 > img {width: 120px; height: 240px; border-radius: 0 120px 120px 0;}
+    .sec2 .object .b-1 {width: 80px; top: 400px;}
+    .sec2 .object .b-2 {width: 120px; top: 200px;}
+    .sec2 .object .b-3 {width: 80px;}
+    .sec2 .object .b-4 {display: none;}
+    .sec2 .object .s-2 {display: none;}
+    .sec2 .object .s-3 {top: 30px;}
+    .sec2 .intro {height: 300px;}
+    .sec2 .intro ul.que {font-size: 25px;}
+    .sec2 .intro ul.ans {font-size: 17px; line-height: 2.7em;}
+    .sec2 .intro .line {height: 276px; width: 3px;}
+    .sec2 .skill .ability .progress {border: 3px solid #19057A;}
+    .sec2 .skill .ability .progress .progress-bar:after {border: 3px solid #19057A;}
+    .sec3 .title .object .b-1 {width: 263px;}
+    .sec3 .title .object .s-1 {left: -500px; top: -370px;}
+    .sec3 .site .top {display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative;}
+    .sec3 .site .view {width: 90%; margin-left: -20px;}
+    .sec3 .site .view img {bottom: 12px;}
+    .sec3 .site .btn {position: static; height: 100px; width: 100%;}
+    .sec3 .site .btn ul {display: flex; justify-content: center; flex-direction: row; bottom: 0; width: 100%;}
+    .sec3 .site .btn li {flex: 0 0 45%; margin: 0;}
+    .sec3 .site .btn li:hover {background: #FEE050;}
+    .sec3 .site .btn li a {padding: 9px 10px;}
+    .sec3 .site .btn li a i {font-size: 17px;}
+    .sec3 .site .bot {margin-top: 30px;}
+    .sec3 .site .desc-box {text-align: center;}
+    .sec3 .site .desc-box h3 {font-size: 40px;}
+    .sec3 .site .desc-box .desc {font-size: 14px;}
+    .sec4 {padding: 0;}
+    .sec5 .right h2 {font-size: 40px;}
+    .sec5 .right ul {font-size: 18px;}
+}
+
+@media (max-width: 480px) { /* 0 ~ 480px */
+    .mNav .menu .left li {font-size: 40px;}
+    .sec1 .title-mob {font-size: 80px;}
+    .sec1 .object .b-1 {left: 142px; top: -44px; width: 100px;}
+    .sec1 .object .b-2 {left: -227px; top: -450px; width: 150px;}
+    .sec1 .object .s-1 {right: 130px; top: -800px;}
+    .sec1 .object .s-2 {left: -655px; top: -400px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;}
+    .sec1 p.desc {font-size: 15px;}
+
+    .sec2 h2 {font-size: 40px; padding: 0 64px;}
+    .sec2 .object {height: 550px;}
+    .sec2 .object .p-1 > img {width: 130px; height: 130px;}
+    .sec2 .object .p-2 > img {width: 130px; height: 130px;}
+    .sec2 .object .p-3 > img {width: 100px; height: 200px; border-radius: 0 100px 100px 0;}
+    .sec2 .object .b-1 {width: 80px; top: 400px;}
+    .sec2 .object .b-2 {width: 120px; top: 200px;}
+    .sec2 .object .b-3 {width: 80px;}
+    .sec2 .object .s-2 {display: block; top: 30px; width: 300px;}
+    .sec2 .object .s-3 {top: 278px; left: 19px; width: 300px;}
+    .sec2 .object-fix .s-5 {display: none;}
+    .sec2 .ment p {padding: 50px 30px; font-size: 14px;}
+    .sec2 .ment p span {font-size: 15px;}
+    .sec2 .ment p:before {left: 5px; font-size: 60px;}
+    .sec2 .ment p:after {right: 5px; font-size: 60px;}
+    .sec2 .intro ul.que {font-size: 21px;}
+    .sec2 .intro ul.ans {font-size: 13px; line-height: 2.9em;}
+    .sec2 .intro .line {height: 230px;}
+    .sec2 .skill {height: 270px;}
+    .sec2 .skill h3 {font-size: 30px;}
+    .sec2 .skill .left .ab {padding: 20px;}
+    .sec2 .skill .right .ab {padding: 20px;}
+    
+    .sec3 .title .object .s-1 {left: -378px; top: -370px;}
+    .sec3 .title h2 {font-size: 40px; margin-bottom: 20px;}
+    .sec3 .site .desc-box .desc {font-size: 12px;}
+    
+    .sec4 .ani {margin: 0 70px; width: calc(100% - 140px);}
+    .sec4 .ani .ani-wrap {height: 250px; box-shadow: 50px 50px 0 -33px #19057A;}
+    
+    .sec5 .contact {height: 400px;}
+    .sec5 .right ul {font-size: 15px;}
+    .sec5 .object .pencil {width: 120px; bottom: -30px;}
+    .sec5 .object .b-1 {left: 332px; width: 70px;}
+    .sec5 .object .b-2 {width: 70px;}
+    .sec5 .object .s-3 display: none;}
+}
+@media (max-width: 360px) {
+    .sec2 .right h2 {padding: 0;}
+} 

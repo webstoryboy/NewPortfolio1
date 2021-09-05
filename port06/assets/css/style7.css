@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/* webfont */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {font-family: 'Cafe24Danjunghae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal;}
+/* font-family: 'Playfair Display SC', serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Cafe24Danjunghae'; */
+/* font-family: 'Cafe24Simplehae'; */
+ 
+/* layout */
+#nav {position: relative;}
+#contents {}
+#section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
+#section1 svg {position: absolute; left: 0; top: 0;}
+#section2 {height: 270vh; background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
+#section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
+#section4 {height: 240vh; background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
+#section5 {height: 110vh; background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover;}
+
+/* container */
+.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+
+/* nav */
+.logo {position: absolute; left: 20px; z-index: 10000;}
+.nav {position: absolute; top: 25px; right: 90px; z-index: 1000;}
+.nav ul {text-align: center;}
+.nav li {display: inline-block; margin: 0 20px;}
+.nav li a {color: #fff; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: 300;}
+.mNav {position: fixed; top: 20px; right: 30px; z-index: 1000;}
+.mNav .ham {display: block; width: 25px; height: 10px; /* background: rgba(0,0,0,0.4); */ padding: 17px 10px 10px 10px;}
+.mNav .ham span {position: relative; display: block; width: 25px; height: 2px; background: #fff;}
+.mNav .ham span:before {content: ''; width: 25px; height: 2px; background: #fff; position: absolute; left: 0; top: -7px;}
+.mNav .ham span:after {content: ''; width: 25px; height: 2px; background: #fff; position: absolute; left: 0; bottom: -7px;}
+
+/* section1 : home */
+.sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 90vh; flex-direction: column;}
+/* .sec1 h1 {font-size: 6vw; font-family: 'Playfair Display SC', serif; font-weight: 900;} */
+.sec1 .title-container {position: relative; width: 100%; height: 200px;}
+.sec1 .title-container .text-container {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.sec1 .title-container .text-container .text {font-family: 'Playfair Display SC', serif; font-weight: 800; font-size: 8rem; display: flex; letter-spacing: 5px;}
+.sec1 .title-container .text-container .text .char-container {
+    animation-name: tilt-up-down;
+    animation-duration: 2000ms; animation-iteration-count: infinite; animation-timing-function: ease; animation-delay: var(--animation-delay);
+    z-index: 10; pointer-events: none; user-select: none; text-shadow: 8px 8px #0e0225;
+}
+@keyframes tilt-up-down {
+    0%, 100% {transform: translateY(0) rotate(0);}
+    50% {transform: translateY(-35%) rotate(-12deg);}
+}
+@keyframes scale-up-down {
+    0% {transform: translate(-50%, -50%) scale(1) rotate(0);}
+    50% {transform: translate(-50%, -50%) scale(1.5) rotate(90deg);}
+    100% {transform: translate(-50%, -50%) scale(1) rotate(180deg);}
+}
+.sec1 p.desc {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px;}
+
+/* section2 : about */
+.sec2 {padding-top: 250px;}
+.sec2 h2 {color: #19057A; text-align: center; font-size: 80px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec2 .object {height: 750px; position: relative; --x: 0; --y: 0; --d: 50; margin-top: 30px;}
+.sec2 .object .pt {
+    position: absolute;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 1px ), calc(var(--y) / var(--d) * 1px));
+}
+.sec2 .object .pt > img {border: 5px solid #19057A; box-shadow: 20px 20px 0 0 #19057A;}
+.sec2 .object .p-1 {top: 60px; left: 30%;}
+.sec2 .object .p-1 > img {width: 200px; height: 200px; border-radius: 50%; top: -10px; left: -10px;}
+.sec2 .object .p-2 {top: 350px; left: 10%;}
+.sec2 .object .p-2 > img {width: 320px; height: 320px; top: -10px; left: -10px;}
+.sec2 .object .p-3 {top: 200px; left: 67%;}
+.sec2 .object .p-3 > img {position: absolute; width: 230px; height: 460px; border-radius: 0 230px 230px 0; transform: rotate(-27deg); top: -20px; left: -20px;}
+.sec2 .object .ob {
+    position: absolute; z-index: 10;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));
+}
+.sec2 .object .b-1 {top: 550px; left: 50%;}
+.sec2 .object .b-2 {top: 280px; left: 22%;}
+.sec2 .object .b-3 {top: 100px; right: 10%;}
+.sec2 .object .b-4 {top: 500px; right: 5%;}
+.sec2 .object .dot {
+    position: absolute; z-index: 20;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 5px ), calc(var(--y) / var(--d) * 5px));
+}
+.sec2 .object .s-1 {top: 100px; left: 0;}
+.sec2 .object .s-2 {top: 550px; left: 35%;}
+.sec2 .object .s-3 {top: 60px; right: 2%;}
+.sec2 .object .s-4 {top: 1500px; left: 3%; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * 2px));}
+.sec2 .object .s-5 {top: 1200px; right: 3%; transform: translate(calc(var(--x) / var(--d) * -1px ), calc(var(--y) / var(--d) * -1px));}
+
+.sec2 .ment {/*background: url(../img/ment-cloud.png) no-repeat center center;*/ height: auto;}
+.sec2 .ment p {position: relative; padding: 90px 0; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
+.sec2 .ment p span {/*color: #FD96B3;*/}
+.sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
+.sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
+
+.sec2 .intro {color: #19057A; height: 500px; margin: 50px 0; position: relative;}
+.sec2 .intro ul {padding: 0 2%; overflow: hidden;}
+.sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
+.sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4;}
+.sec2 .intro .line {width: 5px; height: 410px; background: #fff; position: absolute; float: left; left: 50%;}
+
+/*
+.sec2 .ability {height: 300px; margin: 100px 0; position: relative;}
+.sec2 .ability > div {overflow: hidden; position: absolute;}
+.sec2 .ability .row1 {left: 0;}
+.sec2 .ability .row1 .ab {float: left;}
+.sec2 .ability .row2 {right: 0; top: 150px;}
+.sec2 .ability .row2 .ab {float: left;}
+.semi-donut {
+    --percentage: 0; --fill: #05B9CA;
+    width: 260px; height: 130px; position: relative; margin: 10px 70px;
+    color: #19057A; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; line-height: 1.2em; box-sizing: border-box;
+    overflow: hidden;
+    display: flex; align-items: flex-end; justify-content: center; text-align: center;
+}
+.semi-donut:before {
+    content: '';
+    width: 260px; height: 260px; box-sizing: border-box; position: absolute; left: 0; top: 0;
+    border: 35px solid #19057A; border-radius: 50%;
+    transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8 ) ));
+}
+.semi-donut:after {
+    content: '';
+    width: 250px; height: 250px; box-sizing: border-box; position: absolute; left: 5px; top: 5px;
+    border: 25px solid; border-color: #19057A #19057A var(--fill) var(--fill); border-radius: 50%;
+    transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8 ) ));
+    animation: fillAnimation 1s ease-in;
+}
+@keyframes fillAnimation {
+  0% {transform: rotate(-45deg);}
+  50% {transform: rotate(135deg);}
+}
+*/
+.sec2 .ability {height: 400px; margin-bottom: 100px; position: relative;}
+.sec2 .ability h3 {color: #19057A; text-align: center; font-size: 50px; font-family: 'Playfair Display', serif; font-weight: 900; padding: 50px 0;}
+.sec2 .ability .row1 {overflow: hidden; text-align: center;}
+.sec2 .ability .row1 .ab {float: left;}
+.sec2 .ability .row2 {overflow: hidden; text-align: center; margin-left: 165px;}
+.sec2 .ability .row2 .ab {float: left;}
+.semi-donut {
+    --percentage: 0; --fill: #05B9CA;
+    width: 260px; height: 130px; position: relative; margin: 0 70px;
+    background: #19057A; border-radius: 130px 130px 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex; align-items: flex-end; justify-content: center; text-align: center;
+}
+.semi-donut:after {
+    content: '';
+    width: 250px; height: 250px; box-sizing: border-box; position: absolute; left: 5px; top: 5px;
+    border: 30px solid; border-color: #19057A #19057A var(--fill) var(--fill); border-radius: 50%;
+    transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8 ) ));
+    animation: fillAnimation 1s ease-in;
+}
+.sec2 .ability .ab .semi-donut span {color: #fff; font-family: 'Cafe24Danjunghae'; font-size: 30px; line-height: 2em; z-index: 1;}
+.sec2 .ability .ab .line {width: 260px; height: 5px; background: #19057A; margin: 0 auto;}
+.sec2 .ability .ab strong {color: #19057A; font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; line-height: 1.2em;}
+
+@keyframes fillAnimation {
+  0% {transform: rotate(-45deg);}
+  50% {transform: rotate(135deg);}
+}
+
+
+
+
+
+/* section3 : works */
+.sec3 {}
+.sec3 .title {display: flex; justify-content: space-between; align-items: flex-end; position: relative; height: 340px;}
+.sec3 .title h2 {flex: 0 0 50%; font-size: 80px; font-family: 'Playfair Display', serif; color: #fff; text-align: left; font-weight: 900;}
+.sec3 .title p {flex: 0 0 50%; font-size: 26px; font-family: 'Cafe24Simplehae'; color: #fff;}
+.sec3 .title .object {
+    position: relative; --x: 0; --y: 0; --d: 50;
+}
+.sec3 .title .object .ob {
+    position: absolute; z-index: 10;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 3px ), calc(var(--y) / var(--d) * 3px));
+}
+.sec3 .title .object .b-1 {top: -50px; left: -200px; transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));}
+.sec3 .title .object .s-2 {top: -330px; left: -670px;}
+.sec3 .site-wrap {margin-top: 50vh;}
+.sec3 .site {margin: 250px 0; position: relative;}
+.sec3 .site strong {position: absolute; font-size: 450px; line-height: 1; color: rgba(0,0,0,0.1); right: -15px; top: 335px;}
+.sec3 .site .top {padding: 5vw 5vw 3vw 0;}
+.sec3 .site .top .view {width: 80%; height: 350px; background: #fbce62; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A;}
+.sec3 .site .top .view img {position: absolute; top: -130px;}
+.sec3 .site .bot {height: 250px; display: flex; margin-top: 50px;}
+.sec3 .site .bot .desc-box {flex: 0 0 50%;}
+.sec3 .site .bot .desc-box h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 54px;}
+.sec3 .site .bot .desc-box .desc {color: #8E8E8E; font-family: 'Cafe24Simplehae'; font-size: 20px; margin-top: 10px;}
+.sec3 .site .bot .btn-box {flex: 0 0 32%; margin-top: 53px;}
+.sec3 .site .bot .btn-box ul {text-align: center;}
+.sec3 .site .bot .btn-box li {font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; border: 5px solid #19057A; margin: 15px 60px;}
+.sec3 .site .bot .btn-box li a {display: inline-block; color: #19057A; width: 280px; padding: 15px 20px;}
+.sec3 .site .bot .btn-box li a i {float: right; font-size: 22px;}
+.sec3 .site .bot .btn-box li.mint {background: #05B9CA;}
+.sec3 .site .bot .btn-box li.mint a {color: #fff;}
+.sec3 .site:after {content: ''; height: 5px; width: 430px; background: #19057A; position: absolute; left: 0; bottom: 0;}
+
+.sec3 .si1 .top .view {background: #fbce62;}
+.sec3 .si2 .top .view {background: #b6ea7e;}
+.sec3 .si3 .top .view {background: #5eacfc;}
+.sec3 .si4 .top .view {background: #9567e4;}
+
+/* section4 : animation */
+.sec4 {padding: 250px 0;}
+.sec4 h2 {color: #19057A; text-align: left; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900; margin: 150px 0 50px 0;}
+.sec4 .ani {}
+.sec4 .ani .anima {margin: 30px 30px 50px 30px;}
+.sec4 .ani .anima div {display: inline-block; width: 440px; height: 370px; border: 5px solid #19057A; background: #fff; position: relative; box-shadow: 100px 100px 0 -75px #19057A;}
+.sec4 .ani .anima h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 34px; margin-top: 20px;}
+.sec4 .ani-left {float: left; width: 50%;}
+.sec4 .ani-left .anima {margin-left: 170px;}
+.sec4 .ani-right {float: right; width: 50%; margin-top: -170px;}
+.sec4 .ani-right .anima {margin-left: 50px;}
+.sec4 .ani-left:after {content: ''; width: 5px; height: 1700px; background: #fff; position: absolute; left: 50%; top: 50%;}
+
+
+/* section5 : contact */
+.sec5 {padding: 250px 0;}
+.sec5 h2 {color: #19057A; text-align: left; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900; margin: 150px 0 50px 0;}
+
+
+
+/* media query */
+@media (max-width: 1280px) {
+    .container {width: 100%;}
+}
+@media (max-width: 1024px) {}
+@media (max-width: 960px) {}
+@media (max-width: 768px) {}
+@media (max-width: 600px) {}
+@media (max-width: 480px) {}
+@media (max-width: 360px) {} 

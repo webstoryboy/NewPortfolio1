@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+/* webfont */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Cafe24Danjunghae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal;}
+
+/* ---------------------- layout ---------------------- */
+#nav {position: relative;}
+#contents {}
+#section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
+#section1 svg {position: absolute; left: 0; top: 0; animation: opening 1s linear; -webkit-animation: opening 1s linear;}
+#section2 {background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
+#section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
+#section4 {background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
+#section5 {background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover; position: relative;}
+#section5 svg {position: absolute; right: 0; bottom: 0;}
+@keyframes opening {
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(0);}
+}
+-webkit-@keyframes opening {
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(0);}
+}
+
+/* ---------------------- container ---------------------- */
+.container {width: 1400px; overflow: hidden; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+
+/* ---------------------- nav ---------------------- */
+.logo {position: absolute; left: 20px; display: none;}
+.nav {position: absolute; top: 25px; right: 90px; z-index: 1000;}
+.nav ul {text-align: center;}
+.nav li {display: inline-block; margin: 0 20px;}
+.nav li a {color: #fff; font-size: 22px; font-family: 'Roboto', sans-serif; transition: 0.5s all;}
+.nav li a:hover {color: #05B9CA;}
+.mNav {position: fixed; top: 20px; right: 30px; z-index: 1000;}
+.mNav .ham {display: block; position: absolute; width: 25px; height: 17px; right: 10px; top: 12px; cursor: pointer;}
+.mNav .ham span {position: absolute; display: block; width: 25px; height: 3px; background: #fff; transition: all 0.3s ease-in-out; z-index: 10000;}
+.mNav .ham span:nth-child(1) {top: 0;}
+.mNav .ham span:nth-child(2) {top: 50%;}
+.mNav .ham span:nth-child(3) {top: 100%;}
+.mNav .ham.active span:nth-child(1) {top: 50%; transform: rotate(45deg);}
+.mNav .ham.active span:nth-child(2) {opacity: 0;}
+.mNav .ham.active span:nth-child(3) {top: 50%; transform: rotate(-45deg);}
+.mNav .menu {position: fixed; width: 100%; height: 100vh; top: 0; right: -100%; background: #19057A; transition: 0.5s ease;}
+.mNav .menu.active {right: 0;}
+.mNav .menu .left {float: left; width: 50%; height: 100%; display: flex; align-items: center; justify-content: center;}
+.mNav .menu .left li {font-size: 98px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.mNav .menu .left li a {color: #fff; transition: 0.5s ease;}
+.mNav .menu .left li:first-child a {color: #FEE050;}
+.mNav .menu .left li a:hover {color: #05B9CA;}
+.mNav .menu .left li.mob {display: none;}
+.mNav .menu .right {float: left; width: 50%; height: 100%; display: flex; align-items: left; justify-content: center; flex-direction: column;}
+.mNav .menu .right .top {padding-left: 30px;}
+.mNav .menu .right .top li {color: #fff; font-size: 26px; font-family: 'Cafe24Danjunghae';}
+.mNav .menu .right .bot {padding-left: 30px; margin-top: 30px;}
+.mNav .menu .right .bot li {display: inline-block; margin-right: 20px; font-size: 35px;}
+.mNav .menu .right .bot li a {color: #fff;}
+.mNav .menu .right .bot li a:hover {color: #FEE050;}
+
+/* ---------------------- section1 : home ---------------------- */
+.sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column;}
+.sec1 .title-mob {display: none;}
+.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out; -webkit-animation: title-slide 2s ease-in-out; z-index: 500;}
+@keyframes title-slide {
+    0% {opacity: 0; transform: translateY(-800px);}
+    50% {opacity: 0; transform: translateY(-800px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+-webkit-@keyframes title-slide {
+    0% {opacity: 0; transform: translateY(-800px);}
+    50% {opacity: 0; transform: translateY(-800px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+.sec1 .title .rainbow {animation: rainbow 1.5s ease-in-out infinite; -webkit-animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
+.sec1 .title .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s; -webkit-animation-delay: 0.5s;}
+.sec1 .title .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s; -webkit-animation-delay: 0.4s;}
+.sec1 .title .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s; -webkit-animation-delay: 0.3s;}
+.sec1 .title .rainbow:nth-child(4) {color: #fff; position: absolute; top: 0; right: 9px;}
+@keyframes rainbow {
+    0%, 100% {transform: translateY(0.15em);}
+    50% {transform: translateY(-0.15em);}
+}
+-webkit-@keyframes rainbow {
+    0%, 100% {transform: translateY(0.15em);}
+    50% {transform: translateY(-0.15em);}
+}
+.sec1 p.desc {font-size: 25px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px; color: #fff; animation: subtitle-show 2.5s ease-in-out; -webkit-animation: subtitle-show 2.5s ease-in-out;}
+@keyframes subtitle-show {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+-webkit-@keyframes subtitle-show {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.sec1 .object {position: relative;}
+.sec1 .object > img {position: absolute;}
+.sec1 .object .ob {z-index: 10; animation: shake-1 6s ease-in infinite; -webkit-animation: shake-1 6s ease-in infinite;}
+.sec1 .object .dot {z-index: 100;}
+.sec1 .object .b-1 {left: 400px; top: -40px;}
+.sec1 .object .b-2 {left: -750px; top: -700px;}
+.sec1 .object .s-1 {left: -690px; top: -300px; animation: shake-1 5s ease-in infinite; -webkit-animation: shake-1 5s ease-in infinite;}
+.sec1 .object .s-2 {left: -20px; top: -250px; animation: shake-2 3s ease-in infinite; -webkit-animation: shake-2 3s ease-in infinite;}
+.sec1 .object .s-3 {left: 100px; top: -450px; animation: shake-1 4s ease-in infinite; -webkit-animation: shake-1 4s ease-in infinite;}
+@keyframes shake-1 {
+    25% {transform: translate(-10px, 15px)}
+    75% {transform: translate(10px, -15px);}
+}
+-webkit-@keyframes shake-1 {
+    25% {transform: translate(-10px, 15px)}
+    75% {transform: translate(10px, -15px);}
+}
+@keyframes shake-2 {
+    25% {transform: translate(12px, 7px)}
+    75% {transform: translate(-12px, -7px);}
+}
+-webkit-@keyframes shake-2 {
+    25% {transform: translate(12px, 7px)}
+    75% {transform: translate(-12px, -7px);}
+}
+ 
+/* ---------------------- section2 : about ---------------------- */
+.sec2 {padding: 250px 0 300px 0;}
+.sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec2 .object {height: 750px; position: relative; --x: 0; --y: 0; --d: 50; margin-top: 30px;}
+.sec2 .object .pt {
+    position: absolute; z-index: 15;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 1px ), calc(var(--y) / var(--d) * 1px));
+}
+.sec2 .object .pt > img {border: 5px solid #19057A; box-shadow: 20px 20px 0 0 #19057A;}
+.sec2 .object .p-1 {top: 60px; left: 30%;}
+.sec2 .object .p-1 > img {width: 200px; height: 200px; border-radius: 50%; top: -10px; left: -10px;}
+.sec2 .object .p-2 {top: 350px; left: 10%;}
+.sec2 .object .p-2 > img {width: 320px; height: 320px; top: -10px; left: -10px;}
+.sec2 .object .p-3 {top: 200px; left: 67%;}
+.sec2 .object .p-3 > img {position: absolute; width: 230px; height: 460px; border-radius: 0 230px 230px 0; transform: rotate(-27deg); top: -20px; left: -20px;}
+.sec2 .object .ob {
+    position: absolute; z-index: 20;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));
+}
+.sec2 .object .b-1 {top: 550px; left: 50%; position: relative;}
+.sec2 .object .b-2 {top: 280px; left: 22%;}
+.sec2 .object .b-3 {top: 100px; right: 10%;}
+.sec2 .object .b-4 {top: 500px; right: 5%;}
+.sec2 .object .dot {
+    position: absolute; z-index: 10;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 5px ), calc(var(--y) / var(--d) * 5px));
+}
+.sec2 .object .s-1 {top: 100px; left: 0;}
+.sec2 .object .s-2 {top: 550px; left: 35%;}
+.sec2 .object .s-3 {top: 60px; right: 2%;}
+
+.sec2 .object-fix {position: relative;}
+.sec2 .object-fix > img {position: absolute;}
+.sec2 .object-fix .s-4 {top: 350px; left: -50px; animation: shake-1 4s ease-in infinite;}
+.sec2 .object-fix .s-5 {top: 700px; right: -50px; animation: shake-2 3s ease-in infinite;}
+
+.sec2 .ment {height: auto;}
+.sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
+.sec2 .ment p span {font-size: 30px; color: #05B9CA;}
+.sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
+.sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
+
+.sec2 .intro {color: #19057A; height: 500px; margin: 50px 0; position: relative;}
+.sec2 .intro ul {padding: 0 2%; overflow: hidden;}
+.sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
+.sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 22px; line-height: 3.1em;}
+.sec2 .intro .line {width: 5px; height: 410px; background: #fff; position: absolute; float: left; left: 50%;}
+
+.sec2 .skill {height: 400px;}
+.sec2 .skill h3 {color: #19057A; text-align: center; font-size: 38px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec2 .skill .ability {float: left; width: 50%;}
+.sec2 .skill .left .ab {padding: 20px 100px 20px 180px;}
+.sec2 .skill .right .ab {padding: 20px 180px 20px 100px;}
+.sec2 .skill .ability .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
+.sec2 .skill .ability .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
+.sec2 .skill .ability .progress .progress-bar {position: relative; height: 15px; border-radius: 20px;}
+.sec2 .skill .ability .progress .progress-bar:after{
+    content:'';
+    position: absolute; top: -12px; right: 0px;
+    background: #fff; height: 30px; width: 30px; border-radius: 50%; border: 5px solid #19057A;
+}
+
+/* scroll */
+.sec2 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec2.show h2 {opacity: 1; transform: scale(1);}
+.sec2 .object {opacity: 0; transform: translateY(100px); transition: 1s 0.5s ease-in;}
+.sec2.show .object {opacity: 1; transform: translateY(0);}
+.sec2 .object .p-1 > img {opacity: 0; transform: rotate(-10deg); transition: 0.2s 1.9s ease-in;}
+.sec2.show .object .p-1 > img {opacity: 1; transform: rotate(0);}
+.sec2 .object .p-2 > img {opacity: 0; transform: rotate(5deg); transition: 0.2s 1.5s ease-in;}
+.sec2.show .object .p-2 > img {opacity: 1; transform: rotate(0);}
+.sec2 .object .p-3 > img {opacity: 0; transform: rotate(-3deg); transition: 0.2s 1.7s ease-in;}
+.sec2.show .object .p-3 > img {opacity: 1; transform: rotate(0);}
+.sec2 .ment {opacity: 0; transition: 0.7s ease-in;}
+.sec2 .ment.show {opacity: 1;}
+.sec2 .ment span.name {opacity: 0; transition: 0.5s 1s ease-in;}
+.sec2 .ment span.job {opacity: 0; transition: 0.5s 1.5s ease-in;}
+.sec2 .ment.show span.name {opacity: 1; color: #05B9CA;}
+.sec2 .ment.show span.job {opacity: 1; color: #05B9CA;}
+.sec2 .intro {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .intro.show {opacity: 1;}
+.sec2 .skill h3 {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .skill.show h3 {opacity: 1;}
+.sec2 .skill .ability {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .skill.show .ability {opacity: 1;}
+.sec2 .skill.show .ability .ab .progress .progress-bar {animation: ability-progress 2s ease-in; -webkit-animation: ability-progress 2s ease-in;}
+@keyframes ability-progress {
+    0% {width: 5%;}
+}
+-webkit-@keyframes ability-progress {
+    0% {width: 5%;}
+}
+
+/* ---------------------- section3 : works ---------------------- */
+.sec3 .title {display: flex; justify-content: space-between; align-items: flex-end; position: relative; height: 340px;}
+.sec3 .title h2 {flex: 0 0 50%; font-size: 80px; font-family: 'Playfair Display', serif; color: #fff; text-align: left; font-weight: 900;}
+.sec3 .title p {flex: 0 0 50%; font-size: 25px; font-family: 'S-CoreDream-2ExtraLight'; color: #fff;}
+.sec3 .title .object {
+    position: relative; --x: 0; --y: 0; --d: 50;
+}
+.sec3 .title .object .ob {
+    position: absolute; z-index: 10;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    transform: translate(calc(var(--x) / var(--d) * 3px ), calc(var(--y) / var(--d) * 3px));
+}
+.sec3 .title .object .b-1 {top: -40px; left: -200px; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * -2px));}
+.sec3 .title .object .s-1 {top: -330px; left: -670px;}
+.sec3 .site-wrap {padding-top: 200px;}
+.sec3 .site {margin: 250px 0; height: auto;}
+
+.sec3 .site .top {display: flex; padding: 5vw 0 3vw 0;}
+.sec3 .site .view {width: 70%; height: 350px; background: #f5f2f0; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A; position: relative;}
+.sec3 .site .view img {position: absolute; left: 0; bottom: 30px; width: 100%;}
+.sec3 .site .btn {width: 30%; position: relative;}
+.sec3 .site .btn ul {text-align: center; position: absolute; bottom: -45px;}
+.sec3 .site .btn li {font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; border: 5px solid #19057A; margin: 15px 0 15px -5px; width: 200px; background: #fff; transition: all 0.3s;}
+.sec3 .site .btn li a {display: inline-block; color: #19057A; padding: 15px 20px;}
+.sec3 .site .btn li a i {margin-left: 10px; font-size: 22px;}
+.sec3 .site .btn li.mint {background: #05B9CA; margin-left: 25px;}
+.sec3 .site .btn li.mint a {color: #fff;}
+.sec3 .site .btn li:hover {width: 230px;}
+
+.sec3 .site .bot {height: 400px; display: flex; justify-content: space-between; margin-top: 50px;}
+.sec3 .site .desc-box {width: 35%;}
+.sec3 .site .desc-box h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 64px; line-height: 1; padding-bottom: 30px;}
+.sec3 .site .desc-box .desc {color: #8E8E8E; font-family: 'S-CoreDream-2ExtraLight'; font-size: 20px;}
+.sec3 .site .tab-box {width: 60%; overflow: hidden;}
+.sec3 .site .tab-box .tab-btn {}
+.sec3 .site .tab-box .tab-btn ul {overflow: hidden;}
+.sec3 .site .tab-box .tab-btn li {float: left; width: 20%; text-align: center;}
+.sec3 .site .tab-box .tab-btn li a {display: block; font-size: 20px; line-height: 2.5em; font-family: 'Cafe24Danjunghae'; color: #19057A; transition: all 0.3s;}
+.sec3 .site .tab-box .tab-btn li:hover a {color: #05B9CA;}
+.sec3 .site .tab-box .tab-btn li.active a {background: #19057A; color: #fff; border-radius: 5px 5px 0 0;}
+.sec3 .site .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 335px; border-radius: 5px; background: #f5f2f0; font-size: 15px;}
+.sec3 .site .tab-box .tab-cont::-webkit-scrollbar {width: 10px; height: 10px;}
+.sec3 .site .tab-box .tab-cont::-webkit-scrollbar-thumb {background-color: #19057A;}
+.sec3 .site .tab-box .tab-cont > div {display: none;}
+.sec3 .site .tab-box .tab-cont > div:nth-child(1) {display: block;}
+.sec3 .site .line {width: 280px; height: 5px; background: #19057A;}
+
+/* scroll */
+.sec3 .title h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec3 .title.show h2 {opacity: 1; transform: scale(1);}
+.sec3 .title p {transition: 0.5s 0.5s all; opacity: 0;}
+.sec3 .title.show p {opacity: 1;}
+.sec3 .site .view {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site.show .view {opacity: 1; transform: translateX(0);}
+.sec3 .site .line {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site.show .line {opacity: 1; transform: translateX(0);}
+.sec3 .site .btn {opacity: 0; transform: translateX(100px); transition: 0.5s all;}
+.sec3 .site.show .btn {opacity: 1; transform: translateX(0);}
+.sec3 .site .desc-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 0.5s all;}
+.sec3 .site.show .desc-box {opacity: 1; transform: translateY(0);}
+.sec3 .site .tab-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 1s all;}
+.sec3 .site.show .tab-box {opacity: 1; transform: translateY(0);}
+
+/* ---------------------- section4 : animation ---------------------- */
+.sec4 {padding: 250px 0 100px 0; overflow: hidden; position: relative;}
+.sec4 h2 {color: #19057A; text-align: left; font-size: 80px; font-family: 'Playfair Display', serif; font-weight: 900; margin: 120px 0 70px 0;}
+.sec4 .ani .ani-wrap {display: inline-block; width: 440px; height: 370px; border: 5px solid #19057A; background: #fff; position: relative; box-shadow: 100px 100px 0 -75px #19057A; transition: all 1s; overflow: hidden;}
+.sec4 .ani .ani-wrap:hover {width: 600px;}
+.sec4 .ani .ani-wrap .desc {opacity: 0; position: absolute; z-index: 100000; background: rgba(0,0,0,0.7); width: 100%; height: 100%; text-align: center; transition: all 1s;}
+.sec4 .ani .ani-wrap:hover .desc {opacity: 1;}
+.sec4 .ani .ani-wrap .desc p {padding: 100px 0 20px 0; color: #fff; font-family: 'Cafe24Simplehae'; font-weight: bold; font-size: 20px; transition: all 0.3s;}
+.sec4 .ani .ani-wrap .desc a {color: #000; background: #fff; font-family: 'Cafe24Simplehae'; font-weight: bold; font-size: 18px; border-radius: 10px; padding: 2px 15px 4px 15px;}
+.sec4 .ani h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 34px; margin-top: 20px;}
+.sec4 .ani-left {float: left; width: 50%;}
+.sec4 .ani-left .ani-wrap {margin: 30px 0px 30px 190px;}
+.sec4 .ani-left .ani-wrap:hover {margin-left: 30px;}
+.sec4 .ani-left h3 {margin-left: 190px;}
+.sec4 .line {width: 5px; height: 1700px; background: #fff; position: absolute; float: left; left: 50%; bottom: 60px;}
+.sec4 .ani-right {float: right; width: calc(50% - 5px); margin-top: -170px;}
+.sec4 .ani-right .ani-wrap {margin: 30px 160px 30px 30px;}
+.sec4 .ani-right h3 {margin-left: 30px;}
+
+/* scroll */
+.sec4 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec4.show h2 {opacity: 1; transform: scale(1);}
+.sec4 .ani-left {opacity: 0; transform: translateX(30px); transition: 0.5s 1s ease-in;}
+.sec4 .ani-right {opacity: 0; transform: translateX(-30px); transition: 0.5s 1s ease-in;}
+.sec4.show .ani-left {opacity: 1; transform: translateX(0);}
+.sec4.show .ani-right {opacity: 1; transform: translateX(0);}
+.sec4 .line {opacity: 0; height: 0; transition: 0.5s 0.5s ease;}
+.sec4.show .line {opacity: 1; height: 1700px;}
+
+/* ---------------------- section5 : contact ---------------------- */
+.sec5 {padding: 250px 0 110px 0;}
+.sec5 .contact {display: flex; align-items: center; justify-content: center; height: 870px;}
+.sec5 .left {flex: 0 0 55%; margin: 150px 30px 50px 30px;}
+.sec5 .left .cform {margin: 50px}
+.sec5 .left input {display: block; box-sizing: border-box; font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 500; font-size: 20px; border: none; background: none; border-bottom: 5px solid #fff; width: 100%; height: 45px; padding: 5px 15px;}
+.sec5 .left input::placeholder {color: #19057A;}
+.sec5 .left textarea {display: block; box-sizing: border-box; font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 500; font-size: 20px; background: none; border: 5px solid #fff; width: 100%; height: 200px; margin-top: 40px; padding: 10px;}
+.sec5 .left textarea::placeholder {color: #19057A;}
+.sec5 .left button {font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; color: #fff; margin-top: 30px; float: right; width: 200px; height: 50px; background: none; border: 5px solid #fff; transition: all 0.5s;}
+.sec5 .left button:hover {background: #FEE050;}
+.sec5 .right {flex: 0 0 45%; margin: 150px 30px 50px 30px;}
+.sec5 .right h2 {color: #19057A; text-align: left; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec5 .right ul {color: #fff; font-size: 22px; line-height: 2.5em; font-family: 'Cafe24Danjunghae'; margin-top: 30px;}
+.sec5 .right li i {padding-right: 30px;}
+.sec5 .object {position: relative;}
+.sec5 .object > img {position: absolute;}
+.sec5 .object .pencil {z-index: 100; right: 0; bottom: 40px; animation: pencil-shake 2s ease-in infinite; -webkit-animation: pencil-shake 2s ease-in infinite;}
+.sec5 .object .ob {z-index: 100;}
+.sec5 .object .dot {z-index: 10;}
+.sec5 .object .b-1 {left: 600px; bottom: 400px; animation: object-shake-2 5s ease-in infinite; -webkit-animation: object-shake-2 5s ease-in infinite;}
+.sec5 .object .b-2 {left: 0; bottom: 0; animation: object-shake-1 5s ease-in infinite; -webkit-animation: object-shake-1 5s ease-in infinite;}
+.sec5 .object .s-1 {left: 0; bottom: 600px; animation: object-shake-2 5s ease-in infinite; -webkit-animation: object-shake-2 5s ease-in infinite;}
+.sec5 .object .s-2 {right: -70px; bottom: 600px; animation: object-shake-1 5s ease-in infinite; -webkit-animation: object-shake-1 5s ease-in infinite;}
+.sec5 .object .s-3 {right: -200px; bottom: -50px; animation: object-shake-2 5s ease-in infinite; -webkit-animation: object-shake-2 5s ease-in infinite;}
+@keyframes pencil-shake {
+    25% {transform: rotate(-10deg) translateY(-20px);}
+    75% {transform: rotate(10deg) translateY(20px);}
+}
+-webkit-@keyframes pencil-shake {
+    25% {transform: rotate(-10deg) translateY(-20px);}
+    75% {transform: rotate(10deg) translateY(20px);}
+}
+@keyframes object-shake-1 {
+    25% {transform: translate(-10px, 5px)}
+    75% {transform: translate(10px, -5px);}
+}
+-webkit-@keyframes object-shake-1 {
+    25% {transform: translate(-10px, 5px)}
+    75% {transform: translate(10px, -5px);}
+}
+@keyframes object-shake-2 {
+    25% {transform: translate(2px, 7px)}
+    75% {transform: translate(-2px, -7px);}
+}
+-webkit-@keyframes object-shake-2 {
+    25% {transform: translate(2px, 7px)}
+    75% {transform: translate(-2px, -7px);}
+}
+
+/* scroll */
+.sec5 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec5.show h2 {opacity: 1; transform: scale(1);}
+.sec5 .left {opacity: 0; transform: rotate(-10deg); transform-origin: left top;
+transition: 0.5s 0.5s ease-in;}
+.sec5.show .left {opacity: 1; transform: rotate(0);}
+.sec5 .right ul {opacity: 0; transform: translateY(-30px); transition: 0.5s 1s ease-in;}
+.sec5.show .right ul {opacity: 1; transform: translateY(0);}
+.sec5.show .pencil {animation: pencil-drop 1s ease, pencil-shake 2s 1s ease-in infinite; -webkit-animation: pencil-drop 1s ease, pencil-shake 2s 1s ease-in infinite;}
+@keyframes pencil-drop {
+    0% {opacity: 0; transform: translateY(-200px);}
+    40% {opacity: 1; transform: translateY(0);}
+    65% {opacity: 1; transform: translateY(-50px);}
+    80% {opacity: 1; transform: translateY(0);}
+    90% {opacity: 1; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+-webkit-@keyframes pencil-drop {
+    0% {opacity: 0; transform: translateY(-200px);}
+    40% {opacity: 1; transform: translateY(0);}
+    65% {opacity: 1; transform: translateY(-50px);}
+    80% {opacity: 1; transform: translateY(0);}
+    90% {opacity: 1; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}

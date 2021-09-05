@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Cafe24Danjunghae'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* layout */
+#contents {}
+#section1 {
+    height: 100vh;
+    background: #FEE050 url(https://assets.website-files.com/5dbaec16f510ee7b1c0004d6/5dcc4ba7e654b268b33b59bb_homepage-wave-hero.svg) no-repeat center top;
+    background-size: cover;
+}
+#section1 svg {
+    position: absolute; left: 0; top: 0;
+}
+#section2 {
+    height: 2000px;
+    background-color: #FEE050;
+}
+#section3 {
+    height: 5000px;
+    background-color: #fff;
+    background-image: url(../img/wave-blue.svg);
+    background-repeat: no-repeat;
+   
+}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+ 
+/* sec1 */
+.sec1 {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;    
+    flex-direction: column;
+}
+.sec1 h1 {
+    font-size: 100px;
+    font-family: 'Playfair Display SC', serif;
+}
+.sec1 p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+}
+
+/* sec2 */
+.sec2 {padding: 20vh 0;}
+.sec2 h2 {
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    color: #19057A;
+    text-align: center;
+    font-weight: 900;
+}
+
+
+/* sec3 */
+.sec3 {}
+.sec3 .title {
+    display: flex;
+    padding-top: 15vh;
+    justify-content: space-between;
+    align-items: flex-end
+}
+.sec3 .title h2 {
+    flex: 0 0 50%;
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    text-align: left;
+    font-weight: 900;
+}
+.sec3 .title p {
+    flex: 0 0 30%;
+    font-family: 'Cafe24Simplehae';
+    font-size: 26px;
+    color: #fff; 
+}
+
+.site-wrap {margin-top: 30vh;}
+.site {}
+.site .top {padding: 5vw 5vw 3vw 0;}
+.site .top .view {
+    width: 80%;
+    height: 400px;
+    background: #fbce62;
+    border: 5px solid #19057A;
+    box-shadow: 30px 30px 0 0 #19057A;
+}
+
+.site .bot {height: 400px; display: flex}
+.site .bot .left {
+    flex: 0 0 50%;
+}
+.site .bot .left h3 {
+    color: #19057A;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 54px;
+}
+.site .bot .left p {
+    color: #8E8E8E;
+    font-family: 'Cafe24Simplehae';
+    font-size: 20px;
+    margin-top: 10px; 
+}
+
+
+.site .bot .right {
+    flex: 0 0 50%;
+}
+
+
+
+
+
+
+
+
+
+

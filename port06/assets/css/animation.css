@@ -1,0 +1,286 @@
+/* an1 cube */
+.sec4 .ani .an1 .ani-wrap {
+    background-image: linear-gradient( 359deg,  rgba(150,192,255,1) -17.7%, rgba(255,180,161,1) 101.5% );
+    perspective: 1000px; display: flex; align-items: center; justify-content: center;
+}
+.cube {position: relative; width: 100px; height: 100px; transform-style: preserve-3d; transform: rotateX(0) rotateY(0); animation: cube-rotate 8s linear infinite;}
+.cube div {display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; width: 100px; height: 100px; opacity: 0.75;}
+.cube div:nth-child(1) {background: #ffcc80; transform-origin: center top; transform: rotateX(90deg) translateY(-100px); animation: cube-top 4s 4s ease-in-out infinite;}
+.cube div:nth-child(2) {background: #ffb74d; transform-origin: center bottom; transform: rotateX(-90deg) translateY(100px); animation: cube-bottom 4s 4s ease-in-out infinite;}
+.cube div:nth-child(3) {background: #ffa726; transform-origin: left center; transform: rotateY(-90deg) translateX(-100px); animation: cube-left 4s 4s ease-in-out infinite;}
+.cube div:nth-child(4) {background: #ff9800; transform-origin: right center; transform: rotateY(90deg) translateX(100px); animation: cube-right 4s 4s ease-in-out infinite;}
+.cube div:nth-child(5) {background: #fb8c00; transform-origin: center center; transform: rotateX(0) translateZ(0); animation: cube-front 4s 4s ease-in-out infinite;}
+.cube div:nth-child(6) {background: #ff9800; transform-origin: center center; transform: rotateX(180deg) translateZ(100px); animation: cube-back 4s 4s ease-in-out infinite;}
+@keyframes cube-rotate {
+    0% {transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0);}
+    100% {transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) translateZ(0);}
+}
+@keyframes cube-top {
+    0% {transform: rotateX(90deg) translateY(-100px) translateZ(0);}
+    50% {transform: rotateX(90deg) translateY(-100px) translateZ(100px);}
+    100% {transform: rotateX(90deg) translateY(-100px) translateZ(0);}
+}
+@keyframes cube-bottom {
+    0% {transform: rotateX(-90deg) translateY(100px) translateZ(0);}
+    50% {transform: rotateX(-90deg) translateY(100px) translateZ(100px);}
+    100% {transform: rotateX(-90deg) translateY(100px) translateZ(0);}
+}
+@keyframes cube-left {
+    0% {transform: rotateY(-90deg) translateX(-100px) scaleY(1);}
+    50% {transform: rotateY(-90deg) translateX(-100px) scaleY(3);}
+    100% {transform: rotateY(-90deg) translateX(-100px) scaleY(1);}
+}
+@keyframes cube-right {
+    0% {transform: rotateY(90deg) translateX(100px) scaleY(1);}
+    50% {transform: rotateY(90deg) translateX(100px) scaleY(3);}
+    100% {transform: rotateY(90deg) translateX(100px) scaleY(1);}
+}
+@keyframes cube-front {
+    0% {transform: rotateX(0) translateZ(0) scaleY(1);}
+    50% {transform: rotateX(0) translateZ(0) scaleY(3);}
+    100% {transform: rotateX(0) translateZ(0) scaleY(1);}
+}
+@keyframes cube-back {
+    0% {transform: rotateX(180deg) translateZ(100px) scaleY(1);}
+    50% {transform: rotateX(180deg) translateZ(100px) scaleY(3);}
+    100% {transform: rotateX(180deg) translateZ(100px) scaleY(1);}
+}
+
+/* an2 glow */
+.sec4 .ani .an2 .ani-wrap {
+    background: #240229;
+    display: flex; align-items: center; justify-content: center;
+}
+.glow {position: relative; width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); animation: glow-rolling 1s linear infinite;}
+.glow div {position: absolute; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);}
+.glow div:nth-child(1) {filter: blur(5px);}
+.glow div:nth-child(2) {filter: blur(10px);}
+.glow div:nth-child(3) {filter: blur(20px);}
+.glow div:nth-child(4) {filter: blur(40px);}
+.glow:after {content: ''; position: absolute; left: 10px; top: 10px; right: 10px; bottom: 10px; background: #240229; border-radius: 50%;}
+@keyframes glow-rolling {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* an3 planet */
+.sec4 .ani .an3 .ani-wrap {
+    background: #045762;
+    display: flex; align-items: center; justify-content: center;
+}
+.planet-wrap {position: relative; background: #173c57; height: 300px; width: 300px; overflow: hidden; border-radius: 50%; border: 10px solid #fff; z-index: 2; box-shadow: 0 0 20px rgba(#000, 0.3);}
+.bg {border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: bg 4s linear infinite;}
+.round-1 {background: #286c7f; width: 180px; height: 180px; z-index: 8;}
+.round-2 {background: #235968; width: 210px; height: 210px; z-index: 7;}
+.round-3 {background: #234b68; width: 230px; height: 230px; z-index: 6;}
+@keyframes bg {
+  50% {transform: translate(-50%, -50%) scale(1.3);}
+}
+.orbit {width: 2px; height: 2px; background: white; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9;}
+.orbit-1 {animation: orbit-1 5s linear infinite;}
+.orbit-2 {animation: orbit-2 10s linear infinite;}
+.orbit-3 {animation: orbit-3 15s linear infinite;}
+.orbit-4 {animation: orbit-4 20s linear infinite;}
+.orbit-5 {animation: orbit-5 25s linear infinite;}
+.orbit-6 {animation: orbit-6 30s linear infinite;}
+@keyframes orbit-1 {
+    0% {transform: rotate(0deg) translateX(65px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(65px) rotate(-360deg);}
+}
+@keyframes orbit-2 {
+    0% {transform: rotate(0deg) translateX(80px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(80px) rotate(-360deg);}
+} 
+@keyframes orbit-3 {
+    0% {transform: rotate(0deg) translateX(95px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(95px) rotate(-360deg);}
+}
+@keyframes orbit-4 {
+    0% {transform: rotate(0deg) translateX(110px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(110px) rotate(-360deg);}
+} 
+@keyframes orbit-5 {
+    0% {transform: rotate(0deg) translateX(125px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(125px) rotate(-360deg);}
+} 
+@keyframes orbit-6 {
+    0% {transform: rotate(0deg) translateX(140px) rotate(0deg);}
+    100% {transform: rotate(360deg) translateX(140px) rotate(-360deg);}
+} 
+.planet {width: 170px; height: 170px; border-radius: 50%; background: radial-gradient(ellipse at center, #70dec1 0%,#70dec1 30%, #7db9e8 100%); position: absolute; z-index: 10; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.sub-planet {width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(to bottom, #AEE69B 1%, #498DA4 50%, #0A404A 100%); position: absolute; top: 25%; left: 70%; z-index: 9;}
+.wave {position: absolute; bottom: 0; transform: scale(2); z-index: 10;}  
+.wave-1 {left: 60px; bottom: 106px; z-index: 11;   animation: wave-1 1s linear infinite;}
+.wave-2 {left: -61px; bottom: 78px; z-index: 12; animation: wave-2 1s linear infinite;}
+.wave-3 {left: 100px; bottom: 54px; z-index: 13; animation: wave-3 1s linear infinite;}
+.wave-4 {left: 40px; bottom: 29px; z-index: 14; animation: wave-2 1s linear infinite;}
+.wave-5 {left: -71px; bottom: 2px; z-index: 15; animation: wave-1 1s linear infinite;}
+@keyframes wave-1 {
+  50% {transform: scale(2) translate(-5px, 5px);}
+}
+@keyframes wave-2 {
+  50% {transform: scale(2) translate(3px, 8px);}
+}
+@keyframes wave-3 {
+  50% {transform: scale(2) translate(-4px, 7px);}
+}
+
+/* an4 heartbeat */
+.sec4 .ani .an4 .ani-wrap {
+    background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    animation: heart-attack 1.5s infinite;
+}
+.heart {background: #ff4646; height: 100px; width: 100px; transform: rotate(-45deg); animation: heart-beat 1.5s infinite; position: relative;}
+.heart:after {content: ''; background: #ff4646; border-radius: 50%; position: absolute; width: 100px; height: 100px; top: 0px; left: 50px;}
+.heart:before {content: ''; background: #ff4646; border-radius: 50%; position: absolute; width: 100px; height: 100px; top: -50px; left: 0px;}
+@keyframes heart-attack {
+    50% {background: #f3bad6;}
+}
+@keyframes heart-beat {
+    0% {transform: scale(1) rotate(-45deg);}
+    25% {transform: scale(0.8) rotate(-45deg);}
+    50% {transform: scale(1.2) rotate(-45deg);}
+    75% {transform: scale(0.8) rotate(-45deg);}
+}
+
+/* an5 speaking monster */
+.sec4 .ani .an5 .ani-wrap {
+    background: #1c27b5; overflow: hidden;
+    display: flex; align-items: flex-end; justify-content: center;
+}
+.monster {display: flex; align-items: flex-end; justify-content: center; position: relative; width: 200px; height: 300px;}
+.monster-body {display: flex; justify-content: center; position: relative; width: 100%; height: 100%; background-color: #3C47D7; border-top-left-radius: 100px; border-top-right-radius: 100px; box-shadow: 10px 10px 0 #07129C;}
+.monster-face {display: flex; align-items: center; justify-content: center; flex-direction: column; position: absolute; top: 19%; width: 75%; height: 50%;}
+.monster-eyes {display: flex; justify-content: space-between; width: 28%; height: auto; margin-bottom: 10px;}
+.monster-eye {width: 30%; height: 30px; border-radius: 20px; background: #000;}
+.monster-mouth {display: flex; justify-content: center; align-items: center; position: relative; width: 80%; height: 0%; overflow: hidden; border: 15px solid #FFC333; border-radius: 100px; background-color: #810332; animation: mouth 1.75s infinite;}
+.monster-mouth::before {content: ''; position: absolute; width: 70px; height: 40px; border-radius: 20px; background-color: #400018;}
+.monster-mouth::after {content: ''; position: absolute; bottom: -80px; width: 160px; height: 80px; border-top-left-radius: 50%; border-top-right-radius: 50%; background-color: #DC1B50; animation: tongue 1.75s infinite;}
+.monster-top {position: absolute; top: -30px; z-index: 100; width: 100px; height: 20px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; background-color: #ffffff; animation: top 1.75s infinite;}
+.monster-bottom {position: absolute; z-index: 100; bottom: 0; width: 100px; height: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #ffffff; animation: bottom 1.75s infinite;}
+@keyframes top {
+    0%, 10%, 80%, 100% {top: -30px;}
+    20% {top: 0px;}
+    30% {top: -20px;}
+    40% {top: -0px;}
+    50% {top: -25px;}
+    70% {top: 0px;}
+}
+@keyframes bottom {
+    0%, 10%, 80%, 100% {bottom: -30px;}
+    20% {bottom: 0px;}
+    30% {bottom: -20px;}
+    40% {bottom: -0px;}
+    50% {bottom: -25px;}
+    70% {bottom: 0px;}
+}
+@keyframes mouth {
+    0%, 10%, 100% {width: 100%; height: 0%;}
+    15% {width: 90%; height: 30%;}
+    20% {width: 50%; height: 70%;}
+    25% {width: 70%; height: 70%;}
+    30% {width: 80%; height: 60%;}
+    35% {width: 60%; height: 70%;}
+    40% {width: 55%; height: 75%;}
+    45% {width: 50%; height: 90%;}
+    50% {width: 40%; height: 70%;}
+    55% {width: 70%; height: 95%;}
+    60% {width: 40%; height: 50%;}
+    65% {width: 100%; height: 60%;}
+    70% {width: 100%; height: 70%;}
+    75% {width: 90%; height: 70%;}
+    80% {width: 50%; height: 70%;}
+    85% {width: 40%; height: 70%;}
+    90% {width: 90%; height: 30%;}
+    95% {width: 100%; height: 10%;}
+}
+@keyframes tongue {
+    0%, 20%, 100% {bottom: -80px;}
+    30%, 90% {bottom: -40px;}
+    40% {bottom: -45px;}
+    50% {bottom: -50px;}
+    70% {bottom: -80px;}
+    90% {bottom: -40px;}
+}
+
+/* an6 corgi */
+.sec4 .ani .an6 .ani-wrap {
+    background: #3f3456;
+    display: flex; align-items: flex-end; justify-content: center;
+}
+.dog {position: relative; z-index: 0; width: 250px; height: 200px;}
+.dog-heart {position: absolute; width: 6%; height: 7%; background-color: #e64356; border-bottom-right-radius: 23%; opacity: 0; animation-fill-mode: both;}
+.dog-heart:before, .dog-heart:after {position: absolute; width: 100%; height: 100%; content: ''; border-radius: 50%; background-color: #e64356;}
+.dog-heart:after {bottom: 0px; left: -53%;}
+.dog-heart:before {top: -53%; right: 0px; transform: rotate(45deg);}
+.heart-1 {top: -25%; left: 15%; animation: dog-heart 2s ease-out infinite 1.5s;}
+.heart-2 {top: -36%; left: 7%; animation: dog-heart 2s ease-out infinite 1s;}
+.heart-3 {top: -48%; left: 14%; animation: dog-heart 2s ease-out infinite 2s;}
+.heart-4 {top: -53%; left: -3%; animation: dog-heart 2s ease-out infinite 2.5s;}
+@keyframes dog-heart {
+	0% {transform: scale(0.75) rotate(35deg); opacity: 1; }
+	5%, 15%, 25% {transform: scale(1) rotate(35deg); }
+	10%, 20% {transform: scale(0.75) rotate(35deg); }
+	70% {opacity: 1;}
+	100% {transform: rotate(35deg) translateY(-10px) translateX(-10px); opacity: 0;}
+}
+.body {position: absolute; width: 100%; height: 50%; background-color: #f79e38; border-top-right-radius: 17% 40%; border-top-left-radius: 25%; border-bottom-right-radius: 5% 13%; border-bottom-left-radius: 30% 40%; z-index: 3;}
+.cheast {position: absolute; width: 45%; height: 100%; background-color: #fff; border-top-right-radius: 17% 40%; border-top-left-radius: 25%; border-bottom-right-radius: 40% 40%; border-bottom-left-radius: 40% 40%; z-index: 4;}
+.cheast:after, .cheast:before {position: absolute; content: ''; width: 7%; height: 55%; border-radius: 39%; background-color: #fff;}
+.cheast:after {top: 36%; left: 3%; -webkit-transform: rotate(-1deg); transform: rotate(-1deg);}
+.cheast:before {top: 19%; left: -4%;}
+.head {position: absolute; width: 100%; height: 100%; z-index: 4; animation: dog-head 1s ease-out infinite; animation-fill-mode: both; animation-direction: alternate;}
+@keyframes dog-head {
+	100% {-webkit-transform: translateX(-3px) rotate(3deg);transform: translateX(-3px) rotate(3deg);}
+}
+.tail {position: absolute; top: -14%; left: 92%; width: 10%; height: 45%; background-color: #f79e38; border-top-right-radius: 30% 30%; border-top-left-radius: 40% 30%; border-bottom-right-radius: 30% 40%; border-bottom-left-radius: 40% 40%; z-index: 1; transform: rotate(20deg); animation: dog-tail 170ms ease-out infinite;}
+.tail:before {position: absolute; content: ''; top: -8%; left: -7%; width: 100%; height: 50%; background-color: #f79e38; border-radius: 50%; animation: dog-tail-before 160ms ease-out infinite;}
+@keyframes dog-tail {
+	0%, 100% {transform: rotate(10deg);}
+	50%, 60% {transform: rotate(70deg) translateX(10px) translateY(2px);}
+}
+@keyframes dog-tail-before {
+	0%, 100% {transform: translateX(0);}
+	50% {transform: translateX(3px);}
+}
+.legs {position: absolute; top: 97%; left: 0; width: 100%; height: 30%; z-index: 2; animation: dog-legs 1s ease-out infinite 1.5s; animation-fill-mode: both; animation-direction: alternate;}
+.legs-front, .legs-back {width: 10%; height: 100%; background-color: #f79e38; position: absolute; border-bottom-right-radius: 100%; border-bottom-left-radius: 100%;}
+.legs-front:after, .legs-back:after {content: ''; position: absolute; top: 50%; width: 100%; height: 49%; background-color: #fff; border-bottom-right-radius: 100%; border-bottom-left-radius: 100%;}
+.legs-front-left {left: 38%; transform: rotate(1deg);}
+.legs-front-right {left: 20%; transform: rotate(-4deg);}
+.legs-back-left {left: 69%; transform: rotate(-7deg);}
+.legs-back-right {left: 85%; transform: rotate(2deg);}
+@keyframes dog-legs {
+	0% {transform: translateY(-1px);}
+	100% {transform: translateY(0px);}
+}
+.face {height: 40%; width: 42%; position: absolute; top: -13%; left: -3%; background-color: #fff; border-top-right-radius: 45% 50%; border-top-left-radius: 35% 50%; border-bottom-left-radius: 35% 21%; z-index: 6;}
+.face:after, .face:before {content: ''; position: absolute; background-color: #f79e38;}
+.face:after {width: 27%; left: 7%; height: 23%; border-top-right-radius: 100% 100%; border-bottom-left-radius: 49% 100%; transform: rotate(-64deg); top: -1%; border-top-left-radius: 0% -20%; border-bottom-right-radius: 52% 0%; box-shadow: rgba(0, 0, 0, 0.1) 2px -6px 11px 1px;}
+.face:before {width: 55%; left: 42%; top: 0%; height: 35%; border-radius: 23% 7% 16% 12%; transform: rotate(0deg) scaleX(-1);}
+.eye {width: 6%; height: 6%; position: absolute; border-radius: 100%; top: 24%; background-color: #000; z-index: 6; animation: dog-eye 1.8s infinite;}
+.eye-left {left: 27%;}
+.eye-right {left: 46%;}
+@keyframes dog-eye {
+	0%, 100% {animation-timing-function: step-end; opacity: 1;}
+	50%, 55% {animation-timing-function: step-start; opacity: 0;}
+}
+.mouth {background-color: transparent; border-color: #000; width: 44%; border-style: solid; border-width: 0.7vmin; height: 48%; z-index: 6; position: absolute; bottom: 35%; left: 14%; border-top-color: transparent; border-bottom-left-radius: 72% 100%; border-bottom-right-radius: 77% 100%; border-right-color: transparent; border-top-right-radius: 50%; border-left-color: transparent; transform: rotate(-41deg);}
+.year {position: absolute;}
+.year-left {top: -40%; left: 3%; height: 47%; width: 19%; z-index: 1; background-color: #e99036; border-top-left-radius: 68% 100%; border-top-right-radius: 100% 100%; transform-origin: bottom center; animation: left-year 1000ms ease-out infinite; animation-fill-mode: both; animation-direction: alternate; }
+.year-right {top: -39%; left: 19%; height: 38%; width: 18%; z-index: 1; background-color: #f79e38; border-top-left-radius: 56% 100%; border-top-right-radius: 100% 100%; transform-origin: bottom center; border-bottom-right-radius: 14% 38%; animation: right-year 1000ms ease-out infinite; animation-fill-mode: both; animation-direction: alternate; }
+@keyframes right-year {
+	0% {transform: rotate(-331deg);}
+	25% {transform: rotate(-320deg);}
+	50% {transform: rotate(-331deg);}
+	100% {transform: rotate(-320deg);}
+}
+@keyframes left-year {
+	0% {transform: rotate(-26deg);}
+	25% {transform: rotate(-35deg);}
+	50% {transform: rotate(-26deg);}
+	100% {transform: rotate(-40deg);}
+}
+.nose {position: absolute; width: 24%; height: 24%; background-color: #fff; z-index: 7; left: -12%; top: -3%; border-bottom-left-radius: 50% 88%; border-top-left-radius: 11% 43%; transform: rotate(12deg);}
+.nose:after {content: ''; position: absolute; width: 50%; height: 55%; background-color: #000; border-radius: 100%; left: -7%; top: -18%;}
