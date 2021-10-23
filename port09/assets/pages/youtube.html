@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react portfolio</title>
+
+    <!--css -->
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- header -->
+        <header id="header">
+            <h1><a href="../../index.html">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a></h1>
+            <nav>
+                <h2 class="screen_out">메인 메뉴</h2>
+                <ul>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../../index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../pages/youtube.html">YOUTUBE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../pages/movie.html">MOVIE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../pages/project.html">PROJECT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../pages/contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <!-- wrapTitle -->
+        <section id="wrapTitle-section">
+            <div class="wrapTitle-wrap">
+                <h3 class="wrapTitle-title">
+                    <span class="wrapTitle-line"></span>
+                    <p class="tit">YOUTUBE</p>
+
+                </h3>
+                <div class="wrapTitle-intro">
+                    <p class="wrapTitle-intro1 fontBonV">THAT’S MY</p>
+                    <p class="wrapTitle-intro2 fontCoco">YOUTUBE.</p>
+                </div>
+                <div class="wraptitle-cont">
+                    <div class="wrapTitle-des1">
+                        <span class="wrapTitle-des1-line"></span>
+                        <p class="wrapTitle-des1-1">SEARCH</p>
+                        <p class="wrapTitle-des1-2">FUNCTION</p>
+                        <p class="wrapTitle-des1-3">USING</p>
+                        <p class="wrapTitle-des1-4">YOUTUBE API</p>
+                    </div>
+                    <div class="wrapTitle-des2">
+                        유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //wrapTitle -->
+
+        <section id="youtube-video-section">
+            <h3 class="screen_out">youtube video 영역</h3>
+            <article class="youtube-video-article">
+                <h4 class="screen_out">youtube video 본문 영역</h4>
+                <div class="youtube-video-search">
+                    <input type="search" id="video-search" name="q" aria-label="Search video"
+                        placeholder="원하는 영상을 검색해 보세요.">
+                    <button class="search-btn">
+                        <i class="bx bx-search" style="color:#ffffff"></i>
+                    </button>
+                </div>
+                <div class="youtube-video-cont">
+                    <div class="youtube-video-tit">
+                        <p class="fontCoco">YOUTUBE VIDEO</p>
+                        <p>Search for keywords for the video you want!</p>
+                    </div>
+                    <div class="youtube-video-list">
+                        <ul>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE</div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE</div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                            <li>
+                                <div class="video"></div>
+                                <div class="video-tit">VIDEO TITLE </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+
+
+
+        <!-- 컨텍트 -->
+        <section class="contact-section">
+            <div class="contact-row">
+                <h3 class="contact-title">
+                    <span class="contact-line"></span>
+                    <p class="smallTitle">SEE MORE</p>
+                    <p class="fontBonV">CONTACT</p>
+                    <p class="fontCoco">ME</p>
+                </h3>
+                <div class="contact-cont"><a>
+                        <span class="contact-more">SEE MORE</span>
+                        <span class="contact-arrow"></span>
+                    </a></div>
+            </div>
+        </section>
+        <!-- //컨텍트 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <a href="../../index.html" class="footer-cont-row1 fontSun">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a>
+                <ul class="footer-cont-row2">
+                    <li>Front End Development : Yang Se Young</li>
+                    <li>PHONE : 010 2242 2378</li>
+                    <li>ⓒ Bright Young’s Portfolio 2021</li>
+                </ul>
+                <div class="footer-cont-row3">
+                    <a href="diddpwl80@gmail.com" class="email fontSun">diddpwl80@gmail.com</a>
+                    <div class="coding">
+                        <p><img src="../../assets/img/symbol.svg"></p>
+                        <p>With love from coding</p>
+
+                    </div>
+                    <div class="footer-social">
+                        <p>GET SOCIAL <span class="smile">:)</span></p>
+                        <p class="footer-line"></p>
+                        <p class="footer-sns-list">
+                            <span><a href="#">
+                                    <img src="../../assets/img/sns1.png">
+                                </a></span>
+                            <span><a href="#">
+                                    <img src="../../assets/img/sns2.png">
+                                </a></span>
+                            <span><a href="#">
+                                    <img src="../../assets/img/sns3.png">
+                                </a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="../js/page.js"></script>
+</body>
+
+</html>

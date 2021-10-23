@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react portfolio</title>
+
+    <!--css -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="loader loader--active">
+        <div class="loader__icon">
+            <div id="loading-rotater">
+                <svg id="loading-svg" width="50" height="50" fill="transparent">
+                    <circle cx="25" cy="25" r="24" stroke="black"></circle>
+                </svg>
+            </div>
+        </div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+    </div>
+
+    <div id="wrap" class="projectwrap">
+
+        <!-- header -->
+        <header id="header">
+            <h1><a href="../index.html">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a></h1>
+            <nav>
+                <h2 class="screen_out">메인 메뉴</h2>
+                <ul>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="page__click" href="../index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="page__click" href="youtube.html">YOUTUBE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="page__click" href="movie.html">MOVIE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="page__click" href="project.html">PROJECT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="page__click" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-ham">
+                <div class="ham">
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- wrapTitle -->
+        <section id="wrapTitle-section" class="project-wraptitle-section">
+            <div class="wrapTitle-wrap">
+                <h3 class="wrapTitle-title">
+                    <span class="wrapTitle-line"></span>
+                    <p class="tit">PROJECT</p>
+                </h3>
+                <div class="wrapTitle-intro">
+                    <p class="wrapTitle-intro1 fontBonV">THAT’S MY</p>
+                    <p class="wrapTitle-intro2 fontCoco">PROJECT</p>
+                </div>
+                <div class="wraptitle-cont">
+                    <div class="wrapTitle-des1">
+                        <span class="wrapTitle-des1-line"></span>
+                        <p class="wrapTitle-des1-1">SEARCH</p>
+                        <p class="wrapTitle-des1-2">FUNCTION</p>
+                        <p class="wrapTitle-des1-3">USING</p>
+                        <p class="wrapTitle-des1-4">YOUTUBE API</p>
+                    </div>
+                    <div class="wrapTitle-des2">
+                        유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //wrapTitle -->
+
+        <!-- project -->
+        <section id="project-section">
+            <h3 class="screen_out">project 영역</h3>
+            <article class="project-article">
+                <h4 class="screen_out">project 본문 영역</h4>
+                <div class="tab-wrapper">
+                    <div class="nav">
+                        <ul class="tab-menu">
+                            <li>
+                                <img src="../assets/img/tabimage1.jpg" alt="웹사이트">
+                                <a href="#website">WEB SITE</a>
+                            </li>
+                            <li>
+                                <img src="../assets/img/tabimage2.jpg" alt="웹사이트">
+                                <a href="#script">SCRIPT</a>
+                            </li>
+                            <li>
+                                <img src="../assets/img/tabimage3.jpg" alt="웹사이트">
+                                <a href="#animation">ANIMATION</a>
+                            </li>
+                        </ul>
+                        <span class="highlight"></span>
+                    </div>
+                    <div class="tab-content">
+                        <!-- website -->
+                        <div id="website">
+                            <div class="project-subtit">
+                                <div class="subtit-main">WEBSITE PROJECTS</div>
+                                <div class="subtit-cont">
+                                    <div class="subtit-cont-line"></div>
+                                    <div class="subtit-cont1">
+                                        <p>BRIEF</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                    </div>
+                                    <div class="subtit-cont2">
+                                        <p>SOLUTION</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                        <div class="subtit-cont-line line2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project">
+                                <ul>
+                                    <li class="project1">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 1</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">PORTFOLIO</span>
+                                                <span>
+                                                    첫번째로 만든 포트폴리오입니다.
+                                                    다양한 애니메이션과 스크립트 효과를 이용해서
+                                                    제작하였습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view">
+                                                <a href="https://seyoungjoy.github.io/portfolio/port/" target="_blank">
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="mockup">
+                                            <video width="750" height="100%" src="../assets/img/site1.mp4" autoplay
+                                                muted loop></video>
+                                        </div>
+                                    </li>
+                                    <li class="project2">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 2</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">VUE WEBSITE</span>
+                                                <span>
+                                                    Vue를 이용한 웹 사이트를 제작했습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view">
+                                                <a href="https://vue2027.web.app/" target="_blank">
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web2.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="project3">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 3</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">PHP WEBSITE</span>
+                                                <span>
+                                                    Php를 사용해 웹 페이지를 제작하였습니다. 댓글 기능, 게시판 등의 기능을 넣었습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view"><a>
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a></p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web3.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="project4">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 4</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">MEGABOX</span>
+                                                <span>
+                                                    메가박스 사이트를 클론 코딩하였습니다. 반응형까지 작동하도록 만들었고 웹표준에 맞추어 제작하였습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view"><a>
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a></p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web4.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="project5">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 5</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">WINIX<br> RESPONSIVE</span>
+                                                <span>
+                                                    위닉스 홈페이지를 리뉴얼하여 제작했습니다. 제품에 집중할 수 있도록 디자인했으며 처음으로 반응형 웹페이지를
+                                                    구현해보았습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view"><a href="https://seyoungjoy.github.io/portfolio/port/project/project5/" target="_blank">
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a></p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web5.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="project6">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 6</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">KOIPA</span>
+                                                <span>
+                                                    한국지식재산보호원 홈페이지 리뉴얼 | HTML5 & CSS3 웹표준에 맞추어 공기업의 신뢰성 있는 디자인과 정보 전달
+                                                    위주로 리뉴얼 하였습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view"><a href="https://seyoungjoy.github.io/portfolio/port/project/project6/" target="_blank">
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a></p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web6.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="project7">
+                                        <div class="cont">
+                                            <p class="num">PROJECT 7</p>
+                                            <p class="tit">
+                                                <span class="fontBonV">KRISPY KREME</span>
+                                                <span>
+                                                    크리스피크림 리뉴얼 홈페이지 코딩 | 처음 만든 웹사이트로 브랜드가 추구하는 분위기와 주연령대를 분석하여 리뉴얼
+                                                    하였습니다. 상세페이지 메뉴도 함께 제작하였습니다.
+                                                </span>
+                                            </p>
+                                            <p class="view"><a href="https://seyoungjoy.github.io/portfolio/port/project/project7/" target="_blank">
+                                                    <span class="view-text">VIEW SITE</span>
+                                                    <span class="view-arrow"></span>
+                                                </a></p>
+                                        </div>
+                                        <div class="mockup">
+                                            <img src="../assets/img/web7.jpg">
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- script -->
+
+                        <div id="script">
+                            <div class="project-subtit">
+                                <div class="subtit-main">JAVASCRIPT PROJECTS</div>
+                                <div class="subtit-cont">
+                                    <div class="subtit-cont-line"></div>
+                                    <div class="subtit-cont1">
+                                        <p>BRIEF</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                    </div>
+                                    <div class="subtit-cont2">
+                                        <p>SOLUTION</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                        <div class="subtit-cont-line line2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="animation-cont">
+                                <div class="row2">
+                                    <p>VANILLA JAVASCRIPT</p>
+                                    <p>THAT’S MY PROJECT</p>
+                                </div>
+                                <div class="row1">
+                                    <ul>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="js1" title="js1" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/jsproject/index1.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">PLAY THE PIANO</span>
+                                                    <span>
+                                                        순수 100% Vanilla JavaScript로 키보드를 누르면 건반 소리가 나는 프로그램을 만들었습니다.순수
+                                                        100% Vanilla JavaScript로 키보드를 누르면 건반 소리가 나는 프로그램을 만들었습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="js1" title="js1" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/jsproject/index2.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">Clock</span>
+                                                    <span>
+                                                        순수 100% Vanilla JavaScript로 만든 크롬 앱 서비스입니다. 현재 시간을 가져오는 시계를
+                                                        구현했으며, 할 일 목록을 생성하고 완료된 것은 삭제할 수 있습니다. 또한, 지역기반으로 API를 가져와 날씨를
+                                                        보여주며, 랜덤 배경 사진 기능을 구현했습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="js1" title="js1" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/jsproject/index3.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">TO DO LIST</span>
+                                                    <span>
+                                                        javascript로 만든 To do list 입니다. + 버튼을 클릭하면 아래 숨겨져 있던 form이 나오고
+                                                        제목과 내용을 입력하면 목록을 추가할 수 있습니다. 리스트 목록과 오른쪽 상단의 숫자를 동일하게 설정하여 목록의
+                                                        개수를 알 수 있도록 설정했습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="js1" title="js1" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/jsproject/index4.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">Calculator</span>
+                                                    <span>
+                                                        순수 100% Vanilla JavaScript로 만든 크롬 앱 서비스입니다. 현재 시간을 가져오는 시계를
+                                                        구현했으며, 할 일 목록을 생성하고 완료된 것은 삭제할 수 있습니다. 또한, 지역기반으로 API를 가져와 날씨를
+                                                        보여주며, 랜덤 배경 사진 기능을 구현했습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="js1" title="js1" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/jsproject/index5.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">Counter</span>
+                                                    <span>
+                                                        순수 100% Vanilla JavaScript로 만든 글자 수 계산기입니다. 단어수와 글자수를 자동으로
+                                                        계산해줍니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- animation -->
+                        <div id="animation">
+                            <div class="project-subtit">
+                                <div class="subtit-main">ANIMATION</div>
+                                <div class="subtit-cont">
+                                    <div class="subtit-cont-line"></div>
+                                    <div class="subtit-cont1">
+                                        <p>BRIEF</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                    </div>
+                                    <div class="subtit-cont2">
+                                        <p>SOLUTION</p>
+                                        <p>
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                            Hello, I am Yang Se-young, who is preparing to become a front-end developer.
+                                        </p>
+                                        <div class="subtit-cont-line line2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="animation-cont">
+                                <div class="row1">
+                                    <ul>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="ani" title="animation" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/animation/index1.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">Circle Animation</span>
+                                                    <span>
+                                                        keyframe과 transform의 scale, tranlate, rotate 속성을 이용한 애니메이션입니다.
+                                                        animation-timing-function에 cubic-bezier속성을 추가하여 좀 더 자연스럽게 보이도록
+                                                        했습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="ani" title="animation" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/animation/index2.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">Roket Animation</span>
+                                                    <span>
+                                                        CSS 효과를 이용한 "rocket" 애니메이션입니다. HTML에서 작업한 각각의 class에 맞게 css효과를
+                                                        적용하여 로켓, 불꽃, 스파크, 우주, 별의 모습을 표현했습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="ani" title="animation" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/animation/index3.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">SVG filter Animation</span>
+                                                    <span>
+                                                        feTurbulence을 이용한 svg filter 효과를 이용한 애니메이션입니다. 생성한 필터는 CSS
+                                                        filter 속성의 url 참조를 사용해 적용시켰습니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mockup">
+                                                <iframe class="ani" title="animation" width="100%" height="100%"
+                                                    src="http://fejoy95.dothome.co.kr/port_react/animation/index4.html">
+                                                </iframe>
+                                            </div>
+                                            <div class="cont">
+                                                <p class="tit">
+                                                    <span class="fontBonV">GSAP Animation</span>
+                                                    <span>
+                                                        GSAP 라이브러리를 활용한 애니메이션입니다.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row2">
+                                    <p>VANILLA JAVASCRIPT</p>
+                                    <p>THAT’S MY PROJECT</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- //project -->
+
+
+
+
+        <!-- 컨텍트 -->
+        <section class="contact-section">
+            <div class="contact-row">
+                <h3 class="contact-title">
+                    <span class="contact-line"></span>
+                    <p class="smallTitle">SEE MORE</p>
+                    <p class="contact-title-1 fontBonV">CONTACT</p>
+                    <p class="contact-title-2 fontCoco">ME</p>
+                </h3>
+                <div class="contact-cont">
+                    <a href="contact.html">
+                        <span class="contact-more">SEE MORE</span>
+                        <span class="contact-arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- //컨텍트 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <a href="../index.html" class="footer-cont-row1 fontSun">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a>
+                <ul class="footer-cont-row2">
+                    <li>Front End Development : Yang Se Young</li>
+                    <li>PHONE : 010 2242 2378</li>
+                    <li>ⓒ Bright Young’s Portfolio 2021</li>
+                </ul>
+                <div class="footer-cont-row3">
+                    <a href="diddpwl80@gmail.com" class="email fontSun">diddpwl80@gmail.com</a>
+                    <div class="coding">
+                        <p><img src="../assets/img/symbol.svg"></p>
+                        <p>With love from coding</p>
+
+                    </div>
+                    <div class="footer-social">
+                        <p>GET SOCIAL <span class="smile">:)</span></p>
+                        <p class="footer-line"></p>
+                        <p class="footer-sns-list">
+                            <span><a href="#">
+                                    <img src="../assets/img/sns1.png">
+                                </a></span>
+                            <span><a href="#">
+                                    <img src="../assets/img/sns2.png">
+                                </a></span>
+                            <span><a href="#">
+                                    <img src="../assets/img/sns3.png">
+                                </a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="../assets/js/page.js"></script>
+    <script src="../assets/js/common.js"></script>
+
+    <script>
+        const tabMenu = document.querySelectorAll('.tab-menu li');
+        const tabContent = document.querySelectorAll('.tab-content > div');
+        const highLight = document.querySelector('.highlight');
+
+        tabMenu.forEach(function (item, idx) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                showContent(idx);
+                moveHighLight(idx);
+            });
+        });
+        function showContent(num) {
+            tabContent.forEach(function (item) {
+                item.style.display = 'none';
+            });
+            tabContent[num].style.display = 'block';
+        };
+        function moveHighLight(num) {
+            const newLeft = tabMenu[num].offsetLeft;
+            const newWidth = tabMenu[num].offsetWidth;
+            console.log(newWidth);
+            highLight.style.left = newLeft + 'px';
+            highLight.style.width = newWidth + 'px';
+        }
+
+
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+
+            if (scroll >= $(".nav").offset().top - $(window).height() * 0.7) {
+                let tl = gsap.timeline();
+                tl.to(".nav", { duration: 1, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+            };
+            if (scroll >= $(".subtit-main").offset().top - $(window).height() * 0.4) {
+                let tl = gsap.timeline();
+                tl.to(".subtit-main", { duration: 0.5, opacity: 1, rotationZ: 0, ease: "bounce.out" });
+                tl.to(".subtit-cont-line", { duration: 0.5, opacity: 1, scaleX: 1, ease: "ease.out" });
+                tl.to(".subtit-cont>div>p:first-child", { duration: 0.5, opacity: 1, y: 0, ease: "ease.out" });
+                tl.to(".subtit-cont>div>p:last-child", { duration: 0.5, opacity: 1, y: 0, ease: "ease.out" }, "-=0.32");
+            };
+            if (scroll >= $(".project1").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project1 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project1 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project1 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project1 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project1 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project2").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project2 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project2 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project2 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project2 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project2 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project3").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project3 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project3 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project3 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project3 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project3 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project4").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project4 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project4 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project4 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project4 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project4 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project5").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project5 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project5 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project5 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project5 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project5 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project6").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project6 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project6 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project6 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project6 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project6 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+            if (scroll >= $(".project7").offset().top - $(window).height() * 0.5) {
+                let tl = gsap.timeline();
+                tl.to(".project7 .num", { duration: 0.3, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" });
+                tl.to(".project7 .tit", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project7 .cont .tit span:nth-child(2)", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.Out" }, "-=0.22");
+                tl.to(".project7 .view", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+                tl.to(".project7 .mockup", { duration: 0.5, stagger: 0.01, opacity: 1, x: 0, ease: "ease.out" }, "-=0.22");
+            };
+        })
+    </script>
+
+</body>
+
+</html>

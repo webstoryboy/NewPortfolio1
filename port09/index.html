@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react portfolio</title>
+
+    <!--css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+</head>
+
+<body>
+    <!-- 마우스 커서 -->
+    <div class="cursor"></div>
+
+    <div class="loader loader--active">
+        <div class="loader__icon">
+            <div id="loading-rotater">
+                <svg id="loading-svg" width="50" height="50" fill="transparent">
+                    <circle cx="25" cy="25" r="24" stroke="black"></circle>
+                </svg>
+            </div>
+        </div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+    </div>
+
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <h1><a href="index.html">
+                    <p class="change-color">BRIGHT</p>
+                    <p class="symbol change-color">young</p>
+                </a></h1>
+            <nav>
+                <h2 class="screen_out">메인 메뉴</h2>
+                <ul>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="change-color page__click" href="index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="change-color page__click" href="pages/youtube.html">YOUTUBE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="change-color page__click" href="pages/movie.html">MOVIE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="change-color page__click" href="pages/project.html">PROJECT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a class="change-color page__click" href="pages/contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-ham">
+                <div class="ham">
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <main>
+            <section id="mainContent">
+                <h2 class="screen_out">메인 컨텐츠</h2>
+                <!-- 메인 화면 -->
+                <article class="screen-content">
+                    <div class="screen-content-main">
+                        <div>
+                            <p class="wordIam fontCavi">I AM</p>
+                            <p class="mainArrow"><img src="assets/img/arrowsvg.svg" alt="화살표"></p>
+                            <p class="mainLogo fontSun">
+                                <span>BRIGHT</span>
+                                <span class="mainLogoSymbol">young</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="fontCavi">I DO</p>
+                            <p class="really fontBonV">REALLY</p>
+                            <p class="fontCoco">COOL</p>
+                        </div>
+                        <div>
+                            <p class="fontCoco">CODING</p>
+                            <p class="fontBonV">TO BE A REALLY</p>
+                        </div>
+                        <div>
+                            <p class="mainSymbol"><img src="assets/img/symbol.svg" alt="메인심볼"></p>
+                            <p class="fontBonV">TALENTED</p>
+                            <p class="fontCoco">PEOPLE</p>
+                        </div>
+                    </div>
+                    <div class="screen-line"></div>
+                </article>
+
+                <!-- //메인화면 -->
+
+                <!-- 메인 소개 -->
+                <article class="main-about">
+                    <h3 class="screen_out">메인 소개</h2>
+                        <section class="about-cont">
+                            <h4 class="screen_out">메인 소개 페이지
+                    </h3>
+                    <div class="flow-letter">
+                        <p class="right fontCavi">FRONT END DEVELOPMENT <span class="fontCoco aboutSymbol">YOUNG</span>
+                        </p>
+                        <p class="left fontCavi">FRONT END DEVELOPMENT <span class="fontCoco aboutSymbol">YOUNG</span>
+                        </p>
+                    </div>
+                    <div class="introduce">
+                        <p>
+                            안녕하세요. 다양하고 멋진 효과들을 구현해내고 싶은 프론트엔드 개발자 양세영입니다.
+                        </p>
+                        <p>
+                            부산의 국비지원학원에서 웹퍼블리셔 6개월 과정을 수료했고 처음으로 해본 코딩이었지만 제가 이렇게까지 즐기면서 집중해본 적은 처음이라 이 분야에 더 욕심이 났습니다.
+                        </p>
+                        <p>
+                            그래서 서울에 올라와 Javascript, React, Vue, Php 등 다양한 언어들을 배우며 포트폴리오를 준비했습니다.
+                        </p>
+                        <p>
+                            정성 들여 만든 작업물들을 봐주셔서 정말 감사하고 마음에 드신다면 연락주세요.
+                        </p>
+                        <p>
+                            일은 센스있게, 코딩은 깔끔하게, 배움은 열정적으로 하겠습니다.
+                        </p>
+                        <p><a href="pages/contact.html" class="fontCoco">CONTACT YOUNG</a>
+                        </p>
+                    </div>
+                    <div class="introduceTab">
+                        <div class="row">
+                            <ul class="tab-menu">
+                                <li>
+                                    <a href="#tabs-1" class="active">
+                                        <img src="assets/img/1.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-2">
+                                        <img src="assets/img/2.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-3">
+                                        <img src="assets/img/3.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-4">
+                                        <img src="assets/img/4.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-5">
+                                        <img src="assets/img/5.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-6">
+                                        <img src="assets/img/6.svg">
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="tabs-1" class="tabs clearfix">
+                                    <p class="text-left">
+                                        성취감은<br>
+                                        저를 움직이는 원동력입니다.&#128526;
+                                    </p>
+                                    <p class="text-right">
+                                        No matter how difficult it is, I feel a sense of accomplishment when I see a
+                                        website that is completed one by one.
+                                    </p>
+                                </div>
+                                <div id="tabs-2" class="tabs clearfix">
+                                    <p class="text-left">따뜻하고 책임감이 강한<br>
+                                        ENFJ 입니다.&#129392;
+                                    </p>
+                                    <p class="text-right">
+                                        My MBTI is a bright and caring ENFJ. Warm, active, responsible, sociable and
+                                        compassionate.
+                                    </p>
+                                </div>
+                                <div id="tabs-3" class="tabs clearfix">
+                                    <p class="text-left">
+                                        매일 아침<br>
+                                        그날의 계획을 세웁니다.
+                                        &#128221;
+                                    </p>
+                                    <p class="text-right">
+                                        Every morning I make a plan for the day. No matter what happens, I tend to act
+                                        in a planned manner.
+                                    </p>
+                                </div>
+                                <div id="tabs-4" class="tabs clearfix">
+                                    <p class="text-left">자기계발에 관심이 많고<br>
+                                        코딩 공부를 즐깁니다.&#128187;
+                                    </p>
+                                    <p class="text-right">
+                                        I am interested in self-development and enjoy studying coding. Learning new
+                                        things is always fun.
+                                    </p>
+                                </div>
+                                <div id="tabs-5" class="tabs clearfix">
+                                    <p class="text-left">운동은 주 4회 하며<br>
+                                        체력 관리를 하고있습니다.&#128170;
+                                    </p>
+                                    <p class="text-right">
+                                        I exercise 4 times a week and manage my stamina. Because you have to be
+                                        physically fit to study.
+                                    </p>
+                                </div>
+                                <div id="tabs-6" class="tabs clearfix">
+                                    <p class="text-left">내 꿈은<br>
+                                        코딩왕&#128081;
+                                    </p>
+                                    <p class="text-right">
+                                        내가 원하는 것들은 모두 구현할 수 있는 수준의 코딩실력을 갖추고 싶습니다. 그것이 진정 코딩왕이 아닐까요?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            </article>
+            <!-- //메인 소개 -->
+
+            <!-- 메인 스토리 -->
+            <article class="story-article">
+                <h3 class="screen_out">메인 스토리</h2>
+                    <section class="main-story">
+                        <h4 class="main-story-title">
+                            <span class="story-line" aria-hidden="true"></span>
+                            <p class="story-title-1 fontBonV">THAT’S MY</p>
+                            <p class="story-title-2 fontCoco">STORY</p>
+                        </h4>
+                        <div class="swiper-container mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story3.jpg" alt="스토리1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story1.jpg" alt="스토리2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story2.jpg" alt="스토리3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story6.jpg" alt="스토리4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story5.jpg" alt="스토리5">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/story4.jpg" alt="스토리6">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </article>
+            <!-- //메인 스토리 -->
+            </section>
+        </main>
+        <!-- //main -->
+
+        <!-- 컨텍트 -->
+        <section class="contact-section">
+            <div class="contact-row">
+                <h3 class="contact-title">
+                    <span class="contact-line"></span>
+                    <p class="smallTitle">SEE MORE</p>
+                    <p class="contact-title-1 fontBonV">CONTACT</p>
+                    <p class="contact-title-2 fontCoco">ME</p>
+                </h3>
+                <div class="contact-cont">
+                    <a href="pages/contact.html">
+                        <span class="contact-more">SEE MORE</span>
+                        <span class="contact-arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- //컨텍트 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <a href="index.html" class="footer-cont-row1 fontSun">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a>
+                <ul class="footer-cont-row2">
+                    <li>Front End Development : Yang Se Young</li>
+                    <li>PHONE : 010 2242 2378</li>
+                    <li>ⓒ Bright Young’s Portfolio 2021</li>
+                </ul>
+                <div class="footer-cont-row3">
+                    <a href="pages/contact.html" class="email fontSun">diddpwl80@gmail.com</a>
+                    <div class="coding">
+                        <p><img src="assets/img/symbol.svg"></p>
+                        <p>With love from coding</p>
+
+                    </div>
+                    <div class="footer-social">
+                        <p>GET SOCIAL <span class="smile">:)</span></p>
+                        <p class="footer-line"></p>
+                        <p class="footer-sns-list">
+                            <span><a href="https://github.com/seyoungjoy" target="_blank">
+                                    <img src="assets/img/sns1.png">
+                                </a></span>
+                            <span><a href="https://diddpwl80.gitbook.io/study/" target="_blank">
+                                    <img src="assets/img/sns2.png">
+                                </a></span>
+                            <span><a href="https://bongbongdang.tistory.com/" target="_blank">
+                                    <img src="assets/img/sns3.png">
+                                </a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script>
+        //마우스 커서 효과
+        var cursor = $(".cursor");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function () {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function (e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        $(".swiper-container").on("mouseenter", function () {
+            cursor.addClass("active");
+
+        });
+
+        $(".swiper-container").on("mouseleave", function () {
+            cursor.removeClass("active");
+
+        });
+
+
+
+
+
+
+        // 메인 페이지
+        setTimeout(function () {
+            let tl = gsap.timeline();
+            tl.to("#header", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, rotationZ: 0, ease: "bounce.out" });
+            tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" });
+            tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "power4.out" });
+            tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(3) > p:nth-child(1)", { duration: 0.5, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(3) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, skewX: 0, ease: "bounce.out" });
+            tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" });
+            tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+            tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+            tl.to(".screen-line", { duration: 0.8, stagger: 0.1, opacity: 1, scaleY: 1, ease: "ease.out" });
+
+        }, 1400);
+
+
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+
+            // 스크롤시 텍스트 출현
+            if (scroll >= $(".introduce").offset().top - $(window).height() * 1) {
+                let tl = gsap.timeline();
+                tl.to(".introduce p:nth-child(1)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" });
+                tl.to(".introduce p:nth-child(2)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" }, "-=0.32");
+                tl.to(".introduce p:nth-child(3)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" }, "-=0.32");
+                tl.to(".introduce p:nth-child(4)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" }, "-=0.32");
+                tl.to(".introduce p:nth-child(5)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" }, "-=0.32");
+                tl.to(".introduce p:nth-child(6)", { opacity: 1, y: 0, duration: 0.5, ease: "ease.out" }, "-=0.32");
+            };
+            //main-story 애니메이션
+            if (scroll >= $(".main-story").offset().top - $(window).height() * 0.7) {
+                let tl = gsap.timeline();
+                tl.to(".story-line", { opacity: 1, scaleY: 1, duration: 0.4, stagger: 0.3, ease: "ease.out" });
+                tl.to(".story-title-1", { opacity: 1, rotationZ: 0, duration: 0.5, ease: "bounce.out" }, "-=0.12");
+                tl.to(".story-title-2", { opacity: 1, rotationZ: 0, duration: 0.5, stagger: 0.1, ease: "bounce.out" }, "-=0.22");
+                tl.to(".swiper-container", { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "ease.out" });
+            };
+            //contact 애니메이션
+            if (scroll >= $(".contact-title").offset().top - $(window).height() * 0.9) {
+                let tl = gsap.timeline();
+                tl.to(".contact-line", { opacity: 1, scaleY: 1, duration: 0.3, stagger: 0.3, ease: "ease.out" });
+                tl.to(".smallTitle", { opacity: 1, x: 0, duration: 0.4, stagger: 0.3, ease: "ease.out" });
+                tl.to(".contact-title-1", { opacity: 1, rotationZ: 0, duration: 0.5, ease: "bounce.out" }, "-=0.12");
+                tl.to(".contact-title-2", { opacity: 1, rotationZ: 0, duration: 0.5, stagger: 0.1, ease: "bounce.out" }, "-=0.22");
+                tl.to(".contact-cont", { opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: "ease.out" });
+            };
+            // 스크롤시 텍스트 이동
+            $(".flow-letter .right").css("transform", "translatex(" + -scroll + "px");
+            $(".flow-letter .left").css("transform", "translatex(" + scroll + "px");
+        });
+
+        //탭메뉴
+        var targetLink = document.querySelectorAll('.tab-menu li a');
+        var tabContent = document.querySelectorAll('.tab-content .tabs');
+        // var textLeft = document. querySelectorAll('.tab-content .tabs .text-left');
+
+        for (var i = 0; i < targetLink.length; i++) {
+            targetLink[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                var orgTarget = e.target.getAttribute('href');
+                var tabTarget = orgTarget.replace('#', '');
+
+                for (var x = 0; x < tabContent.length; x++) {
+                    tabContent[x].style.display = 'none';
+                    // textLeft[x].classList.remove('active');
+                }
+                document.getElementById(tabTarget).style.display = 'block';
+                document.getElementById(tabTarget).classList.add('active');
+                let ta = document.getElementById(tabTarget)
+                // e.target.classList.add('active');
+
+                for (var j = 0; j < targetLink.length; j++) {
+                    targetLink[j].classList.remove('active');
+                    e.target.classList.add('active');
+                }
+            });
+        };
+        document.getElementById('tabs-1').style.display = 'block';
+
+
+     
+
+
+        //스와이퍼 슬라이드
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 10,
+            grabCursor: false,
+            breakpoints: {
+                768: {
+                slidesPerView: 4,
+                },
+                500: {
+                slidesPerView: 2,
+                },
+                380: {
+                slidesPerView: 1,
+                },
+            }
+        });
+
+    //contact 애니메이션
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact page</title>
+
+    <!--css -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="loader loader--active">
+        <div class="loader__icon">
+            <div id="loading-rotater">
+                <svg id="loading-svg" width="50" height="50" fill="transparent">
+                    <circle cx="25" cy="25" r="24" stroke="black"></circle>
+                </svg>
+            </div>
+        </div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+    </div>
+
+    <div id="wrap">
+
+        <!-- header -->
+        <header id="header">
+            <h1><a href="../index.html">
+                    <p>BRIGHT</p>
+                    <p class="symbol">young</p>
+                </a></h1>
+            <nav>
+                <h2 class="screen_out">메인 메뉴</h2>
+                <ul>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="../index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="youtube.html">YOUTUBE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="movie.html">MOVIE</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="project.html">PROJECT</a>
+                    </li>
+                    <li class="nav-ellipse">
+                        <svg width="187" height="72" viewBox="0 0 187 72" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.5 36C186.5 40.7814 183.985 45.3925 179.316 49.6431C174.646 53.8938 167.861 57.7448 159.435 60.9892C142.585 67.4768 119.274 71.5 93.5 71.5C67.7261 71.5 44.4147 67.4768 27.5652 60.9892C19.1387 57.7448 12.3539 53.8938 7.68428 49.6431C3.01486 45.3925 0.5 40.7814 0.5 36C0.5 31.2186 3.01486 26.6075 7.68428 22.3569C12.3539 18.1062 19.1387 14.2552 27.5652 11.0108C44.4147 4.52323 67.7261 0.5 93.5 0.5C119.274 0.5 142.585 4.52323 159.435 11.0108C167.861 14.2552 174.646 18.1062 179.316 22.3569C183.985 26.6075 186.5 31.2186 186.5 36Z"
+                                stroke="white" />
+                        </svg>
+                        <a href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-ham">
+                <div class="ham">
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+
+        <!-- contact -->
+        <section class="ct-section">
+            <h3 class="screen_out">컨텍트 페이지 영역</h3>
+            <article class="ct-article">
+                <h4 class="screen_out">contact article</h4>
+                <div class="contact-main">
+                    <div class="contact-text">
+                        <p>FRONT END</p>
+                        <p>DEVELOPMENT</p>
+                        <p>HOTLINE&#9993;</p>
+                    </div>
+                </div>
+                <div class="contact-sub">
+                    <p class="contact-mail">
+                        <span class="mail-button">CLICK</span>
+                        <span class="mail-address">diddpwl80@gmail.com</span>
+                    </p>
+                    <p>(© SEYOUNG PORTFOLIO 2021)</p>
+                </div>
+
+                <div class="floating-form">
+                    <div class="contact-form">
+                        <form class="form">
+                            <button id="hide-menu">
+                                <i class="bx bxs-x-circle"></i>
+                            </button>
+                            <h4 class="contact-tit">Contact Me</h4>
+                            <!-- <p class="contact-subtit">
+                                Whether you’re looking for answers, would to want to let me know how i did, you’ll find
+                                many ways to contact me right here.
+                            </p> -->
+                            <div class="input-group">
+                                <input type="email" id="email" placeholder="your email" required>
+                                <label for="email">your email</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" rows="8" placeholder="your message"></textarea>
+                                <label for="message">your message</label>
+                            </div>
+                            <button type="submit" id="send-btn">send</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- //contact -->
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+
+        //text mouse effect
+        let x = 0,
+            y = 0,
+            mouseX = 0,
+            mouseY = 0,
+            fmouseX = 0,
+            fmouseY = 0;
+
+        document.addEventListener("mousemove", function (e) {
+            x = e.pageX;
+            y = e.pageY;
+            //마우스의 x축 y축 쵯소값 -100 쵯대값 100으로 설정
+            mouseX = Math.max(-50, Math.min(50, window.innerWidth / 2 - x));
+            mouseY = Math.max(-50, Math.min(50, window.innerHeight / 2 - y));
+
+            angleX = (12 * mouseX) / 100;
+            angleY = (12 * mouseY) / 100;
+
+            fmouseX += (angleX - fmouseX) * 1 / 10;
+            fmouseY += (angleY - fmouseY) * 1 / 10;
+
+            //움직임
+            let move = document.querySelector(".contact-text");
+            move.style.transform = "translate(-50%, -50%) perspective(600px) rotateX(" + fmouseY + "deg) rotateY(" + -fmouseX + "deg)"
+        });
+
+        // 나타나기
+        setTimeout(function () {
+            let tl = gsap.timeline();
+            tl.to(".contact-main", { duration: 1, stagger: 0.1, opacity: 1, scale: 1, ease: "bounce.out" });
+            tl.to(".contact-sub p:nth-child(1)", { duration: 0.5, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" });
+            tl.to(".contact-sub p:nth-child(2)", { duration: 0.5, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" },"-=0.12");
+        }, 1500);
+
+        //floating contact
+        let floatingBtn = document.querySelector('.contact-mail');
+        let hideForm = document.querySelector('#hide-menu');
+        let floatingForm = document.querySelector('.floating-form');
+
+        //mail click
+        floatingBtn.addEventListener('click', function(){
+            floatingForm.classList.toggle('floating-form-active');
+        });
+        hideForm.addEventListener('click',function(){
+            floatingForm.classList.toggle('floating-form-active');
+        });
+
+    </script>
+</body>
+
+</html>
