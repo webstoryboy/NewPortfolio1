@@ -1,0 +1,217 @@
+fieldset{ border: 0; }
+
+/* ir 효과 */
+.ir_pm {
+    font-size: 0;
+    text-indent: -9999px;
+    font-size: 1px;
+    line-height: 0;
+    color: transparent
+}
+
+.ir_pm,
+.ir_wa {
+    display: block;
+    overflow: hidden
+}
+
+.ir_wa {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%
+}
+
+.ir_caption {
+    width: 1px;
+    font-size: 1px
+}
+
+.ir_caption,
+.screen_out {
+    overflow: hidden;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+.screen_out {
+    position: absolute;
+    width: 0;
+    height: 0
+}
+
+.caption_hide {
+    overflow: hidden;
+    width: 1px;
+    height: .1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+
+/* style */
+
+
+
+.flow-article {
+   width: 100%;
+/*    background: var(--colorBg9);*/
+/*	background: #c2dce6;*/
+	background: #fff5df;
+	font-family: 'yg-jalnan';
+}
+
+/* section-comment */
+.section-comment {
+    padding: 50px 0 100px 0;
+}
+.section-comment > h4{
+	font-size: 3vw;
+	text-align: center;
+/*   color: #fff;*/
+	color: #e07257;
+	transform: translateY(0);
+	animation: pMove 0.7s infinite alternate;
+}
+@keyframes pMove{
+	to{transform: translateY(-8px);}
+}
+.section-comment > p{
+	text-align: center;
+	font-size: 1.3vw;
+	color: #c7aa8d
+}
+
+.comment-form {
+    margin-top: 50px;
+}
+
+.comment-wrap {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.comment-wrap input {
+	border: 2px solid #F4DEAB;
+   padding: 1vw 2vw;
+   margin: 0.5vw;
+	background: #ffffff8f;
+	border-radius: 50px;
+	outline: none;
+	color: #E2BF6E;
+}
+.comment-wrap input::-webkit-input-placeholder {
+/*    color: #a4cbdb;*/
+	color: #E2BF6E;
+}
+.comment-wrap input:-ms-input-placeholder {
+/*    color: #a4cbdb;*/
+	color: #E2BF6E;
+}
+.comment-wrap input::placeholder {
+/*    color: #a4cbdb;*/
+	color: #E2BF6E;
+}
+.comment-wrap .text input {
+    min-width: 300px;
+}
+.comment-wrap button {
+	background: #F4DEAB;
+    /* border: 2px solid #a4cbdb; */
+    /* border: 2px solid #c7aa8d; */
+    /* color: #a4cbdb; */
+    color: #E2BF6E;
+    padding: 0px;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 4.5vw;
+    height: 4.5vw;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    font-size: 1.3vw;
+    cursor: pointer;
+}
+.comment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px 7vw;
+}
+.comment-list > div {
+    flex: 0 0 22%;
+    margin-bottom: 5vw;
+}
+.comment-list > div p {
+	background: #F4DEAB;
+	color: #947f4d;
+	padding: 1.5vw;
+	margin-bottom: 3vw;
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	font-size: 1.2vw;
+	font-family: 'NEXON Lv1 Gothic OTF';
+}
+.comment-list > div p::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -10px;
+	transform: translatex(-50%);
+	border-top: 10px solid #F4DEAB;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.comment-list .id_wrap span {
+	font-size: 1.4vw;
+	color: #E2BF6E;
+}
+.comment-list .id_wrap span:last-child {
+	font-size: 1vw;
+	color: #a18c5a;
+	float: right;
+	margin-top: 3px;
+}
+
+@media (max-width: 960px){
+    .comment-list > div {
+        flex: 0 0 28%;
+      
+    }
+}
+@media (max-width: 768px){
+    /* comment */
+    #section6 { margin-top: -50vw; }
+    .sec6 .section-comment > h4{   font-size: 5.5vw;  }
+    .sec6 .section-comment > p {   font-size: 2.5vw;}
+    .sec6 .comment-wrap input {  font-size: 16px;}
+    .sec6 .comment-wrap button {  width: 5.5vw; height: 5.5vw; font-size:16px; }
+    .sec6 .comment-list > div {  flex: 0 0 45%; margin-bottom: 7vw;}
+    .sec6 .comment-list > div p {  font-size: 15px; padding: 3vw;}
+    .comment-list .id_wrap span { font-size: 13px}
+    .comment-list .id_wrap span:last-child { font-size: 13px;}
+}
+@media (max-width: 600px){
+    .comment-wrap {
+        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        margin: 0 auto 30px;
+        
+    }
+    .sec6 .comment-wrap > div{width: 100%;}
+    .sec6 .comment-wrap input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5vw 2vw;
+        margin: 1vw;
+    }
+    .sec6 .comment-wrap button {
+        width: 7.5vw;
+        height: 7.5vw;
+        font-size: 2.2vw;}
+}

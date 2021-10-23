@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <header id="header">
+        <h1><a href="#c">PORT</a></h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">ANIMATION</a></li>
+                <li><a href="#">JAVASCRIPT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>
+                    <strong>KANGYOON'S</strong>
+                    <em class="em1">PORTFOLIO</em>
+                </h1>
+            </div>
+            <div class="dog">
+                <div class='wrap'>
+                    <div class='body'>
+                        <div class='leg l'>
+                            <div class='paw'></div>
+                        </div>
+                        <div class='leg r'>
+                            <div class='paw'></div>
+                        </div>
+                        <div class='spots'></div>
+                        <div class='head'>
+                            <div class='snout'>
+                                <div class='nose'></div>
+                            </div>
+                            <div class='eyes'></div>
+                            <div class='ear'></div>
+                            <div class='ear right'></div>
+                            <div class='inner'>
+                                <div class='spot'></div>
+                            </div>
+                            <div class='eyes'></div>
+                            <div class='ear'></div>
+                            <div class='ear right'></div>
+                            <div class='inner'>
+                                <div class='spot'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+                    <defs>
+                        <filter id="squiggly-0">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                            <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+                        </filter>
+                        <filter id="squiggly-1">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                        </filter>
+                        <filter id="squiggly-2">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+                        </filter>
+                        <filter id="squiggly-3">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                        </filter>
+                        <filter id="squiggly-4">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="sec2">
+                <div class="sec2-box">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+
+        </section>
+        <!-- //section3 -->
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+    <!-- //contents -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        window.addEventListener("scroll", function () {
+            let scroll = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+            document.querySelector(".scroll").innerText = parseInt(scroll);
+        });
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            let offset = scrollTop - $("#section2").offset().top
+
+            if( scrollTop >= $("#section2").offset().top ){
+                $(".sec2").css("left", -offset)
+            }
+        });
+        
+
+        var $eyes = $('.eyes'),
+            $snout = $('.snout'),
+            $spot = $('.spot'),
+            $nose = $('.nose'),
+            $ear = $('.ear'),
+            $rightear = $('.right'),
+            $leftleg = $('.l'),
+            $rightleg = $('.r'),
+            $leftpaw = $('.l .paw'),
+            $rightpaw = $('.r .paw'),
+            $container = $('.wrap'),
+            $outer = $('body'),
+            container_w = $container.width(),
+            container_h = $container.height();
+
+        $('body').on('mousemove.parallax', function (event) {
+            var pos_x = event.pageX,
+                pos_y = event.pageY,
+                left = 0,
+                bottom = 0,
+                top = 0;
+
+            left = container_w / 0.5 - pos_x;
+            top = container_h / 2 - pos_y;
+            bottom = container_h / 0.25 - (pos_y * 2.5);
+
+
+            TweenMax.to(
+                $snout,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 +
+                            'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $spot,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 +
+                            'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $eyes,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 +
+                            'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $nose,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 +
+                            'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $ear,
+                1, {
+                    css: {
+                        transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 +
+                            'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $rightear,
+                1, {
+                    css: {
+                        transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 +
+                            'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $leftleg,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 +
+                            'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $rightleg,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 +
+                            'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $leftpaw,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 +
+                            'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $rightpaw,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 +
+                            'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- https://netrixdigital.com/ -->

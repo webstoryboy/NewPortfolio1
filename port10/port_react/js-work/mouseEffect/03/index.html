@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>mouse effect</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../../../assets/css/font.css">
+</head>
+<body>
+	<!-- info -->
+	<div class="info left">
+		<h1>Mouse 03</h1>
+		<p>마우스 방향에 따라 움직이기</p>
+		<ul class="pMenu">
+			<li><a href="../01/index.html">01</a></li>
+			<li><a href="../02/index.html">02</a></li>
+			<li><a href="../03/index.html">03</a></li>
+			<li><a href="../04/index.html">04</a></li>
+			<li><a href="../05/index.html">05</a></li>
+		</ul>
+	</div>
+	<div class="info bottom">
+		<ul>
+			<li>clientX : <span class="clientX">0</span></li>
+			<li>clientY : <span class="clientY">0</span></li>
+		</ul>
+	</div>
+	<!-- //info -->
+	<!-- main -->
+	<main>
+		<div class="cursor"></div>
+		<div class="contents">
+			<div class="move-image">
+				 <div class="mimg">
+					<img class="img" src="https://image.utoimage.com/preview/cp917663/2020/06/202006037456_500.jpg" alt="이미지">
+				 </div>
+				 <div class="mtext">
+					<p>Luck is when preparedness meets opportunity.</p>
+					<p>운이란 준비가 기회를 만나는 것이다.</p>
+				 </div>
+			</div>
+	   </div>
+	</main>
+	<!-- //main -->
+	
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	<script>
+	let x = 0,
+		y = 0;
+
+	//move-image안에서만!
+	$('.move-image').mousemove(function(e){
+		// 커서 값 넣어주기
+		gsap.to(".cursor",{duration: 0.5,left : e.pageX -10, top : e.pageY - 10})
+		
+		//좌표값을 중앙으로 설정 : 컨텐츠 박스의 width()/2 + 왼쪽 여백값
+		//$('.move-image').width()/2 -> 컨텐츠 박스의 width()/2
+		//$('.move-image').position().left  -> 왼쪽 여백값	
+		x = e.clientX - ($('.move-image').width()/2 + $('.move-image').position().left )
+		y = e.clientY - ($('.move-image').height()/2 + $('.move-image').position().top )
+
+		$('.img').attr({"style":"transform:translate("+ x/20 +"px,"+ y/20 +"px)"})
+	
+	})
+						
+	//출력용
+	$(window).mousemove(function(e){
+		$('.clientX').text(e.clientX);
+		$('.clientY').text(e.clientY);
+		$('.mouseX').text(Math.floor(x)+"px");
+		$('.mouseY').text(Math.floor(y)+"px");
+		
+	})
+
+
+	</script>
+</body>
+</html>

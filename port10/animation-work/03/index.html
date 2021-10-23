@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Wave Animation</title>
+	<style>
+		body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
+            background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            /* background: #E9CACC; */
+            }
+        .row {
+            display:flex;
+            flex: 0 1 100%;
+        }
+        .row .circle {
+            width: 9px; height: 9px;
+            margin: 5px 10px;
+            border-radius: 50%;
+            background: #fff;
+            transform-origin:top center;
+            animation:spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0%   { transform:rotate(0) scale(1.1)}
+            50%  { transform:rotate(180deg) scale(0.3)}
+            100% { transform: rotate(360deg) scale(1.1);
+            }
+        }
+
+        .row:nth-child(1) .circle {
+            animation-delay: 100ms;
+        }
+        .row:nth-child(2) .circle {
+            animation-delay: 200ms;
+        }
+        .row:nth-child(3) .circle {
+            animation-delay: 300ms;
+        }
+        .row:nth-child(4) .circle {
+            animation-delay: 400ms;
+        }
+        .row:nth-child(5) .circle {
+            animation-delay: 500ms;
+        }
+        .row:nth-child(6) .circle {
+            animation-delay: 600ms;
+        }
+        .row:nth-child(7) .circle {
+            animation-delay: 700ms;
+        }
+        .row:nth-child(8) .circle {
+            animation-delay: 800ms;
+        }
+        .row:nth-child(9) .circle {
+            animation-delay: 900ms;
+        }
+        .row:nth-child(10) .circle {
+            animation-delay: 1000ms;
+        }
+	</style>
+</head>
+<body>
+	<div class="circles">
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="row">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+	</div>
+</body>
+</html>

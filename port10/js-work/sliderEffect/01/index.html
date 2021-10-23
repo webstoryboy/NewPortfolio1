@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect</title>
+    <link rel="stylesheet" href="../../../assets/css/font.css">
+    <style>
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733_1280.jpg") no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            transition: all 0.2s;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(50, 37, 11, 0.9);
+            z-index: -1;
+        }
+         body::-webkit-scrollbar {
+            width: 10px;
+            height: 7px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 3px;
+        }
+         *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+            font-family: 'S-CoreDream-4Regular';
+            font-family: 'yg-jalnan';
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+            color: #fff;
+            font-family: 'yg-jalnan';
+        }
+        img {
+            width: 100%;
+            vertical-align: top; /* 여백 초기화 */
+        }
+        ul {
+            list-style: none;
+        }
+        body{
+            background: #222;
+        }
+        .info{
+            position:fixed; 
+            z-index: 1000;
+            color:#fff;
+        }
+        .info.left{
+            left:1%;top:2%;
+        }
+        .info.bottom{
+            right: 2%; bottom: 2%;
+        }
+        .info.bottom li{
+            font-size: 1.2vw;
+        }
+        .info h1{   
+            font-size: 3vw;
+            margin-bottom: 1%;
+        }
+        .info p{
+            font-size: 1.6vw;
+            margin-bottom: 5%;
+            font-weight: 100;
+            letter-spacing: 0.4px;
+        }
+        .info .pMenu{
+            position: fixed;
+            top: 2%;
+            right: 1%;
+            display: inline-block;
+            padding: 0.4% 1%;
+            background: #ffffff1c;
+            border-radius: 10px;
+            width: 270px;
+            z-index: 20;
+        }
+        .info .pMenu li{
+            display: inline-block;
+            margin: 0 0.5%;
+        }
+        .info .pMenu li a{
+            display: inline-block;
+            font-size: 1.8vw;
+            color: #636363;
+            font-weight: 100;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .info .pMenu li:nth-child(1) a{
+            border: 1px dashed #fff;
+            color: #fff;
+            display: block;
+        }
+        
+        /* slide */
+        .slider-wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 330px;
+            overflow: hidden;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, .5);
+        }
+        .slider-img {
+            position: relative;
+            width:2500px;
+            height: inherit;
+            overflow: hidden;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, .5);
+        }
+        .slider-img .slider {
+            float: left;
+            width: 500px;
+            height: inherit;
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 5px 10px;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+     <!--info-->
+     <div class="info left">
+        <h1>Slider01</h1>
+        <p>이미지 슬라이드 - 좌로 넘기기</p>
+        <ul class="pMenu">
+            <li><a href="../01/index.html">01</a></li>
+            <li><a href="../02/index.html">02</a></li>
+            <li><a href="../03/index.html">03</a></li>
+            <li><a href="../04/index.html">04</a></li>
+            <li><a href="../05/index.html">05</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider"><img src="https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733_1280.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider"><img src="https://cdn.pixabay.com/photo/2020/06/30/22/34/dog-5357794_1280.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider"><img src="https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985_1280.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider"><img src="https://cdn.pixabay.com/photo/2016/10/31/14/55/rottweiler-1785760_1280.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider"><img src="https://cdn.pixabay.com/photo/2021/08/24/01/44/cat-6569156_1280.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+
+        let currentIndex = 0;
+
+        setInterval(function(){
+            //3초에 한번씩 왼쪽으로 500px를 이동시킨다.
+            if(currentIndex < 4){
+                currentIndex++;
+            }else{
+                currentIndex = 0;
+            }
+
+            let sliderPosition = currentIndex * -500;
+            sliderImg.animate({left : sliderPosition },600,"easeOutExpo")
+        },3000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+/*progress*/
+.progress{
+	position: fixed; top: 0; left: 0;
+	margin: 0; padding: 0;
+	z-index: 10001;
+	width: 100%;
+	min-height:  100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #EF6C42;
+	transition: 0.6s cubic-bezier(0.42, 0, 0.13, 1.04) 1s;
+}
+.progress.active{
+/*	top: -120%;*/
+/*	opacity: 0;*/
+	transform: scale(0);
+	opacity: 0;
+}
+.progress .loading{
+	width: 20vw;
+	height: 20vw;
+	border-radius: 50%;
+	display: flex;
+	background: #ce441a;
+	justify-content: center;
+	align-items: center;
+}
+.progress .loading img{
+	width: 10vw;
+	animation: loadImg .5s infinite alternate cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes loadImg{
+	from{ transform: translateY(-3%);}
+	to{ transform: translateY(3%);}
+}
+
+.progress-text{
+	margin-top: 2.2%; margin-left: 1%;
+	font-size: 2vw;
+	color: #fff;
+	font-family: 'yg-jalnan';
+}
+
+/* 화면 너비 0 ~ 1024px */
+@media (max-width: 1024px){
+	.progress .loading{width: 30vw;height: 30vw;}
+    .progress .loading img{width: 20vw;}
+    .progress-text{font-size: 3vw;}
+}
+
+/* 화면 너비 0 ~ 768 */
+@media (max-width: 768px){
+	.progress .loading{width: 40vw;height: 40vw;}
+    .progress .loading img{width: 25vw;}
+    .progress-text{font-size: 5vw;  margin-top: 3.2%;}
+}

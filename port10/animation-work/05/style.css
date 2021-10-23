@@ -1,0 +1,72 @@
+body{
+	color: #222; line-height: 1.5rem;
+    padding: 0; margin: 0;
+    background-image: linear-gradient(to top right, #a8edea 0%, #fed6e3 100%);
+}
+.container{
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	height: 100vh;padding: 0; margin: 0;
+}
+.container .app-ui {
+	position: relative;
+	width: 100px; height: 170px;
+	transform: rotate(-30deg) skewX(20deg);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	transition: 0.5s;
+	background-color: #ddd;
+}
+.container .app-ui img{
+	position: absolute;
+   width: 100%;
+	display: block;
+	transition: 0.5s;
+}
+.container .app-ui{
+    animation: app-ui 1s infinite alternate ;
+}
+@keyframes app-ui {
+    100%{ 
+        box-shadow: -50px 100px 60px rgba(0,0,0,0.3);
+        transform: translate(0px, 35px) rotate(-30deg) skew(20deg);
+    }
+}
+.container .app-ui img:nth-child(1) {
+    animation: app_1 1s infinite alternate;
+}
+@keyframes app_1 {
+    100%{
+        transform: translate(20px, -20px);
+        opacity: 0.2;
+    }
+}
+.container .app-ui img:nth-child(2) {
+	animation: app_2 1s infinite alternate;
+}
+@keyframes app_2 {
+    100%{
+        transform: translate(40px, -40px);
+	    opacity: 0.4;
+    }
+}
+.container .app-ui img:nth-child(3) {
+	opacity: 0.6;
+    animation: app_3 1s infinite alternate;
+}
+@keyframes app_3 {
+    100%{
+        animation: app_3 1s infinite alternate;
+        transform: translate(60px, -60px);
+    }
+}
+.container .app-ui img:nth-child(4) {
+	animation: app_4 1s infinite alternate;
+}
+@keyframes app_4 {
+    100%{
+        transform: translate(80px, -80px);
+    }
+}
+
+

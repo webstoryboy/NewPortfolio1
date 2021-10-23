@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOON REACT PORT</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"><!--abel-->
+    <link rel="stylesheet" href="https://use.typekit.net/svk2cjv.css"><!--adobe font-->
+
+</head>
+<body>
+
+    <!-- cursor -->
+    <!-- <div class="cursor"></div> -->
+    <!-- // cursor -->
+
+    <div class="loader loader--active">
+        <div class="loader__icon">
+        <svg id="loader-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+            <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+            <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z"></path>
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
+        </svg>
+        </div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+    </div>
+    <!-- //page transition -->
+    
+    <header id="header">
+			<h1>
+				<a href="index.html" class="page__click">YOON.</a>
+			</h1>
+			<div class="info">
+				<ul>
+					<li><a href="mailto:rkddb1031@naver.com">→rkddb1031@naver.com</a></li>
+					<li><a href="tel:010-9198-4389">+82 9198 4389</a></li>
+				</ul>
+			</div>
+			<div class="member">
+				<ul>
+			<?php
+	include '../connect/connect.php';
+	include '../connect/session.php';
+
+    
+    if(isset($_SESSION['studyMemberID'])){?>
+					 <li><a href="board/board.html" class="">Board</a></li>
+					 <li><a href="#" class="session"><?=$_SESSION['youName']?>님</a></li>
+					 <li><a href="login/logOut.php" class="">Logout</a></li>
+    <?php }else{ ?>
+					<li><a href="board/board.html" class="">Board</a></li>
+					<li><a href="login/login.html" class="page__click">Login</a></li>
+					<li><a href="login/join.html" class="page__click">Join</a></li>
+  <?php } ?>
+			</ul>
+		</div>
+    </header>
+    <!-- //header -->
+    <!-- <div class="cursor"></div> -->
+    <!-- //header -->
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <div class="left">
+                    <div class="leftWrapper">
+                        <a href="project.html" id="project" class="page__click">
+                            <img src="assets/img/project_icon.png" alt="">
+                        </a>
+                        <svg id="project-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                            <defs>
+                                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                                </path>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_bottom">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250" to="555 250 250" repeatCount="indefinite" />
+                                </path>
+                            </defs>
+                            <text dy="70" textLength="1220">
+                                <textPath xlink:href="#textcircle_top">• Web Project • JavaScript •</textPath>
+                                <textPath xlink:href="#textcircle_bottom">Web project • JavaScript</textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="arrow">
+                        <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7.5H22M22 7.5L17.5 0.5M22 7.5L17.5 15.5" stroke="#F1F1F1" stroke-linecap="round"/>
+                        </svg>    
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rightWrapper">
+                        <a href="about.html" id="about" class="page__click">
+                            <img src="assets/img/about_icon.png" alt="나의 아이콘">
+                        </a>
+                        <svg id="about-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                            <defs>
+                                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                                </path>
+                                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_bottom">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250" to="555 250 250" repeatCount="indefinite" />
+                                </path>
+                            </defs>
+                            <text dy="70" textLength="1220">
+                                <textPath xlink:href="#textcircle_top"> • HELLO I'M KANG YOON • IF YOU WANT</textPath>
+                            <textPath xlink:href="#textcircle_bottom">TO KNOW ABOUT ME • CLICK THIS </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="arrow">
+                        <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 7.5H1M1 7.5L5.5 0.5M1 7.5L5.5 15.5" stroke="#F1F1F1" stroke-linecap="round"/>
+                        </svg>    
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span>REACT.</span>
+                    <div class="info">
+                        <em>Front-end Developer</em>
+                        <em>ⓒ Yoon’s Portfolio 2021</em>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://github.com/rkddbs1031" target="_blank">Git</a></li>
+                            <li><a href="https://codepen.io/rkddbs1031" target="_blank">Codepen</a></li>
+                            <li><a href="https://www.instagram.com/kxun_ii/?hl=ko" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        window.onload = function () {
+            function start(callback) {
+                setTimeout(() => {
+                document.querySelector(".loader").classList.remove("loader--active");
+                }, 100);
+            };
+            start();
+
+            function pageClick() {
+                document.querySelectorAll(".page__click").forEach((elem) => {
+                    elem.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const dataName = elem.getAttribute('href');
+                        document.querySelector(".loader").classList.add("loader--active");
+                        setTimeout(() => {
+                            window.location.href = dataName;
+                        }, 2000);
+                    });
+                });
+            };
+            pageClick();
+            
+        };
+
+        // cursor
+        /*  jQuery + GSAP  */
+        // const cursor = $(".cursor");
+        // //마우스 움직임
+        // $(document).mousemove(function(e){
+        //     gsap.to(".cursor",{duration:0.4 ,left : e.pageX - 5, top: e.pageY - 5})
+        // });
+
+        const left = document.getElementById("project");
+        const leftWrap = document.querySelector(".sec1 .leftWrapper");
+        const right = document.getElementById("about");
+        const rightWrap = document.querySelector(".sec1 .rightWrapper");
+
+
+        if(window.innerWidth > 480){
+            left.addEventListener("mouseover",function(){
+                rightWrap.style.WebkitFilter = "blur(4px)";
+                rightWrap.style.transform = "scale(0.8)";
+                leftWrap.style.transform = "scale(1.1)";
+                right.style.WebkitFilter = "grayscale(1)";
+                document.querySelector(".sec1 .left").classList.add("active");
+                document.querySelector(".sec1 .right .arrow").style.opacity = "0"
+            })
+            left.addEventListener("mouseleave",function(){
+                rightWrap.style.WebkitFilter = "blur(0px)";
+                rightWrap.style.transform = "scale(1)";
+                leftWrap.style.transform = "scale(1)";
+                right.style.WebkitFilter = "grayscale(0)";
+                document.querySelector(".sec1 .left").classList.remove("active");
+                document.querySelector(".sec1 .right .arrow").style.opacity = "1"
+            })
+            right.addEventListener("mouseover",function(){
+                leftWrap.style.WebkitFilter = "blur(4px)";
+                leftWrap.style.transform = "scale(0.8)";
+                rightWrap.style.transform = "scale(1.1)";
+                left.style.WebkitFilter = "grayscale(1)";
+                document.querySelector(".sec1 .right").classList.add("active");
+                document.querySelector(".sec1 .left .arrow").style.opacity = "0"
+            })
+            right.addEventListener("mouseleave",function(){
+                leftWrap.style.WebkitFilter = "blur(0px)";
+                leftWrap.style.transform = "scale(1)";
+                rightWrap.style.transform = "scale(1)";
+                left.style.WebkitFilter = "grayscale(0)";
+                document.querySelector(".sec1 .right").classList.remove("active");
+                document.querySelector(".sec1 .left .arrow").style.opacity = "1"
+            })
+        }else if(window.innerWidth <= 480){
+            left.addEventListener("mouseover",function(){
+                rightWrap.style.WebkitFilter = "blur(4px)";
+                right.style.WebkitFilter = "grayscale(1)";
+                document.querySelector(".sec1 .right .arrow").style.opacity = "0"
+            })
+            left.addEventListener("mouseleave",function(){
+                rightWrap.style.WebkitFilter = "blur(0px)";
+                right.style.WebkitFilter = "grayscale(0)";
+                document.querySelector(".sec1 .right .arrow").style.opacity = "1"
+            })
+            right.addEventListener("mouseover",function(){
+                leftWrap.style.WebkitFilter = "blur(4px)";
+                left.style.WebkitFilter = "grayscale(1)";
+                document.querySelector(".sec1 .left .arrow").style.opacity = "0"
+            })
+            right.addEventListener("mouseleave",function(){
+                leftWrap.style.WebkitFilter = "blur(0px)";
+                left.style.WebkitFilter = "grayscale(0)";
+                document.querySelector(".sec1 .left .arrow").style.opacity = "1"
+            })
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

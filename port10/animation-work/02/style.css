@@ -1,0 +1,45 @@
+body{
+    display: flex; align-items: center; justify-content: center;
+    height: 100vh; 
+    padding: 0;margin: 0;
+    background:#dcf5f5;
+}
+.container{
+    width: 290px; height: 180px;
+}
+.container .color {
+    height: 30px;
+}
+.container .color div {
+    height: inherit; width: 0;
+}
+.container .color .red {
+    background: #f25774;
+    animation: move 3s infinite ;
+}
+.container .color .orange {
+    background: #ffb65b;
+    animation: move 3s infinite 0.1s;
+}  
+.yellow{ 
+    background: #fdda74;
+    animation: move 3s infinite 0.2s;
+}
+.green{ 
+    background: #4cbe5d;
+    animation: move 3s infinite 0.3s;
+}
+.blue{ 
+    background: #4080ff;
+    animation: move 3s infinite 0.4s;
+}
+.purple{ 
+    background: #7b64c0;
+    animation: move 3s infinite 0.5s;
+}
+@keyframes move {
+    10%{width: 0; float: left;}
+    40%{width: 100%; float: left; }
+    70%{width: 100%; float: right;}
+    90%{ width: 0; float: right;}
+}

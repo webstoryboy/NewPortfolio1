@@ -1,0 +1,158 @@
+body {
+    background: url("https://image.freepik.com/free-vector/background-seamless-pattern-vector-with-cute-memphis_53876-105506.jpg") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    transition: all 0.2s;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: none;
+}
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(50, 37, 11, 0.9);
+    z-index: -1;
+}
+ body::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+}
+body::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 3px;
+}
+ *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: 'S-CoreDream-4Regular';
+    font-family: 'yg-jalnan';
+}
+a {
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #fff;
+    font-family: 'yg-jalnan';
+}
+img {
+    width: 100%;
+    vertical-align: top; /* 여백 초기화 */
+}
+ul {
+    list-style: none;
+}
+.info{
+    position:fixed; 
+    z-index: 1000;
+    color:#fff;
+}
+.info.left{
+    left:1%;top:2%;
+}
+.info.bottom{
+    left: 1%; bottom: 2%;
+}
+.info.bottom li{
+    font-size: 1.45vw;
+}
+.info h1{   
+    font-size: 3vw;
+    margin-bottom: 1%;
+}
+.info p{
+    font-size: 1.6vw;
+    margin-bottom: 5%;
+    font-weight: 100;
+    letter-spacing: 0.4px;
+}
+.info .pMenu{
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    display: inline-block;
+    padding: 0.5% 1%;
+    background: rgb(0 0 0 / 30%);
+    border-radius: 30px;
+    width: 240px;
+    z-index: 20;
+}
+.info .pMenu li{
+    display: inline-block;
+    margin: 0 0.5%;
+}
+.info .pMenu li a{
+    display: inline-block;
+    font-size: 1.8vw;
+    color: #fff;
+    font-weight: 100;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.info .pMenu li:nth-child(1) a{
+    background-color: #fff;
+    color:#000;
+    display: block;
+}
+
+@media (max-width: 800px){
+    .info.bottom {display: none;}
+    .info.right {display: none;}
+}
+
+/* main */
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.contents p {
+    max-width: 70vw;
+    font-size: 2.5vw;
+    text-align: justify;
+}
+.contents p:first-child {
+    font-size: 2.5vw;
+    line-height: 2;
+}
+
+.contents p em {
+    color: orange;
+    padding-bottom: 1%;
+    border-bottom: 2px dashed orange;
+    font-style: normal;
+}
+.cursor {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: background-color .2s, border-color .2s;
+}
+
+.cursor.active {
+    background-color: rgba(255, 165, 0, 0.4);
+    border-color: orange;
+}

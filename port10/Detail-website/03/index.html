@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB STANDARD-DETAIL</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../01/css/prim.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../assets/css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<body>
+	<header>
+        <h1>MEGABOX</h1>
+    </header>
+    <!--//header-->
+    
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>메가박스 사이트</h1>
+                <div class="right">
+                    <div class="desc">
+                        <p>
+                            메가박스 사이트를 리뉴얼하여 만든 반응형 사이트입니다.
+                            다양한 기기의 해상도에 대응하기 위하여 해상도별 이미지를 작업하였습니다. Swiper.js 플러그인으로 상단 배너 이미지와 영화차트 슬라이드를 구현하였고 jQuery를 사용하여 공지사항과 영화차트의 탭메뉴, 헤더의 모바일 메뉴를 구현하였습니다. 
+                        </p>
+                        <div class="tag">
+                            <span>#반응형</span>
+                            <span>#Swiper.js</span>
+                            <span>#탭메뉴</span>
+                            <span>#모바일메뉴</span><br>
+                            <span>#해상도에 따른 이미지</span>
+                            <span>#SVG활용</span>
+                        </div>
+                    </div>
+                    <a href="../../website-work/03/index.html" target="_blank">VISIT SITE</a>
+                </div>
+                <img src="../../assets/img/01-megabox.png" alt="메가박스 이미지">
+            </div>
+        </section>
+        <!--//section1-->
+
+        <section id="section2">
+            <div class="sec2">
+                <h1 class="ir_su">메가박스 사이트 핵심 코드보기</h1>
+                <ul class="tap">
+                    <li class="active" data-tab="tab-1"><a href="#">Swiper.js</a></li>
+                    <li data-tab="tab-2"><a href="#">탭 메뉴</a></li>
+                    <li data-tab="tab-3"><a href="#">모바일 메뉴</a></li>
+                </ul>
+                <div class="code-editor show"  id="tab-1"> 
+                    <div class="controls">
+                        <span class="control"></span>
+                        <span class="control"></span>
+                        <span class="control"></span>
+                    </div>  
+                    <div class="code">
+                        <pre class="line-numbers language-html"><code class="language-js">//배너 이미지 슬라이드
+var swiper = new Swiper('.swiper-container',{
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 5000,
+    },
+});
+
+//영화차트 이미지 슬라이드
+var swiper = new Swiper('.swiper-container2',{
+    slidesPerView: 4,
+        spaceBetween: 24,
+    keyboard: {
+                            </code></pre>
+                    </div>
+                </div>     
+                <div class="code-editor"  id="tab-2"> 
+                    <div class="controls">
+                        <span class="control"></span>
+                        <span class="control"></span>
+                        <span class="control"></span>
+                    </div>  
+                    <div class="code">
+                        <pre class="line-numbers language-html"><code class="language-js">//공지사항 탭메뉴
+var notBtn = $(".notice > ul > li");
+var notCont = $(".notice > ul > li > ul");
+
+notCont.hide().eq(0).show();
+
+notBtn.click(function(e){
+    e.preventDefault(); //클릭시 올라가는 것 방지
+    var target = $(this);
+    var index = target.index();
+    notBtn.removeClass("active");
+    target.addClass("active");
+    notCont.css("display","none");
+    notCont.eq(index).css("display","block");
+});
+
+
+//영화차트 탭 메뉴
+var movBtn = $(".movie_title > ul > li");
+var movCont = $(".movie_chart > div");
+
+movCont.hide().eq(0).show();
+
+movBtn.click(function(e){
+    e.preventDefault(); //클릭시 상단으로 올라가는거 방지
+    var target = $(this);
+    var index = target.index();
+    movBtn.removeClass("active");
+    target.addClass("active");
+    movCont.css("display","none");
+    movCont.eq(index).css("display","block");
+});
+
+                            </code></pre>
+                    </div>
+                </div>
+                <div class="code-editor"  id="tab-3"> 
+                    <div class="controls">
+                        <span class="control"></span>
+                        <span class="control"></span>
+                        <span class="control"></span>
+                    </div>  
+                    <div class="code">
+                        <div>
+                            <pre class="line-numbers language-html"><code class="language-css">/* css */
+/* 모바일 메뉴 */
+.ham { display: block; width: 25px; height: 10px; background-color: rgba(0,0,0,0); padding: 15px 10px 10px 10px;}
+.ham span { position: relative; display: block; width: 25px; height: 4px; background-color: #39106a;  
+}
+.ham span:before{ content: ""; width: 25px; height: 4px; background-color: #39106a;
+    position: absolute; left: 0; bottom: -7px;
+}
+.ham span:after{ content: ""; width: 25px; height: 4px; background-color: #39106a;
+    position: absolute; left: 0; top: -7px;
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <pre class="line-numbers language-html"><code class="language-js">// script 
+//헤더 탭 메뉴
+var toggleBtn = $("#mNav");
+var subMenu = $(".nav");
+
+toggleBtn.click(function(e){
+    e.preventDefault();
+    subMenu.toggleClass("active");
+});
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//section2-->
+        <section id="section3">
+            <div class="sec3">
+                <h1>next<br><span>projects</span></h1>
+                <div class="projects">
+                    <div class="project_04">
+                        <a href="../04/index.html">
+                            <img src="../../assets/img/jaju.jpg" alt="자주 사이트">
+                        </a>
+                        <div class="shadow"></div>
+                    </div>
+                    <!-- <div class="project_05">
+                        <a href="../04/index.html">
+                            <img src="../../assets/img/jaju.jpg" alt="자주 사이트">
+                        </a>
+                        <div class="shadow"></div>
+                    </div> -->
+                </div>
+                <a href="../../index.html" class="backBtn">GO BACK</a>
+                <svg id="line" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.71 5.4">
+                    <path class="cls-1" d="M1404.05,94.67s18.57-4.94,35.73,0,35.78,0,48.58,0,22.93,2.2,35.73,2.2,19.49-2.2,30.55-2.2" transform="translate(-1403.93 -91.97)"/>
+                </svg> 
+            </div>
+        </section>
+        <!--//section3-->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../01/js/prim.js"></script>
+    <script>
+        //탭메뉴
+        $('.tap li').click(function(e){
+            e.preventDefault();
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        
+            let dataTab = $(this).attr('data-tab');
+            $('.sec2 .code-editor').removeClass('show');
+            $('#'+dataTab).addClass('show');
+        })
+        
+        //애니메이션
+        let text = $("header h1").text();
+        //  console.log(text)
+        let split = text.split("").join("</span><span>");
+        split = "<span>" + split + "</span>";
+        $("header h1").html(split)
+
+        $(window).scroll(function(){
+            let scrolTop = $(window).scrollTop();
+
+            if(scrolTop>=0){
+                $("header").addClass("show");
+            }
+            for(let i=1; i<=3; i++){
+                if(scrolTop >= $("#section"+i).offset().top - $(window).height()/2){
+                    $("#section"+i).addClass("show");
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>
